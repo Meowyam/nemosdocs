@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>PDPA DBNO Use Case Executive Summary &#8212; L4 Manual 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Early Beta" href="common-early-beta.html" />
+    <link rel="prev" title="Security Considerations" href="pdpa-dbno-security.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue-grey data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#docs/common-deliverables" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="L4 Manual 1.0 documentation"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">L4 Manual 1.0 documentation</span>
+          <span class="md-header-nav__topic"> PDPA DBNO Use Case Executive Summary </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">L4 Manual 1.0 documentation</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="L4 Manual 1.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="L4 Manual 1.0 documentation">L4 Manual 1.0 documentation</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">links</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-first-steps.html" class="md-nav__link">First Steps</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-first-steps.html#taking-your-first-steps-intended-audience" class="md-nav__link">Taking your first steps: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-first-steps.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-returning-users.html" class="md-nav__link">Returning Users</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-returning-users.html#exploring-l4-futher-intended-audience" class="md-nav__link">Exploring L4 Futher: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-returning-users.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-L4-backend.html" class="md-nav__link">Setting up the L4 Backend</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-L4-backend.html#installing-the-l4-backend-intended-audience" class="md-nav__link">Installing the L4 Backend: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-L4-backend.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-law-and-computer-science.html" class="md-nav__link">Law and Computer Science</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-law-and-computer-science.html#law-and-computer-science-intended-audience" class="md-nav__link">Law and Computer Science: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-law-and-computer-science.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-backend-setup-instructions.html" class="md-nav__link">Backend Setup Instructions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-backend-setup-instructions.html#setup-instructions-intended-audience" class="md-nav__link">Setup Instructions: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-backend-setup-instructions.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">First Steps</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="quickstart-tour-of-L4.html" class="md-nav__link">What is L4?</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="quickstart-installation.html" class="md-nav__link">Interacting with L4 through a spreadsheet</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Returning Users</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-computational-law.html" class="md-nav__link">What Computational Law Aims to Solve</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-L4-and-law.html" class="md-nav__link">How L4 Approaches Law</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-examples.html" class="md-nav__link">Examples in L4 and the concepts and keywords introduced in each example</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-common-expressions.html" class="md-nav__link">Common Expressions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-defeasibility-defaults.html" class="md-nav__link">Meta-Rules,Defeasibility, and Defaults</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-flowchart.html" class="md-nav__link">Flowcharts: Practical Considerations from a Software Engineering Perspective</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-cheatsheet.html" class="md-nav__link">L4 Cheatsheet</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-cheatsheet.html#syntax-reference-by-keyword" class="md-nav__link">Syntax Reference by Keyword</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-exporting-L4.html" class="md-nav__link">Exporting L4 to Other Formats</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-tutorials.html" class="md-nav__link">Learning L4: Tutorials</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-language-spec.html" class="md-nav__link">Keywords: Declarations and Definitions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Setting up the L4 Backend</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-webtool.html" class="md-nav__link">Installation and setup instructions of the Web Tool</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-webtool.html#accessing-the-web-tool" class="md-nav__link">Accessing the Web Tool</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-googlesheets.html" class="md-nav__link">Installation and setup instructions of the Google Sheets App</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-L4spreadsheet.html" class="md-nav__link">Installations to compile an edited Natural L4 Spreadsheet</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-explanations.html" class="md-nav__link">Explanation of how L4 works under the hood</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-security.html" class="md-nav__link">Security Considerations</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Deliverables, Early Beta, and Acknowledgements</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> PDPA DBNO Use Case Executive Summary </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">PDPA DBNO Use Case Executive Summary</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#docs-common-deliverables--page-root" class="md-nav__link">PDPA DBNO Use Case Executive Summary</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#first-deliverable" class="md-nav__link">First deliverable</a>
+        </li>
+        <li class="md-nav__item"><a href="#second-deliverable" class="md-nav__link">Second deliverable</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/docs/common-deliverables.rst.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="common-early-beta.html" class="md-nav__link">Early Beta</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="common-acknowledgements.html" class="md-nav__link">Acknowledgements</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#docs-common-deliverables--page-root" class="md-nav__link">PDPA DBNO Use Case Executive Summary</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#first-deliverable" class="md-nav__link">First deliverable</a>
+        </li>
+        <li class="md-nav__item"><a href="#second-deliverable" class="md-nav__link">Second deliverable</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/docs/common-deliverables.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="pdpa-dbno-use-case-executive-summary">
+<span id="pdpa-dbno-executive-summary"></span><h1 id="docs-common-deliverables--page-root">PDPA DBNO Use Case Executive Summary<a class="headerlink" href="#docs-common-deliverables--page-root" title="Permalink to this heading">¶</a></h1>
+<p class="linemarker linemarker-7">The “PDPA DBNO” use case was conducted in 2021 and ended in 2022.</p>
+<section id="first-deliverable">
+<span id="deliverable-1"></span><h2 id="first-deliverable">First deliverable<a class="headerlink" href="#first-deliverable" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-15">The first deliverable in the use case is:
+A representation of all relevant Laws as identified for the use-case in machine-readable form in the L4 language developed by CCLAW.</p>
+<p class="linemarker linemarker-18">Per that deliverable, section <a class="reference internal" href="#deliverable-1"><span class="std std-ref">First deliverable</span></a> of this document provides a link to the Google Spreadsheet containing a representation of all relevant Laws as identified for the use-case in machine-readable form in the L4 language developed by CCLAW. The representation is also attached in CSV, XLSX, and PDF file formats.</p>
+<p class="linemarker linemarker-20">The encoding of the PDPA DBNO legislation and regulations is documented directly in the L4 spreadsheet available at <a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit#gid=1779650637">https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit#gid=1779650637</a></p>
+<p class="linemarker linemarker-22">A screenshot of the encoding is seen in the figure below.</p>
+<img alt="../_images/l4-screenshot.png" src="../_images/l4-screenshot.png"/>
+</section>
+<section id="second-deliverable">
+<span id="deliverable-2"></span><h2 id="second-deliverable">Second deliverable<a class="headerlink" href="#second-deliverable" title="Permalink to this heading">¶</a></h2>
+<p class="linemarker linemarker-32">The second deliverable in the use case is:</p>
+<p class="linemarker linemarker-34">A web-based self-assessment tool for data breach notifications. The intended user of the self-assessment tool is representing an organisation in making an assessment of a data breach, and is assumed to have the relevant information on hand to answer the questions. This tool will be delivered in the form of source code with operating instructions. The user interface of the Deliverables will be on a minimum-viable level commensurate with a POC, with no design or front-end elements.</p>
+<p class="linemarker linemarker-36">Per that deliverable, section <a class="reference internal" href="#deliverable-2"><span class="std std-ref">Second deliverable</span></a> of this document provides explanatory documentation and operating instructions for the web-based self-assessment tool for data breach notifications (“Web Tool”). These instructions provide a high-level overview of the end-user-facing aspects of the Web Tool.</p>
+<p class="linemarker linemarker-38">Sections <a class="reference internal" href="pdpa-dbno-installation-webtool.html#webtool"><span class="std std-ref">Installation and setup instructions of the Web Tool</span></a>, <a class="reference internal" href="pdpa-dbno-installation-googlesheets.html#install-googlesheets"><span class="std std-ref">Installation and setup instructions of the Google Sheets App</span></a>, and <a class="reference internal" href="pdpa-dbno-installation-L4spreadsheet.html#auto-config"><span class="std std-ref">Installations to compile an edited Natural L4 Spreadsheet</span></a> of this document provide internal documentation for the above components, and give links to more detailed system documentation available in Github. These operating instructions include directions for bringing up a server hosting the L4 backend itself, including the components that together generate and hot-reload a version of the Web Tool. Section <a class="reference internal" href="pdpa-dbno-security.html#security"><span class="std std-ref">Security Considerations</span></a> discusses security considerations according to RFC3552 (BCP72).</p>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="pdpa-dbno-security.html" title="Security Considerations"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Security Considerations </span>
+              </div>
+            </a>
+          
+          
+            <a href="common-early-beta.html" title="Early Beta"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> Early Beta </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2023, Meng Weng Wong.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

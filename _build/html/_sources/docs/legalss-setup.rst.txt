@@ -1,0 +1,81 @@
+=========================================
+Setting up the LegalSS Google Sheet
+=========================================
+
+Setting up the LegalSS spreadsheet introduces you to the output sidebar and lets you explore Google Sheets as an Interactive Development Environment (IDE).
+
+Clone the spreadsheet so you can try the exercises yourself.
+
+----------------------------
+How to clone the spreadsheet
+----------------------------
+
+1. Clone the spreadsheet by clicking on 'File' at the toolbar, then choose the 4th option 'Make A Copy'.
+
+.. image:: ../L4manual-images/make-a-copy-screenshot.png
+
+2. You should get a pop-up like in this image:
+
+.. image:: ../L4manual-images/options-to-clone-project.png
+
+3. Choose where you want to clone the spreadsheet. In this example, we clone to "My Drive"
+
+.. image:: ../L4manual-images/choose-where-to-clone-project.png
+
+4. Rename the result: this will be your copy of the spreadsheet tutorial.
+
+.. _sheets_ide:
+
+----------------------------
+Activating the L4 Sheets IDE
+----------------------------
+
+A one-time procedure is needed to activate the L4 Sheets IDE.
+
+1. Click on Extensions/Apps Script. 
+   
+.. image:: ../L4manual-images/apps-script-screenshot.png
+
+2. A new tab will open on your browser and you will be asked to select a project to open. Choose the first project "LegalSS..." with the version number (e.g. "LegalSSv0.9.4.3"). Do not click on "Untitled Project".
+
+.. image:: ../L4manual-images/select-project-screenshot.png
+
+You should be directed to a page similar to the below screenshot.
+
+.. image:: ../L4manual-images/apps-script-page-screenshot.png
+
+3. When the Sheets IDE loads, go back to your copy of the LegalSS Google Sheet in your browser and select the tab "Quickstart" if you are not on the page already. 
+
+.. image:: ../L4manual-images/pdpa-dbno-selection-screenshot.png
+    
+1. Back in the Sheets IDE, click "Run" to execute the function. 
+
+.. image:: ../L4manual-images/select-run-on-sheet-ide-screenshot.png
+
+An Execution Log should appear below the Sheets IDE. Wait until you read "Execution Completed", highlighted in yellow, before you move on to the next step.
+
+.. image:: ../L4manual-images/execution-completed-screenshot.png
+
+5. Return to the LegalSS Spreadsheet. You should see a sidebar appear on the right side of the page. 
+
+.. image:: ../L4manual-images/sidebar-appears-screenshot.png
+
+6. Select the "Case Study: PDPA DBNO" sheet at the bottom of the google spreadsheet window.
+
+If you do not see a sidebar, contact the L4 developers for help.
+
+------------------------------
+L4 Spreadsheet quick reference
+------------------------------
+
+- **Adding tabs to Google Sheets**: Click the plus sign on the bottom-left hand corner of your screen, next to where you can find the google sheet tabs.
+
+.. image:: ../L4manual-images/new-tab.png
+
+- **Sidebar auto-refresh**: You can stop auto-refresh by highlighting the cells you are typing in in a shade of grey. To enable auto-refresh, highlight the cells you are typing in back to white, make a minor change, and then wait for refresh.
+
+If the sidebar is not refreshing at all, re-run the Apps script from step 2 of :ref:`sheets_ide`.
+
+.. image:: ../L4manual-images/grey-colouring.png
+
+- **Adding comments to the LegalSS Google Sheets**: It is currently not possible to add comments to the LegalSS google sheets at the time of writing.

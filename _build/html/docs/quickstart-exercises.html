@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning L4: Exercises &mdash; L4 Manual 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Examples in L4 and the concepts and keywords introduced in each example" href="quickstart-examples.html" />
+    <link rel="prev" title="Interacting with L4 through a spreadsheet" href="quickstart-installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> L4 Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="common-introduction.html">Overview of this document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-acknowledgements.html">Acknowledgements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Quickstart Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html">What is L4?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-is-law-specific">L4 is ‘law-specific’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-outputs-a-diagram">L4 outputs a diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-s-diagram-ouput-can-be-converted-to-multiple-formats">L4’s diagram ouput can be converted to multiple formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-uses-spreadsheets-for-interaction">L4 uses spreadsheets for interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-installation.html">Interacting with L4 through a spreadsheet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Learning L4: Exercises</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#formalising-simple-rules-liquor-exercise">Formalising Simple Rules: Liquor Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parantheses-and-operator-precedence-arithmetic-exercise">Parantheses and Operator precedence: Arithmetic Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-modelling-exercise">Data Modelling Exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modelling-simple-obligations-and-deadlines">Modelling Simple Obligations and Deadlines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#legalss-spreadsheet-quick-reference">LegalSS spreadsheet quick reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-examples.html">Examples in L4 and the concepts and keywords introduced in each example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-language-spec.html">Keywords: Declarations and Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-early-beta.html">Early Beta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The L4 Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-conceptual-reference.html">Conceptual Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-flowcharts.html">Flowcharts: Practical Considerations from a Software Engineering Perspective</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-common-expressions.html">Common Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-defeasibility-and-defaults.html">Meta-Rules,Defeasibility, and Defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-cheatsheet.html">Language Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-cheatsheet.html#syntax-reference-by-keyword">Syntax Reference by Keyword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-advanced-topics.html">Advanced Topics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-executive-summary.html">Executive Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-webtool.html">Installation and setup instructions of the Web Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-webtool.html#accessing-the-web-tool">Accessing the Web Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-googlesheets.html">Installation and setup instructions of the Google Sheets App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-L4spreadsheet.html">Installations to compile an edited Natural L4 Spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-explanations.html">Explanation of how L4 works under the hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-logfile-analysis.html">Analysis of an example logfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-security.html">Security Considerations</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">L4 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Learning L4: Exercises</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/docs/quickstart-exercises.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="learning-l4-exercises">
+<span id="id1"></span><h1>Learning L4: Exercises<a class="headerlink" href="#learning-l4-exercises" title="Permalink to this heading"></a></h1>
+<p class="linemarker linemarker-7">You may find the <a class="reference internal" href="#l4-spreadsheet-quick-reference"><span class="std std-ref">LegalSS spreadsheet quick reference</span></a>, found beneath these exercises, helpful.</p>
+<section id="formalising-simple-rules-liquor-exercise">
+<h2>Formalising Simple Rules: Liquor Exercise<a class="headerlink" href="#formalising-simple-rules-liquor-exercise" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-13">The example provided in L4’s “Must Sing” example is “A person who walks, and eats, or drinks, must sing.”</p>
+<p class="linemarker linemarker-15">Liquor laws vary in many countries, but most have some constraints on who can buy liquor. Imagine you are an internationally trained lawyer intimately familiar with liquor laws in Singapore and America and are trying to implement a fragment of it into the L4 language.</p>
+<p class="linemarker linemarker-17">Task: Implement, in L4, the following legal exercises:</p>
+<p class="linemarker linemarker-19">You are given the following rule in the tab “Learning L4: Liquor Exercise”. You should note that:</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-21">Words in <strong>bold</strong> are keywords and in this example, they are in all-caps to stand out.</p></li>
+<li><p class="linemarker linemarker-23">Yellow cells are where you should type your answer.</p></li>
+<li><p class="linemarker linemarker-25">Comments in L4 begin with two backslashes, <code class="docutils literal notranslate"><span class="pre">\\</span> <span class="pre">like</span> <span class="pre">this</span></code>.</p></li>
+<li><p class="linemarker linemarker-27">Gray cells are for comments</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-29">A person <strong>WHO</strong> is 21, <strong>AND</strong> is <strong>NOT</strong> located within the Little India <strong>OR</strong> Geylang liquor control zones, <strong>MAY</strong> buy liquor.</p></li>
+</ol>
+<img alt="../_images/liquor-exercise-start.png" src="../_images/liquor-exercise-start.png" />
+<p class="linemarker linemarker-33"><strong>Edit the above rule in L4 to reflect the following</strong>, keywords are still in <strong>bold</strong> but they are not in all-caps.</p>
+<ol class="arabic simple" start="2">
+<li><p class="linemarker linemarker-35">A person <strong>who</strong> is 21, <strong>and</strong> has cash, <strong>or</strong> a credit card, <strong>and</strong> is <strong>not</strong> located within the Little India <strong>or</strong> Geylang liquor control zones, <strong>may</strong> buy liquor</p></li>
+</ol>
+<p class="linemarker linemarker-37">You will have succeeded if you obtain the following diagrams:</p>
+<img alt="../_images/Pastedimage20230114164121.png" src="../_images/Pastedimage20230114164121.png" />
+<img alt="../_images/Pastedimage20230114164043.png" src="../_images/Pastedimage20230114164043.png" />
+<img alt="../_images/Pastedimage20230114164104.png" src="../_images/Pastedimage20230114164104.png" />
+<p class="linemarker linemarker-45"><strong>Now, implement the following rule in a new tab in your spreadsheet</strong>. Now keywords are neither in bold nor in all-caps!</p>
+<ol class="arabic simple" start="3">
+<li><p class="linemarker linemarker-47">A person who is not in Michigan, and not in Mississipi, and knows a shop nearby, may buy liquor.</p></li>
+</ol>
+<p class="linemarker linemarker-49">You will have succeeded if you obtain the following diagrams:</p>
+<img alt="../_images/Pastedimage20230114164601.png" src="../_images/Pastedimage20230114164601.png" />
+<img alt="../_images/Pastedimage20230114164523.png" src="../_images/Pastedimage20230114164523.png" />
+<img alt="../_images/Pastedimage20230114164537.png" src="../_images/Pastedimage20230114164537.png" />
+</section>
+<section id="parantheses-and-operator-precedence-arithmetic-exercise">
+<h2>Parantheses and Operator precedence: Arithmetic Exercise<a class="headerlink" href="#parantheses-and-operator-precedence-arithmetic-exercise" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-61">This exercise will introduce parantheses and operator precedence</p>
+</section>
+<section id="data-modelling-exercise">
+<h2>Data Modelling Exercise<a class="headerlink" href="#data-modelling-exercise" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-68">This exercise will teach you how to model sentences like:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="linemarker linemarker-70">Every company has shareholders,</p></li>
+<li><p class="linemarker linemarker-71">Every company has directors,</p></li>
+<li><p class="linemarker linemarker-72">Every company has a mailing address</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="modelling-simple-obligations-and-deadlines">
+<h2>Modelling Simple Obligations and Deadlines<a class="headerlink" href="#modelling-simple-obligations-and-deadlines" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-78">This exercise will allow you to model obligations such as an exchange of money for goods.</p>
+</section>
+<section id="legalss-spreadsheet-quick-reference">
+<span id="l4-spreadsheet-quick-reference"></span><h2>LegalSS spreadsheet quick reference<a class="headerlink" href="#legalss-spreadsheet-quick-reference" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p class="linemarker linemarker-86"><strong>Adding tabs to Google Sheets</strong>: Click the plus sign on the bottom-left hand corner of your screen, next to where you can find the google sheet tabs.</p></li>
+</ul>
+<img alt="../_images/new-tab.png" src="../_images/new-tab.png" />
+<ul class="simple">
+<li><p class="linemarker linemarker-90"><strong>Sidebar auto-refresh</strong>: You can stop auto-refresh by highlighting the cells you are typing in in a shade of grey. To enable auto-refresh, highlight the cells you are typing in back to white, make a minor change, and then wait for refresh.</p></li>
+</ul>
+<p class="linemarker linemarker-92">If the sidebar is not refreshing at all, re-run the Apps script from step 2 of <a class="reference internal" href="quickstart-installation.html#sheets-ide"><span class="std std-ref">Activating the L4 Sheets IDE</span></a>.</p>
+<img alt="../_images/grey-colouring.png" src="../_images/grey-colouring.png" />
+<ul class="simple">
+<li><p class="linemarker linemarker-96"><strong>Adding comments to the LegalSS Google Sheets</strong>: Comments have a grey background and start with ‘//’.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart-installation.html" class="btn btn-neutral float-left" title="Interacting with L4 through a spreadsheet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quickstart-examples.html" class="btn btn-neutral float-right" title="Examples in L4 and the concepts and keywords introduced in each example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Meng Weng Wong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

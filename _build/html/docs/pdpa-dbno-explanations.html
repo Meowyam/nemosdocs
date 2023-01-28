@@ -1,0 +1,915 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Explanation of how L4 works under the hood &#8212; L4 Manual 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Security Considerations" href="pdpa-dbno-security.html" />
+    <link rel="prev" title="Installations to compile an edited Natural L4 Spreadsheet" href="pdpa-dbno-installation-L4spreadsheet.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue-grey data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#docs/pdpa-dbno-explanations" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="L4 Manual 1.0 documentation"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">L4 Manual 1.0 documentation</span>
+          <span class="md-header-nav__topic"> Explanation of how L4 works under the hood </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">L4 Manual 1.0 documentation</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="L4 Manual 1.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="L4 Manual 1.0 documentation">L4 Manual 1.0 documentation</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">links</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-first-steps.html" class="md-nav__link">First Steps</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-first-steps.html#taking-your-first-steps-intended-audience" class="md-nav__link">Taking your first steps: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-first-steps.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-returning-users.html" class="md-nav__link">Returning Users</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-returning-users.html#exploring-l4-futher-intended-audience" class="md-nav__link">Exploring L4 Futher: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-returning-users.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-L4-backend.html" class="md-nav__link">Setting up the L4 Backend</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-L4-backend.html#installing-the-l4-backend-intended-audience" class="md-nav__link">Installing the L4 Backend: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-L4-backend.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-law-and-computer-science.html" class="md-nav__link">Law and Computer Science</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-law-and-computer-science.html#law-and-computer-science-intended-audience" class="md-nav__link">Law and Computer Science: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-law-and-computer-science.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-backend-setup-instructions.html" class="md-nav__link">Backend Setup Instructions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-backend-setup-instructions.html#setup-instructions-intended-audience" class="md-nav__link">Setup Instructions: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-backend-setup-instructions.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">First Steps</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="quickstart-tour-of-L4.html" class="md-nav__link">What is L4?</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="quickstart-installation.html" class="md-nav__link">Interacting with L4 through a spreadsheet</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Returning Users</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-computational-law.html" class="md-nav__link">What Computational Law Aims to Solve</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-L4-and-law.html" class="md-nav__link">How L4 Approaches Law</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-examples.html" class="md-nav__link">Examples in L4 and the concepts and keywords introduced in each example</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-common-expressions.html" class="md-nav__link">Common Expressions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-defeasibility-defaults.html" class="md-nav__link">Meta-Rules,Defeasibility, and Defaults</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-flowchart.html" class="md-nav__link">Flowcharts: Practical Considerations from a Software Engineering Perspective</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-cheatsheet.html" class="md-nav__link">L4 Cheatsheet</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-cheatsheet.html#syntax-reference-by-keyword" class="md-nav__link">Syntax Reference by Keyword</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-exporting-L4.html" class="md-nav__link">Exporting L4 to Other Formats</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-tutorials.html" class="md-nav__link">Learning L4: Tutorials</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-language-spec.html" class="md-nav__link">Keywords: Declarations and Definitions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Setting up the L4 Backend</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-webtool.html" class="md-nav__link">Installation and setup instructions of the Web Tool</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-webtool.html#accessing-the-web-tool" class="md-nav__link">Accessing the Web Tool</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-googlesheets.html" class="md-nav__link">Installation and setup instructions of the Google Sheets App</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-L4spreadsheet.html" class="md-nav__link">Installations to compile an edited Natural L4 Spreadsheet</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Explanation of how L4 works under the hood </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Explanation of how L4 works under the hood</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#docs-pdpa-dbno-explanations--page-root" class="md-nav__link">Explanation of how L4 works under the hood</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#how-the-web-tool-works" class="md-nav__link">How the Web Tool Works</a>
+        </li>
+        <li class="md-nav__item"><a href="#explanation-of-the-google-sheet-app" class="md-nav__link">Explanation of the Google Sheet App</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#system-diagram" class="md-nav__link">System diagram</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#how-the-l4-interpreter-works" class="md-nav__link">How The L4 interpreter Works</a>
+        </li>
+        <li class="md-nav__item"><a href="#vue-is-managed-by-v8k" class="md-nav__link">Vue is managed by v8k</a>
+        </li>
+        <li class="md-nav__item"><a href="#hello-py-is-managed-by-gunicorn" class="md-nav__link">hello.py is managed by gunicorn</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#analysis-of-an-example-gunicorn-hello-py-logfile" class="md-nav__link">Analysis of an example gunicorn/hello.py logfile</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/docs/pdpa-dbno-explanations.rst.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-security.html" class="md-nav__link">Security Considerations</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Early Beta, and Acknowledgements</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="common-early-beta.html" class="md-nav__link">Early Beta</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="common-acknowledgements.html" class="md-nav__link">Acknowledgements</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#docs-pdpa-dbno-explanations--page-root" class="md-nav__link">Explanation of how L4 works under the hood</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#how-the-web-tool-works" class="md-nav__link">How the Web Tool Works</a>
+        </li>
+        <li class="md-nav__item"><a href="#explanation-of-the-google-sheet-app" class="md-nav__link">Explanation of the Google Sheet App</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#system-diagram" class="md-nav__link">System diagram</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#how-the-l4-interpreter-works" class="md-nav__link">How The L4 interpreter Works</a>
+        </li>
+        <li class="md-nav__item"><a href="#vue-is-managed-by-v8k" class="md-nav__link">Vue is managed by v8k</a>
+        </li>
+        <li class="md-nav__item"><a href="#hello-py-is-managed-by-gunicorn" class="md-nav__link">hello.py is managed by gunicorn</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#analysis-of-an-example-gunicorn-hello-py-logfile" class="md-nav__link">Analysis of an example gunicorn/hello.py logfile</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/docs/pdpa-dbno-explanations.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="explanation-of-how-l4-works-under-the-hood">
+<h1 id="docs-pdpa-dbno-explanations--page-root">Explanation of how L4 works under the hood<a class="headerlink" href="#docs-pdpa-dbno-explanations--page-root" title="Permalink to this heading">¶</a></h1>
+<section id="how-the-web-tool-works">
+<h2 id="how-the-web-tool-works">How the Web Tool Works<a class="headerlink" href="#how-the-web-tool-works" title="Permalink to this heading">¶</a></h2>
+<p>The updates are provided by the L4 backend. A copy of the L4 backend was run on an Amazon Web Services (AWS) instance. The Web Tool is also hosted on the AWS instance.</p>
+<p>The first link in the sidebar goes to the Web Tool. It is possible for the legal engineer, taking on the role of the end-user, to experiment with clicking on various inputs to the decision logic, to see what the result becomes. The primary question answered by the tool is “must I notify the PDPC and affected users?”</p>
+<p>The gsheet/pyrest/hello.py script, called in this document hello.py, serves the Python REST API. It:
+- passes the input CSV to the L4 interpreter natural4-exe (step 11)
+which generates static output files;
+- triggers the v8k helper script to reconfigure or relaunch the Web Tool (step 53);
+- returns URLs for the static output files to the REST client Code.gs (step 61); and
+- serves static output files to populate the Google Sheets sidebar (step 11 return)</p>
+<p>Future development of this Web Tool would rely on an L4 library which would be provided as an reusable module loaded by individual instances of the L4 spreadsheet.</p>
+<p>Currently the codebase for the Google Sheets App is loaded locally within a Code.gs file, but in future versions of the L4 system, the Code.gs file would import a shared standard library used by multiple L4 spreadsheets.</p>
+<p>Instructions for activating the IDE sidebar (a one-time process) are given on the installation page.</p>
+</section>
+<section id="explanation-of-the-google-sheet-app">
+<h2 id="explanation-of-the-google-sheet-app">Explanation of the Google Sheet App<a class="headerlink" href="#explanation-of-the-google-sheet-app" title="Permalink to this heading">¶</a></h2>
+<p>The abovementioned sidebar is populated by Code.gs from the template file main.html, by:</p>
+<ul class="simple">
+<li><p>rendering the currently active L4 spreadsheet tab in CSV format;</p></li>
+<li><p>uploading the CSV to the Python REST (Representational State Transfer) API (which is served by the hello.py script documented in section <a class="reference internal" href="pdpa-dbno-installation-L4spreadsheet.html#auto-config"><span class="std std-ref">Installations to compile an edited Natural L4 Spreadsheet</span></a>);</p></li>
+<li><p>receiving the results in a JSON format; and</p></li>
+<li><p>inserting the URLs and images required by the main.html template (step 61).</p></li>
+</ul>
+<section id="system-diagram">
+<h3 id="system-diagram">System diagram<a class="headerlink" href="#system-diagram" title="Permalink to this heading">¶</a></h3>
+<p>A system diagram depicting the function call graph for the system comprising the gsheet front end, the pyrest middle-tier, and the natural4, v8k, and vue-pure-pdpa backends can be found at <a class="reference external" href="https://github.com/smucclaw/gsheet/blob/main/pyrest/architecture.svg">https://github.com/smucclaw/gsheet/blob/main/pyrest/architecture.svg</a></p>
+<p>For convenience a snapshot of that diagram is presented here. The sequence of operations is indicated in the diagram by numbered steps.</p>
+<img alt="../_images/system-diagram.png" src="../_images/system-diagram.png"/>
+<p>The blue (natural4-exe) and green (v8k) boxes are the subject of this section. The other system components corel4 and clara operate in parallel but are not the subject of this section.</p>
+</section>
+</section>
+<section id="how-the-l4-interpreter-works">
+<h2 id="how-the-l4-interpreter-works">How The L4 interpreter Works<a class="headerlink" href="#how-the-l4-interpreter-works" title="Permalink to this heading">¶</a></h2>
+<p>The Web Tool is intended to correspond closely to the encoded legislation and regulations, identified hereinafter as the “Natural L4” encoding in the high-level L4 controlled natural language.</p>
+<p>To achieve this correspondence, the L4 interpreter parses, interprets, and transpiles the Natural L4 encoding.</p>
+<p>Typically, the hello.py script runs natural4-exe. It needs to be present in PATH or its file location can be hardcoded in hello.py. It can also be run by hand.</p>
+<p>When it runs:
+- the parser component reads the encoded input (from the spreadsheet as a CSV file);
+- the interpreter analyses and transforms the parsed input; and
+- the transpiler components produce a variety of static output files, including
+JSON and Purescript representations of the Boolean structures that form the decision logic of the spreadsheet in question; and
+- an intermediate representation in the “Core L4” lower-level language, which is used for type checking and further transpilation to other target languages.</p>
+<p>The hello.py script is hardcoded with the paths to the natural4-exe and v8k executables, and with the path to the workdir directory for output. In a local installation, those paths will need to be updated accordingly, at the top of the script.</p>
+<p>The static output files are produced by natural4-exe under the workdir directory, under a directory whose filename is unique to the spreadsheet user’s current IDE session, spreadsheet ID field, and sheet (tab) ID field. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─[20221102-22:23:12]   [mengwong@cclaw:~/pyrest/temp/workdir]
+└─[0] &lt;&gt; tree 28bd5c9a-5e1c-428b-b60a-5aa4d2e03a8d
+28bd5c9a-5e1c-428b-b60a-5aa4d2e03a8d                          ← UUID for the user and session
+└── 1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss              ← spreadsheet ID
+    └── 1779650637                                            ← sheet ID
+        ├── 20221102T133124.832860Z.csv                       ← timestamp of a specific run
+        ├── aasvg                                             ← output dir containing SVGs
+        │   ├── 2022-11-02T13:31:27.719Z
+        │   │   ├── Notification-anyall.hs
+        │   │   ├── Notification-anyall.json
+        │   │   ├── Notification-full.svg
+        │   │   ├── Notification-qjson.json
+        │   │   ├── Notification-qtree.hs
+        │   │   ├── Notification-tiny.svg
+        │   │   ├── Notify_Individuals-anyall.hs
+        │   │   ├── Notify_Individuals-anyall.json
+        │   │   ├── Notify_Individuals-full.svg
+        │   │   ├── Notify_Individuals-qjson.json
+        │   │   ├── Notify_Individuals-qtree.hs
+        │   │   ├── Notify_Individuals-tiny.svg
+        │   │   ├── index.html
+        │   │   ├── it_is-unlikely_that_-anyall.hs
+        │   │   ├── it_is-unlikely_that_-anyall.json
+        │   │   ├── it_is-unlikely_that_-full.svg
+        │   │   ├── it_is-unlikely_that_-qjson.json
+        │   │   ├── it_is-unlikely_that_-qtree.hs
+        │   │   └── it_is-unlikely_that_-tiny.svg
+        │   └── LATEST -&gt; 2022-11-02T13:31:27.719Z
+        ├── corel4                            ← output dir containing intermediate representation
+        │   ├── 2022-11-02T13:31:27.719Z.l4
+        │   └── LATEST.l4 -&gt; 2022-11-02T13:31:27.719Z.l4
+        ├── epilog
+        │   ├── 20221102T133124.832860Z.epilog
+        │   └── LATEST.epilog -&gt; 20221102T133124.832860Z.epilog
+        ├── grounds
+        │   ├── 2022-11-02T13:31:27.719Z.txt
+        │   └── LATEST.txt -&gt; 2022-11-02T13:31:27.719Z.txt
+        ├── json
+        │   ├── 2022-11-02T13:31:27.719Z.json
+        │   └── LATEST.json -&gt; 2022-11-02T13:31:27.719Z.json
+        ├── native                            ← output dir containing native Haskell representation
+        │   ├── 2022-11-02T13:31:27.719Z.hs
+        │   └── LATEST.hs -&gt; 2022-11-02T13:31:27.719Z.hs
+        ├── org
+        │   ├── 2022-11-02T13:31:27.719Z.org
+        │   └── LATEST.org -&gt; 2022-11-02T13:31:27.719Z.org
+        ├── petri                             ← output dir containing Petri Net representation
+        │   ├── 2022-11-02T13:31:27.719Z-small.png
+        │   ├── 2022-11-02T13:31:27.719Z.dot
+        │   ├── 2022-11-02T13:31:27.719Z.png
+        │   ├── LATEST-small.png -&gt; 2022-11-02T13:31:27.719Z-small.png
+        │   ├── LATEST.dot -&gt; 2022-11-02T13:31:27.719Z.dot
+        │   └── LATEST.png -&gt; 2022-11-02T13:31:27.719Z.png
+        ├── prolog
+        │   ├── 2022-11-02T13:31:27.719Z.pl
+        │   └── LATEST.pl -&gt; 2022-11-02T13:31:27.719Z.pl
+        ├── purs                              ← output dir containing Purescript configuration
+        │   ├── 2022-11-02T13:31:27.719Z.purs
+        │   └── LATEST.purs -&gt; 2022-11-02T13:31:27.719Z.purs
+        ├── ts                                ← output dir containing Typescript representation
+        │   ├── 2022-11-02T13:31:27.719Z.ts
+        │   └── LATEST.ts -&gt; 2022-11-02T13:31:27.719Z.ts
+        └── v8k.out
+
+    15 directories, 45 files
+</pre></div>
+</div>
+<p>Each of the static files shown above contains a different extract from the original L4 spreadsheet: for example, the native directory contains Haskell code showing intermediate representations of the L4 spreadsheet, while the purs directory contains a Purescript representation of certain decision elements assembled according to the spreadsheet.</p>
+<p>As seen above, there is a convention where a LATEST.* file symlinks to a time-stamped file. After multiple runs of the system, where the sidebar is generated and regenerated during edits of the L4 spreadsheet, the LATEST.* files always link to the most recent regeneration. This convention is implemented in the hello.py script. Maintaining multiple copies of the output files is intended to benefit the L4 developer who can efficiently compare old and new outputs.</p>
+<p>hello.py performs some post-processing on the static output files produced by natural4-exe. hello.py runs GraphViz to convert dot files to SVG.</p>
+<p>The static output files shown above are served upon request over HTTPS by hello.py.</p>
+</section>
+<section id="vue-is-managed-by-v8k">
+<h2 id="vue-is-managed-by-v8k">Vue is managed by v8k<a class="headerlink" href="#vue-is-managed-by-v8k" title="Permalink to this heading">¶</a></h2>
+<p>Multiple “legal engineers” may be working at the same time with different instances of the L4 spreadsheet IDE. As they edit their own instance of the L4 spreadsheet, the Google App Script code refreshes each session’s sidebar with links to the latest versions of the static output files and the Web Tool.</p>
+<p>Multiple instances of the Web Tool therefore need to coexist. Each instance is allocated a different port number in the 8001–8010 range, and a different instance of the Vue framework runs on each port. The sidebar links to the appropriate port number, which is served by the appropriate instance. Each instance is launched by npm run serve running out of a separate directory representing a copy of the vue-pure-pdpa codebase. These npm commands run Vue’s vue-cli-service.</p>
+<p>It is necessary to run each Vue instance in “development” mode – which explains why we use npm run serve instead of npm run build – so that the updated Purescript file will be hot-reloaded by Vue automatically and quickly made visible to the legal engineer via the sidebar.</p>
+<p>After the Web Tool has been approved for production it can be mastered with npm run build and served in a production environment where changes are infrequent. The remainder of this documentation deals with hot-reloads supporting active L4 development.</p>
+<p>The vue-pure-pdpa repository contains a Vue application which is enhanced to handle Purescript. As multiple instances of that Vue application are required to support multiple legal engineers working on multiple L4 sessions at the same time, the vue-pure-pdpa repository is duplicated multiple times, across a set of directories:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─[20221102-22:59:43]   [mengwong@cclaw:~/wow/much]
+└─[1] &lt;&gt; ls -al
+total 144212
+drwxrwxr-x 15 mengwong mengwong      4096 Nov  2 21:34 .
+drwxrwxr-x  5 mengwong mengwong      4096 Jul  4 14:46 ..
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-01
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-02
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-03
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-04
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-05
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-06
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-07
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-08
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-09
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-10
+drwxrwxr-x 12 mengwong mengwong      4096 Jul  5 11:06 vue-big
+drwxrwxr-x  9 mengwong mengwong      4096 Jul 10 16:29 vue-small
+</pre></div>
+</div>
+<p>This working directory path is recorded in the V8K_WORKDIR environment variable. You may choose an arbitrary directory for your installation.</p>
+<p>To reduce disk space, large directories which are common across the vue-xx subdirectories are unified using symlinks to vue-big:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─[20221102-23:06:59]   [mengwong@cclaw:~/wow/much]
+└─[0] &lt;&gt; ls -l vue-??/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-01/node_modules -&gt; ../vue-big/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-02/node_modules -&gt; ../vue-big/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-03/node_modules -&gt; ../vue-big/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-04/node_modules -&gt; ../vue-big/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-05/node_modules -&gt; ../vue-big/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-06/node_modules -&gt; ../vue-big/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-07/node_modules -&gt; ../vue-big/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-08/node_modules -&gt; ../vue-big/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-09/node_modules -&gt; ../vue-big/node_modules
+lrwxrwxrwx 1 mengwong mengwong 23 Jul  7 16:10 vue-10/node_modules -&gt; ../vue-big/node_modules
+</pre></div>
+</div>
+<p>The vue-small directory serves as the template source for a particular vue-xx.</p>
+<p>The v8k script helps hello.py launch a Web Tool corresponding to the latest input received from Code.gs. Its job is to bring up, reset, and bring down a particular Vue instance.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─[20221102-23:11:37]   [mengwong@cclaw:~/wow/much]
+└─[0] &lt;&gt; ~/src/smucclaw/vue-pure-pdpa/bin/v8k -h
+usage: v8k [-h] {list,find,up,down,downdir} ...
+
+Manage a herd of Vue dev servers
+
+positional arguments:
+{list,find,up,down,downdir}
+                        sub-command help
+    list                list servers
+    find                find server running a certain uuid ssid sid combo
+    up                  create, replace, or update a server
+    down                bring down a server
+    downdir             bring down a server by explicit slot name
+
+optional arguments:
+-h, --help            show this help message and exit
+</pre></div>
+</div>
+<p>The status of each running instance is recorded in its vue-xx/v8k.json file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─[20221102-23:12:47]   [mengwong@cclaw:~/wow/much/vue-04]
+└─[0] &lt;git:(main 89d183a✱✈) &gt; cat v8k.json | json
+{
+"ssid": "1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss",
+"sheetid": "1779650637",
+"uuid": "28bd5c9a-5e1c-428b-b60a-5aa4d2e03a8d",
+"port": 8004,
+"slot": "04",
+"dir": "/home/mengwong/wow/much/vue-04",
+"base_url": "/28bd5c9a-5e1c-428b-b60a-5aa4d2e03a8d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/1779650637",
+"cli": "npm run serve -- --port=8004 &amp;"
+}
+</pre></div>
+</div>
+<p>The hello.py script runs v8k:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─[20221102-23:14:32]   [mengwong@cclaw:~/src/smucclaw/gsheet/pyrest]
+└─[0] &lt;git:(main a7b4ab3) &gt; grep v8k hello.py
+    #     call v8k up
+    v8kargs = ["/home/mengwong/pyrest/bin/python", "/home/mengwong/src/smucclaw/vue-pure-pdpa/bin/v8k", "up",
+    print("hello.py main: calling %s" % (" ".join(v8kargs)), file=sys.stderr)
+# v8k = subprocess.run(v8kargs,
+    os.system(" ".join(v8kargs) + "&gt; " + uuidssfolder + "/v8k.out");
+    print("hello.py main: v8k up returned", file=sys.stderr)
+    with open(uuidssfolder + "/v8k.out", "r") as read_file:
+    v8k_out = read_file.readline();
+    print("v8k.out: %s" % (v8k_out), file=sys.stderr)
+    # v8k_out = v8k.stdout.decode('utf-8')
+    if re.match(r':\d+', v8k_out): # we got back the expected :8001/uuid/ssid/sid whatever from the v8k call
+    v8k_url = v8k_out.strip()
+    print("v8k up succeeded with: " + v8k_url, file=sys.stderr)
+    response['v8k_url'] = v8k_url
+    v8k_url = ""
+    response['v8k_url'] = None
+    #      v8k_error = v8k.stderr.decode('utf-8')
+    #      print("hello.py main: v8k up stderr: " + v8k_error,                  file=sys.stderr)
+    #      print("hello.py main: v8k up stdout: " + v8k.stdout.decode('utf-8'), file=sys.stderr)
+</pre></div>
+</div>
+<p>The vue-small directory is used as the source for an rsync call that creates the vue-NN “runtime” copies.</p>
+</section>
+<section id="hello-py-is-managed-by-gunicorn">
+<span id="gunicorn"></span><h2 id="hello-py-is-managed-by-gunicorn">hello.py is managed by gunicorn<a class="headerlink" href="#hello-py-is-managed-by-gunicorn" title="Permalink to this heading">¶</a></h2>
+<p>The hello.py script is launched within a long-lived screen(1) (or tmux) session running on a Linux server, using gunicorn to support parallelism and preload for faster response time. This response time is visible to the L4 engineer when the sidebar loads static elements, particularly the PNGs of the process and decision visualizations.</p>
+<p>We configure the V8K_WORKDIR environment variable for use by v8k:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─[20221102-23:03:25]   [mengwong@cclaw:~]
+└─[0] &lt;&gt; export V8K_WORKDIR="/home/mengwong/wow/much"
+
+On the backend server, in one screen, we launch gunicorn to run hello.py:
+┌─[20221102-23:00:59]   [mengwong@cclaw:~/pyrest]
+└─[0] &lt;&gt; gunicorn --certfile /etc/letsencrypt/live/cclaw.legalese.com/cert.pem \
+                --keyfile /etc/letsencrypt/live/cclaw.legalese.com/privkey.pem \
+                --workers=5 \
+                --bind 0.0.0.0:8080 \
+                --pythonpath /home/mengwong/pyrest/lib/python3.8/site-packages/ \
+                wsgi:app
+</pre></div>
+</div>
+<p>On another screen, we launch it with a different bind command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">--bind</span> <span class="pre">0.0.0.0:8081</span></code></p>
+<p>Now there are ten hello.py servers running: five on 8080 and five on 8081.</p>
+<p>This is useful because if you are actively developing the backend, you can run a “production” version on port 8080 and one or more “development” versions on 8081, 8082, and so on. If needed, you can further refine the distinction between production and development by configuring different hello.py to run different natural4-exe and v8k executables.</p>
+<p>As an alternative to the command-line configuration shown above, a gunicorn.conf.py file is available in the gsheet repository. The command line invocation using this approach is:</p>
+<p><code class="docutils literal notranslate"><span class="pre">gunicorn</span> <span class="pre">-c</span> <span class="pre">gunicorn.conf.py</span> <span class="pre">wsgi:app</span></code></p>
+<p>Each server runs an instance of hello.py. That is what wsgi:app does:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>​┌─[20221102-23:23:45]   [mengwong@cclaw:~/pyrest]
+└─[127] &lt;&gt; cat wsgi.py
+from hello import app
+
+if __name__ == "__main__":
+    app.run()%
+</pre></div>
+</div>
+<section id="analysis-of-an-example-gunicorn-hello-py-logfile">
+<h3 id="analysis-of-an-example-gunicorn-hello-py-logfile">Analysis of an example gunicorn/hello.py logfile<a class="headerlink" href="#analysis-of-an-example-gunicorn-hello-py-logfile" title="Permalink to this heading">¶</a></h3>
+<p>The following log was captured from a typical invocation of the gunicorn/hello.py script with interspersed remarks.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">02</span> <span class="mi">17</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">24</span> <span class="o">+</span><span class="mi">0800</span><span class="p">]</span> <span class="p">[</span><span class="mi">3360812</span><span class="p">]</span> <span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="n">Booting</span> <span class="n">worker</span> <span class="k">with</span> <span class="n">pid</span><span class="p">:</span> <span class="mi">3360812</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">processCsv</span><span class="p">()</span> <span class="n">starting</span> <span class="n">at</span>  <span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">02</span> <span class="mi">17</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mf">49.002760</span>
+<span class="o">./</span><span class="n">temp</span><span class="o">/</span><span class="n">workdir</span><span class="o">/</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span><span class="o">/</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">main</span><span class="p">:</span> <span class="n">calling</span> <span class="n">natural4</span><span class="o">-</span><span class="n">exe</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">main</span><span class="p">:</span> <span class="n">natural4</span><span class="o">-</span><span class="n">exe</span> <span class="o">--</span><span class="n">workdir</span><span class="o">=./</span><span class="n">temp</span><span class="o">/</span><span class="n">workdir</span> <span class="o">--</span><span class="n">uuiddir</span><span class="o">=</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span> <span class="o">./</span><span class="n">temp</span><span class="o">/</span><span class="n">workdir</span><span class="o">/</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span><span class="o">/</span><span class="mi">20221202</span><span class="n">T092149</span><span class="mf">.234659</span><span class="n">Z</span><span class="o">.</span><span class="n">csv</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">main</span><span class="p">:</span> <span class="n">back</span> <span class="kn">from</span> <span class="nn">natural4</span><span class="o">-</span><span class="n">exe</span> <span class="p">(</span><span class="n">took</span> <span class="mi">0</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">11.995794</span> <span class="n">seconds</span><span class="p">)</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">main</span><span class="p">:</span> <span class="n">natural4</span><span class="o">-</span><span class="n">exe</span> <span class="n">stdout</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">3797</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">main</span><span class="p">:</span> <span class="n">natural4</span><span class="o">-</span><span class="n">exe</span> <span class="n">stderr</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>The natural4-exe invocation may take up to 15 seconds to run. It is possible to reduce the runtime by passing the –tomd flag which would disable natural language generation output to Markdown format. Without NLG the runtime is typically 200ms.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">main</span><span class="p">:</span> <span class="n">running</span><span class="p">:</span> <span class="n">dot</span> <span class="o">-</span><span class="n">Tpng</span> <span class="o">-</span><span class="n">Gdpi</span><span class="o">=</span><span class="mi">150</span> <span class="o">./</span><span class="n">temp</span><span class="o">/</span><span class="n">workdir</span><span class="o">/</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span><span class="o">/</span><span class="n">petri</span><span class="o">/</span><span class="n">LATEST</span><span class="o">.</span><span class="n">dot</span> <span class="o">-</span><span class="n">o</span> <span class="o">./</span><span class="n">temp</span><span class="o">/</span><span class="n">workdir</span><span class="o">/</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span><span class="o">/</span><span class="n">petri</span><span class="o">/</span><span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">02</span><span class="n">T09</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mf">49.255</span><span class="n">Z</span><span class="o">.</span><span class="n">png</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+<p>hello.py calls graphviz to turn the dot files into SVG. These are run as background processes so as not to slow down the primary thread. Note the “&amp;” at the end.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">main</span><span class="p">:</span> <span class="n">running</span><span class="p">:</span> <span class="n">l4</span> <span class="n">epilog</span> <span class="o">./</span><span class="n">temp</span><span class="o">/</span><span class="n">workdir</span><span class="o">/</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span><span class="o">/</span><span class="n">corel4</span><span class="o">/</span><span class="n">LATEST</span><span class="o">.</span><span class="n">l4</span> <span class="o">&gt;</span> <span class="o">./</span><span class="n">temp</span><span class="o">/</span><span class="n">workdir</span><span class="o">/</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span><span class="o">/</span><span class="n">epilog</span><span class="o">/</span><span class="mi">20221202</span><span class="n">T092149</span><span class="mf">.234659</span><span class="n">Z</span><span class="o">.</span><span class="n">epilog</span>
+</pre></div>
+</div>
+<p>hello.py calls the corel4 transpiler to produce epilog output. Again, this is run as a background process.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">main</span><span class="p">:</span> <span class="n">calling</span> <span class="n">python</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mengwong</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">smucclaw</span><span class="o">/</span><span class="n">vue</span><span class="o">-</span><span class="n">pure</span><span class="o">-</span><span class="n">pdpa</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">v8k</span> <span class="o">--</span><span class="n">workdir</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">mengwong</span><span class="o">/</span><span class="n">wow</span><span class="o">/</span><span class="n">much</span> <span class="n">up</span> <span class="o">--</span><span class="n">uuid</span><span class="o">=</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span> <span class="o">--</span><span class="n">ssid</span><span class="o">=</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span> <span class="o">--</span><span class="n">sheetid</span><span class="o">=</span><span class="mi">1505307398</span> <span class="o">--</span><span class="n">startport</span><span class="o">=</span><span class="mi">8081</span>
+</pre></div>
+</div>
+<p>hello.py calls the v8k controller to launch the Vue web server or reset it with a new Purescript file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./temp/workdir/5fc0aa1e-9f2c-403e-96a9-6d0011a01479/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/1505307398/purs/LATEST.purs
+** startport = 8081
+** poolsize = 9
+** found allegedly existing server(s) on our uuid/ssid/sheetid: 01
+pid 3360758 is listening on port 8082
+pid 3360769 is listening on port 8082
+pid 3360770 is listening on port 8082
+server seems to be still running for port 8082!
+refreshing the purs file
+cp ./temp/workdir/5fc0aa1e-9f2c-403e-96a9-6d0011a01479/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/1505307398/purs/LATEST.purs /home/mengwong/wow/much/vue-01/src/RuleLib/PDPADBNO.purs
+hello.py main: v8k up returned
+v8k.out: :8082/5fc0aa1e-9f2c-403e-96a9-6d0011a01479/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/1505307398
+</pre></div>
+</div>
+<p>The v8k controller returns its port and path to hello.py, to be passed back to sidebar.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v8k</span> <span class="n">up</span> <span class="n">succeeded</span> <span class="k">with</span><span class="p">:</span> <span class="p">:</span><span class="mi">8082</span><span class="o">/</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span>
+<span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">processCsv</span> <span class="n">returning</span> <span class="n">at</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">02</span> <span class="mi">17</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mf">01.170612</span> <span class="p">(</span><span class="n">total</span> <span class="mf">12.16785216331482</span> <span class="n">seconds</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hello.py terminates after 12.168 seconds.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>40% building 0/1 modules 1 active ...ode_modules/purs-loader/lib/index.js??ref--14-0!/home/mengwong/wow/much/vue-01/src/RuleLib/PDPADBNO.pursgetWorkdirFile: returning
+</pre></div>
+</div>
+<p>The vue app’s npm run serve produces a dribble of reset logging – above, the “40%” is indicative of the server reset.</p>
+<p>During population of the sidebar, the spreadsheet requests a variety of PNGs and SVGs from the backend; these static file requests are handled by hello.py as well.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">temp</span><span class="o">/</span><span class="n">workdir</span><span class="o">/</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span><span class="o">/</span><span class="n">petri</span><span class="o">/</span><span class="n">LATEST</span><span class="o">-</span><span class="n">small</span><span class="o">.</span><span class="n">png</span>
+<span class="n">showAasvgImage</span><span class="p">:</span> <span class="n">handling</span> <span class="o">/</span><span class="n">aasvg</span><span class="o">/</span> <span class="n">url</span>
+<span class="n">showAasvgImage</span><span class="p">:</span> <span class="n">sending</span> <span class="n">path</span> <span class="o">./</span><span class="n">temp</span><span class="o">/</span><span class="n">workdir</span><span class="o">/</span><span class="mi">5</span><span class="n">fc0aa1e</span><span class="o">-</span><span class="mi">9</span><span class="n">f2c</span><span class="o">-</span><span class="mf">403e-96</span><span class="n">a9</span><span class="o">-</span><span class="mi">6</span><span class="n">d0011a01479</span><span class="o">/</span><span class="mi">1</span><span class="n">leBCZhgDsn</span><span class="o">-</span><span class="n">Abg2H_OINGGv</span><span class="o">-</span><span class="mi">8</span><span class="n">Gpf9mzuX1RR56v0Sss</span><span class="o">/</span><span class="mi">1505307398</span><span class="o">/</span><span class="n">aasvg</span><span class="o">/</span><span class="n">LATEST</span><span class="o">/</span><span class="n">Qualifies</span><span class="o">-</span><span class="n">tiny</span><span class="o">.</span><span class="n">svg</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="pdpa-dbno-installation-L4spreadsheet.html" title="Installations to compile an edited Natural L4 Spreadsheet"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Installations to compile an edited Natural L4 Spreadsheet </span>
+              </div>
+            </a>
+          
+          
+            <a href="pdpa-dbno-security.html" title="Security Considerations"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> Security Considerations </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2023, Meng Weng Wong.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

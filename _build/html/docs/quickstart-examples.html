@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples in L4 and the concepts and keywords introduced in each example &mdash; L4 Manual 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Keywords: Declarations and Definitions" href="quickstart-language-spec.html" />
+    <link rel="prev" title="Learning L4: Exercises" href="quickstart-exercises.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> L4 Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quickstart Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html">What is L4?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-is-law-specific">L4 is ‘law-specific’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-outputs-a-diagram">L4 outputs a diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-s-diagram-ouput-can-be-converted-to-multiple-formats">L4’s diagram ouput can be converted to multiple formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-uses-spreadsheets-for-interaction">L4 uses spreadsheets for interaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-installation.html">Interacting with L4 through a spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-exercises.html">Learning L4: Exercises</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples in L4 and the concepts and keywords introduced in each example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rules-booleans-and-syntax-must-sing-example">Rules, Booleans, and Syntax: Must Sing Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#regulative-rules">Regulative Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#syntax-meta-rules">Syntax (Meta-)Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constitutive-rules">Constitutive Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boolean-structures">Boolean Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#booleans-and-visualization-rodents-and-vermin-example">Booleans and Visualization: Rodents and Vermin Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#decisions">Decisions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decision-diagrams">Decision Diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contract-as-automaton">Contract as Automaton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#declarations-and-definitions">Declarations and Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deadlines">Deadlines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deontics">Deontics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connections">Connections</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#case-study-motor-insurance">Case Study: Motor Insurance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#case-study-pdpa-dbno">Case Study: PDPA DBNO</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-language-spec.html">Keywords: Declarations and Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-early-beta.html">Early Beta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The L4 Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-conceptual-reference.html">Conceptual Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-flowcharts.html">Flowcharts: Practical Considerations from a Software Engineering Perspective</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-common-expressions.html">Common Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-defeasibility-and-defaults.html">Meta-Rules,Defeasibility, and Defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-cheatsheet.html">L4 Cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-cheatsheet.html#syntax-reference-by-keyword">Syntax Reference by Keyword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-advanced-topics.html">Advanced Topics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-executive-summary.html">Executive Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-webtool.html">Installation and setup instructions of the Web Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-webtool.html#accessing-the-web-tool">Accessing the Web Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-googlesheets.html">Installation and setup instructions of the Google Sheets App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-L4spreadsheet.html">Installations to compile an edited Natural L4 Spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-explanations.html">Explanation of how L4 works under the hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-logfile-analysis.html">Analysis of an example logfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-security.html">Security Considerations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="common-acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">L4 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Examples in L4 and the concepts and keywords introduced in each example</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/docs/quickstart-examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples-in-l4-and-the-concepts-and-keywords-introduced-in-each-example">
+<span id="examples"></span><h1>Examples in L4 and the concepts and keywords introduced in each example<a class="headerlink" href="#examples-in-l4-and-the-concepts-and-keywords-introduced-in-each-example" title="Permalink to this heading"></a></h1>
+<section id="rules-booleans-and-syntax-must-sing-example">
+<h2>Rules, Booleans, and Syntax: Must Sing Example<a class="headerlink" href="#rules-booleans-and-syntax-must-sing-example" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-11"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1505307398">Link to ‘Must Sing’ example</a></p>
+<p class="linemarker linemarker-13">This example gives an overview of how to write a simple rule in L4 using the simple rule: “Every person who walks and eats or drinks must sing”. The example illustrates key concepts along the way.</p>
+<p class="linemarker linemarker-15">We thank Matthew Waddington for originally authoring the case from which this example is drawn.</p>
+<p class="linemarker linemarker-17">Concepts introduced:</p>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-19">Constitutive and Regulative Rules</p></li>
+<li><p class="linemarker linemarker-21">Boolean Structures</p></li>
+<li><p class="linemarker linemarker-23">Inline Syntax</p></li>
+</ol>
+<p class="linemarker linemarker-25">Keywords introduced:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="linemarker linemarker-27">EVERY</p></li>
+<li><p class="linemarker linemarker-28">WHO</p></li>
+<li><p class="linemarker linemarker-29">MUST</p></li>
+<li><p class="linemarker linemarker-30">AND</p></li>
+<li><p class="linemarker linemarker-31">OR</p></li>
+<li><p class="linemarker linemarker-32">MEANS</p></li>
+</ul>
+</div></blockquote>
+<p class="linemarker linemarker-34">This chapter begins with a very simple rule:</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>EVERY   Person
+WHO     walks
+MUST    sing
+</pre></div>
+</div>
+<p class="linemarker linemarker-42">L4 has two types of basic rules: regulative, and constitutive.</p>
+<p class="linemarker linemarker-44">The basic syntax for regulative, or prescriptive, rules is as follows:</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Regulative Rule <span class="o">::=</span> EVERY | PARTY           Entity Label
+                    [ WHO | WHICH           Boolean Structure       ]
+                    MUST | MAY | SHANT      Action Spec
+</pre></div>
+</div>
+<section id="regulative-rules">
+<h3>Regulative Rules<a class="headerlink" href="#regulative-rules" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-56">Legal sentences for regulative rules, according to the syntax definition above, include:</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>1.
+EVERY   Person
+WHO     walks
+MUST    sing
+
+2.
+EVERY   Organization
+WHICH   creates art
+MAY     brag
+
+3.
+PARTY   Alice
+
+MUST    pay Bob
+
+4.
+PARTY   Bob
+
+MUST    say bad things about Alice
+</pre></div>
+</div>
+</section>
+<section id="syntax-meta-rules">
+<h3>Syntax (Meta-)Rules<a class="headerlink" href="#syntax-meta-rules" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-84">The syntax definition above obeys syntax rules of its own.</p>
+<p class="linemarker linemarker-86">A <code class="docutils literal notranslate"><span class="pre">|</span></code> indicates alternatives: the first word of the sentence can be either EVERY or PARTY. The last keyword can be MUST, MAY, or SHANT.</p>
+<p class="linemarker linemarker-88">A pair of [brackets] indicates that the text between them is optional: that’s why in examples 3 and 4, Alice and Bob have no WHO or WHICH.</p>
+<p class="linemarker linemarker-90">The terms to the right of the keywords hold space for expressions that have syntax rules of their own.</p>
+<p class="linemarker linemarker-92">Just as the above stanza defines the syntax for “Regulative Rule”, you can expect to find stanzas elsewhere that define the syntax for “Entity Label”, “Boolean Structure”, and “Action Spec”.</p>
+<p class="linemarker linemarker-94">“Alice”, “Bob”, “Person”, and “Organization” all satisfy the definition for an “Entity Label”.</p>
+<p class="linemarker linemarker-96">“Boolean Structure” is satisfied by “walks” and “creates art”. The simplest Boolean Structure is a single word.</p>
+<p class="linemarker linemarker-98">“Sing”, “brag”, “pay Bob”, and “say bad things about Alice” are all examples of an “Action Spec”.</p>
+<p class="linemarker linemarker-100">If you’ve played Mad-Libs before, you can imagine making up other words to fill those positions in the sentence.</p>
+<p class="linemarker linemarker-102">Together, these syntax rules give the “grammar” of the L4 language.</p>
+<p class="linemarker linemarker-104">L4’s grammar is based on familiar English grammar. Entity Labels are nouns. Action Specs are verbs (technically, verb phrases).</p>
+<p class="linemarker linemarker-106">Armed with this knowledge, let’s keep learning about L4’s syntax.</p>
+</section>
+<section id="constitutive-rules">
+<h3>Constitutive Rules<a class="headerlink" href="#constitutive-rules" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-112">The basic syntax for constitutive rules is as follows:</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Constitutive Rule <span class="o">::=</span> MultiTerm
+                        MEANS   Boolean Structure
+</pre></div>
+</div>
+<p class="linemarker linemarker-119">In legal writing, definitions appear near the top of the document. Defined Terms are usually identified with Capital Letters.</p>
+<p class="linemarker linemarker-121">L4 uses constitutive rules to define terms.</p>
+<p class="linemarker linemarker-123">This “Must Sing” chapter gives an example of a constitutive rule:</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>        Qualifies
+MEANS   walks
+AND             eats
+        OR      drinks
+</pre></div>
+</div>
+<p class="linemarker linemarker-132">The “MultiTerm” being defined is “Qualifies”. The detailed syntax for “MultiTerm” is given below. In short, it consists of one or more words in separate cells.</p>
+<p class="linemarker linemarker-134">The Boolean Structure contains “walks AND eats OR drinks”.</p>
+</section>
+<section id="boolean-structures">
+<h3>Boolean Structures<a class="headerlink" href="#boolean-structures" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-140">Let’s look more closely at Boolean Structures.</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Boolean Structure <span class="o">::=</span>   Boolean Structure
+                        AND | OR | UNLESS   Boolean Structure
+                                            Element
+</pre></div>
+</div>
+<p class="linemarker linemarker-148">The third line of the definition, “Element”, bottoms out at a leaf node: just some word, without any ANDs or ORs within.</p>
+<p class="linemarker linemarker-150">In this first lesson, elements are single words.</p>
+<p class="linemarker linemarker-152">“These are the most essential forms of syntax in L4.
+Advanced versions of these clauses and constituent elements will be presented later.”</p>
+</section>
+</section>
+<section id="booleans-and-visualization-rodents-and-vermin-example">
+<h2>Booleans and Visualization: Rodents and Vermin Example<a class="headerlink" href="#booleans-and-visualization-rodents-and-vermin-example" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-159"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1206725099">Link to ‘Rodents and Vermin’ example</a></p>
+<p class="linemarker linemarker-161">This example focus on a single decision rule drawn from a home insurance policy and its transformations to more easily understood forms.</p>
+<p class="linemarker linemarker-163">Decisions express first-order logic, functions, predicates, judgements, and calculation in general.</p>
+<p class="linemarker linemarker-165">Concepts introduced:</p>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-167">Boolean Structures in detail.</p></li>
+<li><p class="linemarker linemarker-169">Visualization as an electrical circuit diagram.</p></li>
+</ol>
+<p class="linemarker linemarker-171">Keywords introduced:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="linemarker linemarker-173">DECIDE</p></li>
+<li><p class="linemarker linemarker-174">WHEN</p></li>
+<li><p class="linemarker linemarker-175">UNLESS</p></li>
+<li><p class="linemarker linemarker-176">AND</p></li>
+<li><p class="linemarker linemarker-177">OR</p></li>
+<li><p class="linemarker linemarker-178">NOT</p></li>
+</ul>
+</div></blockquote>
+<section id="decisions">
+<h3>Decisions<a class="headerlink" href="#decisions" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-184">Decisions express first-order logic, functions, predicates, judgements, and calculation in general.</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Hornlike <span class="o">::=</span> [GIVEN        ParamText            ]
+              DECIDE       RelationalPredicate
+             [WHEN | IF    Boolean Structure    ]
+</pre></div>
+</div>
+<p class="linemarker linemarker-192">If you happen to know Prolog, you will be familiar with the notion of a Horn clause. If not, no worries.</p>
+<p class="linemarker linemarker-194"><code class="docutils literal notranslate"><span class="pre">head(param1,</span> <span class="pre">param2,</span> <span class="pre">…)</span> <span class="pre">:-</span> <span class="pre">body1(param3,</span> <span class="pre">param4),</span> <span class="pre">body2(param5,</span> <span class="pre">param6).</span></code></p>
+<p class="linemarker linemarker-196">The head, to the left of the :- symbol, is the conclusion of the rule.</p>
+<p class="linemarker linemarker-198">The body, to the right of the :- symbol, contains the list of predicates that, when satisfied, conclude that the head of the rule is true.</p>
+<p class="linemarker linemarker-200">In L4, the relational predicate on the DECIDE line gives the conclusion of the rule.</p>
+<p class="linemarker linemarker-202">The Boolean Structure introduced by the WHEN keyword gives the conditions of the rule.</p>
+<p class="linemarker linemarker-204">The keywords WHEN and IF are synonymous in a DECIDE context.</p>
+<p class="linemarker linemarker-206">The GIVEN keyword provides other arguments to the decision rule, and is conjoined with the WHEN | IF material.</p>
+<p class="linemarker linemarker-208">The expression context of the GIVEN and WHEN | IF includes the history available to the calling context. For example, if the decision is being evaluated for the purposes of executing a certain regulative rule, the trace prior to that state transition is available to the DECIDE rule.</p>
+<p class="linemarker linemarker-210">Constitutive rules using WHEN are a subset of Hornlike rules that use DECIDE.</p>
+</section>
+<section id="decision-diagrams">
+<h3>Decision Diagrams<a class="headerlink" href="#decision-diagrams" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-216">Visualization of a decision rule produces a “circuit diagram”: it is based on electrical circuit diagrams. If you can find a path from the left side of the diagram to the right, where the relevant terms have the required values,
+the overall value of the decision diagram is true.</p>
+<p class="linemarker linemarker-219">This is useful because it shows the “big picture” of a legal construct, and suggests ways to short-circuit a particular decision rule.</p>
+</section>
+</section>
+<section id="contract-as-automaton">
+<h2>Contract as Automaton<a class="headerlink" href="#contract-as-automaton" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-225"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=2000125343">Link to ‘Contract as Automaton’ example</a></p>
+<p class="linemarker linemarker-227">A loan is repaid in two instalments. The borrower has to stay out of trouble.</p>
+<p class="linemarker linemarker-229">Concepts introduced:</p>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-231">Events and consequences</p></li>
+<li><p class="linemarker linemarker-233">Obligations vs permissions</p></li>
+<li><p class="linemarker linemarker-235">Process workflow diagrams</p></li>
+</ol>
+<p class="linemarker linemarker-237">Keywords introduced:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="linemarker linemarker-239">DECLARE</p></li>
+<li><p class="linemarker linemarker-240">DEFINE</p></li>
+<li><p class="linemarker linemarker-241">HAS</p></li>
+<li><p class="linemarker linemarker-242">IS A</p></li>
+<li><p class="linemarker linemarker-243">DO</p></li>
+<li><p class="linemarker linemarker-244">HENCE</p></li>
+<li><p class="linemarker linemarker-245">LEST</p></li>
+<li><p class="linemarker linemarker-246">MAY</p></li>
+<li><p class="linemarker linemarker-247">BY</p></li>
+<li><p class="linemarker linemarker-248">WITHIN</p></li>
+</ul>
+</div></blockquote>
+<p class="linemarker linemarker-250">Some of the earliest written agreements, carved in stone millennia ago, deal with the lending of property. Following in this tradition, this chapter formalizes a simple financial agreement in L4. The ruleset weaves multiple regulative rules together, in series and in parallel. It shows how a “flowchart”-style diagram is automatically generated from the ruleset.
+Such diagrams give people an alternative way to understand legal documents: visually instead of textually.</p>
+<section id="declarations-and-definitions">
+<h3>Declarations and Definitions<a class="headerlink" href="#declarations-and-definitions" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-257">This chapter introduces a handful of keywords. DECLARE and DEFINE have to do with data types and values.</p>
+<p class="linemarker linemarker-259">If you are familiar with Object-Oriented Programming, from languages like Python, Java, C++, or Javascript, you will find the DECLARE and DEFINE concepts familiar.</p>
+<p class="linemarker linemarker-261">We use DECLARE to set up our classes, our records, our types, our schemas, our ontology, our templates.</p>
+<p class="linemarker linemarker-263">We use DEFINE to instantiate those templates with concrete values: the specific variables of a particular agreement.</p>
+<p class="linemarker linemarker-265">These declarations and definitions are automatically exported to the programming language of your choice, lessening the burden of programming downstream. Some call this “model-driven engineering”; others, “low-code”.</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Type Declaration <span class="o">::=</span> DECLARE    MultiTerm   [Type Signature]
+                    [   Has-Attribute       ]
+                    [       ...             ]
+
+Has-Attribute    <span class="o">::=</span> HAS        MultiTerm   [Type Signature]
+                    [   ...                 ]
+                    [   Has-Attribute       ]
+</pre></div>
+</div>
+<p class="linemarker linemarker-277">This syntax rule means you can have multiple HAS-Attributes, listed on subsequent lines. For convenience, only the first HAS keyword is necessary; subsequent lines don’t need it.</p>
+<p class="linemarker linemarker-279">HAS-Attributes can nest, such that one record declaration can contain another.
+For example:</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>DECLARE     Point
+HAS         position x          IS A        Number
+            position y          IS A        Number
+            details             IS A        PointDetail
+            HAS     color       IS ONE OF   Red Green Blue
+                    value       IS A        Number
+                    onHover     IS A        String
+</pre></div>
+</div>
+<p class="linemarker linemarker-292">We’ll talk more about the elementary data-types of L4 later: sum types, product types, lists, and dictionaries. We’ll also talk about type inference and type checking.</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Variable Definition <span class="o">::=</span> DEFINE      Value Term  [Type Signature]    // class-object instantiation
+                        HAS         MultiTerm   [Type Signature]
+                                    [ ... ]
+</pre></div>
+</div>
+<p class="linemarker linemarker-300">Variable definitions with the DEFINE keyword follow the same format as DECLARE.</p>
+</section>
+<section id="deadlines">
+<h3>Deadlines<a class="headerlink" href="#deadlines" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-306">This chapter also introduces temporal constraints: the BY and WITHIN keywords set deadlines.</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Temporal Constraint <span class="o">::=</span> (BEFORE | AFTER | BY | WITHIN | UNTIL)  Temporal Spec
+</pre></div>
+</div>
+<p class="linemarker linemarker-312">A regulative rule without a temporal constraint is incomplete. L4 substitutes “EVENTUALLY” but will issue a warning so you are conscious that a deadline is missing.</p>
+</section>
+<section id="deontics">
+<h3>Deontics<a class="headerlink" href="#deontics" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-318">Laws and contracts impose obligations and prohibitions on persons, and grant permissions.</p>
+<p class="linemarker linemarker-320">These ideas are central to deontic logic, and underlie L4’s keywords MUST, SHANT, and MAY, respectively.</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Deontic Keyword <span class="o">::=</span> MUST | MAY | SHANT
+</pre></div>
+</div>
+<p class="linemarker linemarker-326">Within the context of a single rule, these deontic keywords specify different consequences for the satisfaction or violation of the rule.</p>
+<p class="linemarker linemarker-328">The two fundamental consequences in L4 are FULFILLED and BREACH.</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>        If the actor does not perform the action
+        by the deadline                             If the actor performs
+                                                    the action by the deadline
+
+MUST        BREACHED                                FULFILLED
+SHANT       FULFILLED                               BREACHED
+MAY         FULFILLED                               FULFILLED
+</pre></div>
+</div>
+<p class="linemarker linemarker-340">We observe that a MAY rule is permissive: if you do it, fine! If you don’t, fine!</p>
+<p class="linemarker linemarker-342">l4’s workflow diagrams follow a convention: a rule that is satisfied proceeds to the bottom right, while a rule that is violated proceeds to the bottom left. The “happy path” therefore runs along the right side of a diagram. A MAY rule shows action to the right, and inaction to the left.</p>
+</section>
+<section id="connections">
+<h3>Connections<a class="headerlink" href="#connections" title="Permalink to this heading"></a></h3>
+<p class="linemarker linemarker-348">Ordinary programming languages use the IF … THEN … ELSE construct to connect blocks of code, based on whether the conditions in the IF were met.
+L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative rules, based on whether the preceding rule was satisfied.</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Regulative Connector <span class="o">::=</span> HENCE | LEST   Rule Label | Regulative Rule
+</pre></div>
+</div>
+<p class="linemarker linemarker-355">Individual regulative rules connect with one another to form a graph, or a flowchart, describing a workflow.</p>
+<p class="linemarker linemarker-357">What are the semantics of a rule?</p>
+<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>[Attribute Constraint               ]
+[Conditional Constraint             ]
+[Upon Trigger                       ]
+[HENCE  Rule Label | Regulative Rule]
+[LEST   Rule Label | Regulative Rule]
+[WHERE  Constitutive Rule
+        [ ... ]                     ]
+</pre></div>
+</div>
+</section>
+</section>
+<section id="case-study-motor-insurance">
+<h2>Case Study: Motor Insurance<a class="headerlink" href="#case-study-motor-insurance" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-373"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=2061671536">Link to the case study ‘Motor Insurance’ example</a></p>
+<p class="linemarker linemarker-375">Entity Relations, Ontology Inference, and Convenient Syntax for Predicate Logic.</p>
+<p class="linemarker linemarker-377">Concepts introduced:</p>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-379">Combining regulative and constitutive rules</p></li>
+<li><p class="linemarker linemarker-381">Guards in state transitions</p></li>
+</ol>
+<p class="linemarker linemarker-383">Keywords introduced:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="linemarker linemarker-385">DECIDE</p></li>
+<li><p class="linemarker linemarker-386">UNLESS</p></li>
+<li><p class="linemarker linemarker-387">WHO</p></li>
+<li><p class="linemarker linemarker-388">WHICH</p></li>
+<li><p class="linemarker linemarker-389">WHEN</p></li>
+<li><p class="linemarker linemarker-390">IF</p></li>
+<li><p class="linemarker linemarker-391">TYPICALLY</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="case-study-pdpa-dbno">
+<h2>Case Study: PDPA DBNO<a class="headerlink" href="#case-study-pdpa-dbno" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-397"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1779650637">Link to the case study ‘PDPA DBNO’ example</a></p>
+<p class="linemarker linemarker-399">L4 automatically generates a web app from real-world legislation &amp; regulation. It is an encoding of a fragment of real-world legislation.</p>
+<p class="linemarker linemarker-401">Concepts introduced:</p>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-403">Reference and Expansion</p></li>
+<li><p class="linemarker linemarker-405">Temporal Keywords</p></li>
+<li><p class="linemarker linemarker-407">State transitions</p></li>
+</ol>
+<p class="linemarker linemarker-409">Keywords introduced:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="linemarker linemarker-411">DECIDE</p></li>
+<li><p class="linemarker linemarker-412">UNLESS</p></li>
+<li><p class="linemarker linemarker-413">WHO</p></li>
+<li><p class="linemarker linemarker-414">WHICH</p></li>
+<li><p class="linemarker linemarker-415">WHEN</p></li>
+<li><p class="linemarker linemarker-416">IF</p></li>
+<li><p class="linemarker linemarker-417">TYPICALLY</p></li>
+</ul>
+</div></blockquote>
+<p class="linemarker linemarker-423">This section is still being worked on. We will continue our examination of the PDPA DBNO case with a deep dive into Petri Nets; it is intended to be a Petri Net representation of the PDPA DBNO example.</p>
+<p class="linemarker linemarker-425">Concepts introduced:</p>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-427">Workflow diagrams in detail</p></li>
+<li><p class="linemarker linemarker-429">BPMN used in industry</p></li>
+<li><p class="linemarker linemarker-431">Process algebras</p></li>
+</ol>
+<p class="linemarker linemarker-433">Keywords introduced:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="linemarker linemarker-435">HENCE</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart-exercises.html" class="btn btn-neutral float-left" title="Learning L4: Exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quickstart-language-spec.html" class="btn btn-neutral float-right" title="Keywords: Declarations and Definitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Meng Weng Wong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

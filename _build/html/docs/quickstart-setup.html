@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setting up the LegalSS Google Sheet &mdash; L4 Manual 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Learning L4: Exercises" href="quickstart-exercises.html" />
+    <link rel="prev" title="What is L4 Good For?" href="quickstart-tour-of-L4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> L4 Manual
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="common-introduction.html">Overview of this document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-acknowledgements.html">Acknowledgements</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Quickstart Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html">What is L4 Good For?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting up the LegalSS Google Sheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-clone-the-spreadsheet">How to clone the spreadsheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#activating-the-l4-sheets-ide">Activating the L4 Sheets IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manually-updating-the-sidebar">Manually Updating the Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#learning-l4">Learning L4</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-exercises.html">Learning L4: Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-examples.html">Examples in L4 and the concepts and keywords introduced in each example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-language-spec.html">Keywords: Declarations and Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart-early-beta.html">Early Beta</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The L4 Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-conceptual-reference.html">Conceptual Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-flowcharts.html">Flowcharts: Practical Considerations from a Software Engineering Perspective</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-common-expressions.html">Common Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-defeasibility-and-defaults.html">Meta-Rules,Defeasibility, and Defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-cheatsheet.html">Language Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-cheatsheet.html#syntax-reference-by-keyword">Syntax Reference by Keyword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="L4manual-advanced-topics.html">Advanced Topics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-executive-summary.html">Executive Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-webtool.html">Installation and setup instructions of the Web Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-webtool.html#accessing-the-web-tool">Accessing the Web Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-googlesheets.html">Installation and setup instructions of the Google Sheets App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-L4spreadsheet.html">Installations to compile an edited Natural L4 Spreadsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-explanations.html">Explanation of how L4 works under the hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-logfile-analysis.html">Analysis of an example logfile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-security.html">Security Considerations</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">L4 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Setting up the LegalSS Google Sheet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/docs/quickstart-setup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setting-up-the-legalss-google-sheet">
+<h1>Setting up the LegalSS Google Sheet<a class="headerlink" href="#setting-up-the-legalss-google-sheet" title="Permalink to this heading"></a></h1>
+<p class="linemarker linemarker-5">Setting up the LegalSS spreadsheet introduces you to the output sidebar and lets you explore Google Sheets as an Interactive Development Environment (IDE).</p>
+<p class="linemarker linemarker-7">Clone the spreadsheet so you can try the exercises yourself.</p>
+<section id="how-to-clone-the-spreadsheet">
+<h2>How to clone the spreadsheet<a class="headerlink" href="#how-to-clone-the-spreadsheet" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-13">Clone the spreadsheet by clicking on ‘File’ at the toolbar, then choose the 4th option ‘Make A Copy’.</p></li>
+</ol>
+<img alt="../_images/make-a-copy-screenshot.png" src="../_images/make-a-copy-screenshot.png" />
+<ol class="arabic simple" start="2">
+<li><p class="linemarker linemarker-17">You should get a pop-up like in this image:</p></li>
+</ol>
+<img alt="../_images/options-to-clone-project.png" src="../_images/options-to-clone-project.png" />
+<ol class="arabic simple" start="3">
+<li><p class="linemarker linemarker-21">Choose where you want to clone the spreadsheet. In this example, we clone to “My Drive”</p></li>
+</ol>
+<img alt="../_images/choose-where-to-clone-project.png" src="../_images/choose-where-to-clone-project.png" />
+<ol class="arabic simple" start="4">
+<li><p class="linemarker linemarker-25">Rename the result: this will be your copy of the spreadsheet tutorial.</p></li>
+</ol>
+</section>
+<section id="activating-the-l4-sheets-ide">
+<span id="sheets-ide"></span><h2>Activating the L4 Sheets IDE<a class="headerlink" href="#activating-the-l4-sheets-ide" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-33">A one-time procedure is needed to activate the L4 Sheets IDE.</p>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-35">Click on Extensions/Apps Script.</p></li>
+</ol>
+<img alt="../_images/apps-script-screenshot.png" src="../_images/apps-script-screenshot.png" />
+<ol class="arabic simple" start="2">
+<li><p class="linemarker linemarker-39">A new tab will open on your browser and you will be asked to select a project to open. Choose the first project “LegalSS…” with the version number (e.g. “LegalSSv0.9.4.3”). Do not click on “Untitled Project”.</p></li>
+</ol>
+<img alt="../_images/select-project-screenshot.png" src="../_images/select-project-screenshot.png" />
+<p class="linemarker linemarker-43">You should be directed to a page similar to the below screenshot.</p>
+<img alt="../_images/apps-script-page-screenshot.png" src="../_images/apps-script-page-screenshot.png" />
+<ol class="arabic simple" start="3">
+<li><p class="linemarker linemarker-47">When the Apps Script page loads, go back to your copy of the LegalSS Google Sheet in your browser and select the tab “Quickstart”, which is the first tab of the LegalSS spreadsheet.</p></li>
+</ol>
+<img alt="../_images/pdpa-dbno-selection-screenshot.png" src="../_images/pdpa-dbno-selection-screenshot.png" />
+<ol class="arabic simple" start="4">
+<li><p class="linemarker linemarker-51">Back in the App Script page, click “Run” to execute the function. You will have to grant permission to the App Script to make changes to Google Sheets.</p></li>
+</ol>
+<img alt="../_images/select-run-on-sheet-ide-screenshot.png" src="../_images/select-run-on-sheet-ide-screenshot.png" />
+<p class="linemarker linemarker-55">An Execution Log should appear below the App Script. Wait until you read “Execution Completed”, highlighted in yellow, before you move on to the next step.</p>
+<img alt="../_images/execution-completed-screenshot.png" src="../_images/execution-completed-screenshot.png" />
+<ol class="arabic simple" start="5">
+<li><p class="linemarker linemarker-59">Return to the LegalSS Spreadsheet. You should see a sidebar appear on the right side of the page.</p></li>
+</ol>
+<img alt="../_images/sidebar-appears-screenshot.png" src="../_images/sidebar-appears-screenshot.png" />
+<p class="linemarker linemarker-63">If you do not see a sidebar, contact the L4 developers for help.</p>
+</section>
+<section id="manually-updating-the-sidebar">
+<h2>Manually Updating the Sidebar<a class="headerlink" href="#manually-updating-the-sidebar" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-69">The sidebar has an auto-update function when words are typed in. However, if the auto-update function does not work, you can re-run the app script detailed in step 4 of <a class="reference internal" href="#sheets-ide"><span class="std std-ref">Activating the L4 Sheets IDE</span></a>.</p>
+</section>
+<section id="learning-l4">
+<h2>Learning L4<a class="headerlink" href="#learning-l4" title="Permalink to this heading"></a></h2>
+<p class="linemarker linemarker-75">Get familiar with L4 with the liquor exercise in <a class="reference internal" href="quickstart-exercises.html#learning-l4-exercises"><span class="std std-ref">Learning L4: Exercises</span></a>!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstart-tour-of-L4.html" class="btn btn-neutral float-left" title="What is L4 Good For?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quickstart-exercises.html" class="btn btn-neutral float-right" title="Learning L4: Exercises" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Meng Weng Wong.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

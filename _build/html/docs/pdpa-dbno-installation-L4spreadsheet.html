@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Installations to compile an edited Natural L4 Spreadsheet &#8212; L4 Manual 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Explanation of how L4 works under the hood" href="pdpa-dbno-explanations.html" />
+    <link rel="prev" title="Installation and setup instructions of the Google Sheets App" href="pdpa-dbno-installation-googlesheets.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue-grey data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#docs/pdpa-dbno-installation-L4spreadsheet" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="L4 Manual 1.0 documentation"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">L4 Manual 1.0 documentation</span>
+          <span class="md-header-nav__topic"> Installations to compile an edited Natural L4 Spreadsheet </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">L4 Manual 1.0 documentation</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="L4 Manual 1.0 documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="L4 Manual 1.0 documentation">L4 Manual 1.0 documentation</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">links</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-first-steps.html" class="md-nav__link">First Steps</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-first-steps.html#taking-your-first-steps-intended-audience" class="md-nav__link">Taking your first steps: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-first-steps.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-returning-users.html" class="md-nav__link">Returning Users</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-returning-users.html#exploring-l4-futher-intended-audience" class="md-nav__link">Exploring L4 Futher: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-returning-users.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-L4-backend.html" class="md-nav__link">Setting up the L4 Backend</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-L4-backend.html#installing-the-l4-backend-intended-audience" class="md-nav__link">Installing the L4 Backend: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-L4-backend.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-law-and-computer-science.html" class="md-nav__link">Law and Computer Science</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-law-and-computer-science.html#law-and-computer-science-intended-audience" class="md-nav__link">Law and Computer Science: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-law-and-computer-science.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-backend-setup-instructions.html" class="md-nav__link">Backend Setup Instructions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-backend-setup-instructions.html#setup-instructions-intended-audience" class="md-nav__link">Setup Instructions: Intended Audience</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="links-backend-setup-instructions.html#page-directory" class="md-nav__link">Page Directory</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">First Steps</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="quickstart-tour-of-L4.html" class="md-nav__link">What is L4?</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="quickstart-installation.html" class="md-nav__link">Interacting with L4 through a spreadsheet</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Returning Users</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-computational-law.html" class="md-nav__link">What Computational Law Aims to Solve</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-L4-and-law.html" class="md-nav__link">How L4 Approaches Law</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-examples.html" class="md-nav__link">Examples in L4 and the concepts and keywords introduced in each example</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-common-expressions.html" class="md-nav__link">Common Expressions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-defeasibility-defaults.html" class="md-nav__link">Meta-Rules,Defeasibility, and Defaults</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-flowchart.html" class="md-nav__link">Flowcharts: Practical Considerations from a Software Engineering Perspective</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-cheatsheet.html" class="md-nav__link">L4 Cheatsheet</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-cheatsheet.html#syntax-reference-by-keyword" class="md-nav__link">Syntax Reference by Keyword</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-exporting-L4.html" class="md-nav__link">Exporting L4 to Other Formats</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-tutorials.html" class="md-nav__link">Learning L4: Tutorials</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="L4manual-language-spec.html" class="md-nav__link">Keywords: Declarations and Definitions</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Setting up the L4 Backend</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-webtool.html" class="md-nav__link">Installation and setup instructions of the Web Tool</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-webtool.html#accessing-the-web-tool" class="md-nav__link">Accessing the Web Tool</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-installation-googlesheets.html" class="md-nav__link">Installation and setup instructions of the Google Sheets App</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Installations to compile an edited Natural L4 Spreadsheet </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Installations to compile an edited Natural L4 Spreadsheet</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#docs-pdpa-dbno-installation-l4spreadsheet--page-root" class="md-nav__link">Installations to compile an edited Natural L4 Spreadsheet</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#automatic-configuration-of-the-web-tool" class="md-nav__link">Automatic configuration of the Web Tool</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#installing-the-l4-interpreter-natural4-exe" class="md-nav__link">Installing the L4 interpreter: natural4-exe</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#purescript-configuration" class="md-nav__link">Purescript configuration</a>
+        </li>
+        <li class="md-nav__item"><a href="#maintaining-vue" class="md-nav__link">Maintaining vue</a>
+        </li>
+        <li class="md-nav__item"><a href="#the-l4-spreadsheet-can-choose-a-backend-port" class="md-nav__link">The L4 spreadsheet can choose a backend port</a>
+        </li>
+        <li class="md-nav__item"><a href="#https-is-needed-letsencrypt-refreshes-certificates" class="md-nav__link">Https is needed; letsencrypt refreshes certificates</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/docs/pdpa-dbno-installation-L4spreadsheet.rst.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-explanations.html" class="md-nav__link">Explanation of how L4 works under the hood</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="pdpa-dbno-security.html" class="md-nav__link">Security Considerations</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Early Beta, and Acknowledgements</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="common-early-beta.html" class="md-nav__link">Early Beta</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="common-acknowledgements.html" class="md-nav__link">Acknowledgements</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#docs-pdpa-dbno-installation-l4spreadsheet--page-root" class="md-nav__link">Installations to compile an edited Natural L4 Spreadsheet</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#automatic-configuration-of-the-web-tool" class="md-nav__link">Automatic configuration of the Web Tool</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#installing-the-l4-interpreter-natural4-exe" class="md-nav__link">Installing the L4 interpreter: natural4-exe</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#purescript-configuration" class="md-nav__link">Purescript configuration</a>
+        </li>
+        <li class="md-nav__item"><a href="#maintaining-vue" class="md-nav__link">Maintaining vue</a>
+        </li>
+        <li class="md-nav__item"><a href="#the-l4-spreadsheet-can-choose-a-backend-port" class="md-nav__link">The L4 spreadsheet can choose a backend port</a>
+        </li>
+        <li class="md-nav__item"><a href="#https-is-needed-letsencrypt-refreshes-certificates" class="md-nav__link">Https is needed; letsencrypt refreshes certificates</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/docs/pdpa-dbno-installation-L4spreadsheet.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="installations-to-compile-an-edited-natural-l4-spreadsheet">
+<span id="auto-config"></span><h1 id="docs-pdpa-dbno-installation-l4spreadsheet--page-root">Installations to compile an edited Natural L4 Spreadsheet<a class="headerlink" href="#docs-pdpa-dbno-installation-l4spreadsheet--page-root" title="Permalink to this heading">¶</a></h1>
+<p>This section is only required if you want to edit the L4 Spreadsheet and compile a new version of the web app out of this edited L4 Spreadsheet.</p>
+<section id="automatic-configuration-of-the-web-tool">
+<h2 id="automatic-configuration-of-the-web-tool">Automatic configuration of the Web Tool<a class="headerlink" href="#automatic-configuration-of-the-web-tool" title="Permalink to this heading">¶</a></h2>
+<p>The following code block shows a launch and run of the hello.py script by way of gunicorn, detailed in section <a class="reference internal" href="pdpa-dbno-explanations.html#gunicorn"><span class="std std-ref">hello.py is managed by gunicorn</span></a> This run shows hello.py calling natural4-exe and v8k, each detailed below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gunicorn --certfile /etc/letsencrypt/live/cclaw.legalese.com/cert.pem --keyfile /etc/letsencrypt/live/cclaw.legalese.com/privkey.pem --workers=5 --bind 0.0.0.0:8081 --pythonpath /home/mengwong/pyrest/lib/python3.8/site-packages/ wsgi:app
+</pre></div>
+</div>
+<p>The command-line arguments will need to be adapted to the circumstances of your local development environment. In particular, the pythonpath option may be omitted or customized to match your Python installation. See section <a class="reference internal" href="pdpa-dbno-explanations.html#gunicorn"><span class="std std-ref">hello.py is managed by gunicorn</span></a> for details.</p>
+<section id="installing-the-l4-interpreter-natural4-exe">
+<h3 id="installing-the-l4-interpreter-natural4-exe">Installing the L4 interpreter: natural4-exe<a class="headerlink" href="#installing-the-l4-interpreter-natural4-exe" title="Permalink to this heading">¶</a></h3>
+<p>This subsubsection is only required if you need to edit the web tool. You might want to edit the web tool if, for example, the law changes and you need to update content. If you are happy with the web tool as it is, you may skip this section.</p>
+<p>The interpreter for Natural L4 is contained in the natural4-exe executable, whose source code is available at
+<a class="reference external" href="https://github.com/smucclaw/dsl/tree/main/lib/haskell/natural4">https://github.com/smucclaw/dsl/tree/main/lib/haskell/natural4</a></p>
+<p>Contact the L4 developers for a ZIP file containing natural4-exe executables compiled for the following platforms:
+- Linux
+- MacOS
+- Windows</p>
+<p>The executable may be recompiled from source. While the codebase is written in Haskell, no expertise in Haskell is required, beyond installing and running the “Stack” package manager and build tool <a class="footnote-reference brackets" href="#f1" id="id1">1</a>. The stack tool plays roughly the same role for Haskell that pip does for Python and npm does for Javascript. Detailed build and install instructions are available in the Github repository above.</p>
+</section>
+</section>
+<section id="purescript-configuration">
+<h2 id="purescript-configuration">Purescript configuration<a class="headerlink" href="#purescript-configuration" title="Permalink to this heading">¶</a></h2>
+<p>Generation of the Purescript output file is described in the previous section.</p>
+<p>To become part of the running web app which is linked from the sidebar, the Purescript output file needs to be copied into the source tree of the Web Tool at src/RuleLib/PDPADBNO.purs. The helper script v8k available at vue-pure-pdpa/bin/v8k performs this function automatically when called by the hello.py script.</p>
+<p>The back-end of the Web Tool consumes that file as content and configuration, which controls the Web Tool’s interactive Q&amp;A front end user interface.</p>
+</section>
+<section id="maintaining-vue">
+<h2 id="maintaining-vue">Maintaining vue<a class="headerlink" href="#maintaining-vue" title="Permalink to this heading">¶</a></h2>
+<p>The Vue web tool distributed above originates in the smucclaw/vue-pure-pdpa repository. If it is necessary to update or upgrade the package, the above repository should be used as the main “working directory”, then changes should be synced downstream to the vue-big and vue-small copies.</p>
+<p>Updates involving npm should be performed as far upstream as possible, meaning in vue-big, and then reflected out to the vue-small and vue-NN copies (through the symlink and the rsync respectively), to minimize the build times incurred by npm run serve.</p>
+</section>
+<section id="the-l4-spreadsheet-can-choose-a-backend-port">
+<h2 id="the-l4-spreadsheet-can-choose-a-backend-port">The L4 spreadsheet can choose a backend port<a class="headerlink" href="#the-l4-spreadsheet-can-choose-a-backend-port" title="Permalink to this heading">¶</a></h2>
+<p>In the L4 spreadsheet, a commented-out line at the top of the spreadsheet can contain two adjacent cells containing “devMode port” and “8081”. That will instruct pathsCode.gs to access the Pyrest endpoints on port 8081 of the backend server. If that instruction is not present, the default port is 8080.</p>
+</section>
+<section id="https-is-needed-letsencrypt-refreshes-certificates">
+<span id="https-needed"></span><h2 id="https-is-needed-letsencrypt-refreshes-certificates">Https is needed; letsencrypt refreshes certificates<a class="headerlink" href="#https-is-needed-letsencrypt-refreshes-certificates" title="Permalink to this heading">¶</a></h2>
+<p>Both the Web Tool and gunicorn/hello.py need to be made aware of the SSL certificate paths.</p>
+<p>gunicorn is given those paths on the command line, as seen in section <a class="reference internal" href="pdpa-dbno-explanations.html#gunicorn"><span class="std std-ref">hello.py is managed by gunicorn</span></a> above.</p>
+<p>The vue system is given those paths in <code class="docutils literal notranslate"><span class="pre">$V8K_WORKDIR/vue-xx/vue.config.js</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌─[20221102-23:34:05]   [mengwong@cclaw:~/wow/much/vue-04]
+└─[0] &lt;git:(main 89d183a✱✈) &gt; grep -1 letsencrypt vue.config.js
+    https: {
+    key:  fs.readFileSync('/etc/letsencrypt/live/cclaw.legalese.com/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/cclaw.legalese.com/cert.pem')
+    }
+</pre></div>
+</div>
+<p>To run this system locally you will need to bring up SSL certificates for your own domain name. One popular SSL provider is <a class="reference external" href="https://letsencrypt.org/">https://letsencrypt.org/</a></p>
+<p>Google Apps Script refuses to load image assets in the sidebar if those assets are not retrieved via https. To serve https on the backend server, pick a domain name under your control and set up an SSL certificate for that domain name.</p>
+<p>Configure DNS to point that domain name at your backend server. In our implementation we used Let’s Encrypt to set up and auto-refresh the SSL certificate. The files are saved under the /etc/letsencrypt directory.</p>
+<p>We relied on DNS resources kindly provided by industry partner Legalese.com to set up SSL certificates at the domain cclaw.legalese.com. We do not have DNS control of the Amazon AWS hostname, meaning that we have to use the cclaw.legalese.com hostname.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>available at <a class="reference external" href="https://www.haskellstack.org/">https://www.haskellstack.org/</a></p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="pdpa-dbno-installation-googlesheets.html" title="Installation and setup instructions of the Google Sheets App"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Installation and setup instructions of the Google Sheets App </span>
+              </div>
+            </a>
+          
+          
+            <a href="pdpa-dbno-explanations.html" title="Explanation of how L4 works under the hood"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> Explanation of how L4 works under the hood </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2023, Meng Weng Wong.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
