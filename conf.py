@@ -31,7 +31,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'pdf-version']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_material'
-html_sidebars = {
-    "**" : ["globaltoc.html", "localtoc.html", "searchbox.html"]
-}
+# html_sidebars = {
+#     "**" : ["globaltoc.html", "localtoc.html", "searchbox.html"]
+# }
 html_static_path = ['_static']

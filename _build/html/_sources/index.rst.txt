@@ -37,57 +37,57 @@ You can navigate this document by:
    - Clicking on one of the cards above,
    - Searching for what you need at the top right hand corner.
 
-.. .. toctree:: 
-..    :maxdepth: 0
-..    :caption: links
-..    :hidden:
+.. toctree:: 
+   :maxdepth: 0
+   :caption: links
+   :hidden:
 
-..    docs/links-first-steps.rst
-..    docs/links-returning-users.rst
-..    docs/links-L4-backend.rst
+   docs/links-first-steps.rst
+   docs/links-returning-users.rst
+   docs/links-L4-backend.rst
 
-..    docs/links-law-and-computer-science.rst
-..    docs/links-backend-setup-instructions.rst
+   docs/links-law-and-computer-science.rst
+   docs/links-backend-setup-instructions.rst
 
-.. .. toctree::
-..    :maxdepth: 0
-..    :caption: First Steps
-..    :hidden:
+.. toctree::
+   :maxdepth: 0
+   :caption: First Steps
+   :hidden:
 
-..    docs/quickstart-tour-of-L4.rst
-..    docs/quickstart-installation.rst
+   docs/quickstart-tour-of-L4.rst
+   docs/quickstart-installation.rst
 
-.. .. toctree::
-..    :maxdepth: 0
-..    :caption: Returning Users
-..    :hidden:
+.. toctree::
+   :maxdepth: 0
+   :caption: Returning Users
+   :hidden:
 
-..    docs/L4manual-computational-law.rst
-..    docs/L4manual-L4-and-law.rst
-..    docs/L4manual-examples.rst
-..    docs/L4manual-common-expressions.rst
-..    docs/L4manual-defeasibility-defaults.rst
-..    docs/L4manual-flowchart.rst
-..    docs/L4manual-cheatsheet.rst
-..    docs/L4manual-exporting-L4.rst
-..    docs/L4manual-tutorials.rst
-..    docs/L4manual-language-spec.rst
+   docs/L4manual-computational-law.rst
+   docs/L4manual-L4-and-law.rst
+   docs/L4manual-examples.rst
+   docs/L4manual-common-expressions.rst
+   docs/L4manual-defeasibility-defaults.rst
+   docs/L4manual-flowchart.rst
+   docs/L4manual-cheatsheet.rst
+   docs/L4manual-exporting-L4.rst
+   docs/L4manual-tutorials.rst
+   docs/L4manual-language-spec.rst
 
-.. .. toctree::
-..    :maxdepth: 0
-..    :caption: Setting up the L4 Backend
-..    :hidden:
+.. toctree::
+   :maxdepth: 0
+   :caption: Setting up the L4 Backend
+   :hidden:
 
-..    docs/pdpa-dbno-installation-webtool.rst
-..    docs/pdpa-dbno-installation-googlesheets.rst
-..    docs/pdpa-dbno-installation-L4spreadsheet.rst
-..    docs/pdpa-dbno-explanations.rst
-..    docs/pdpa-dbno-security.rst
+   docs/pdpa-dbno-installation-webtool.rst
+   docs/pdpa-dbno-installation-googlesheets.rst
+   docs/pdpa-dbno-installation-L4spreadsheet.rst
+   docs/pdpa-dbno-explanations.rst
+   docs/pdpa-dbno-security.rst
 
-.. .. toctree:: 
-..    :maxdepth: 0
-..    :caption: Early Beta, and Acknowledgements
-..    :hidden:
+.. toctree:: 
+   :maxdepth: 0
+   :caption: Early Beta, and Acknowledgements
+   :hidden:
 
-..    docs/common-early-beta.rst
-..    docs/common-acknowledgements.rst
+   docs/common-early-beta.rst
+   docs/common-acknowledgements.rst
