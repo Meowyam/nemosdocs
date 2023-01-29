@@ -37,6 +37,8 @@ You can navigate this document by:
    - Clicking on one of the cards above,
    - Searching for what you need at the top right hand corner.
 
+The page's content directory will appear on a column to the right of the main page.
+
 .. toctree:: 
    :maxdepth: 0
    :caption: links
