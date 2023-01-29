@@ -35,7 +35,6 @@ Welcome to the L4 documentation, hosted on Read the Docs.
 You can navigate this document by:
 
    - Clicking on one of the cards above,
-   - Clicking on the section found in the table of contents to the left,
    - Searching for what you need at the top right hand corner.
 
 .. toctree:: 
