@@ -2,226 +2,43 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="lang:clipboard.copy" content="Copy to clipboard">
-  <meta name="lang:clipboard.copied" content="Copied to clipboard">
-  <meta name="lang:search.language" content="en">
-  <meta name="lang:search.pipeline.stopwords" content="True">
-  <meta name="lang:search.pipeline.trimmer" content="True">
-  <meta name="lang:search.result.none" content="No matching documents">
-  <meta name="lang:search.result.one" content="1 matching document">
-  <meta name="lang:search.result.other" content="# matching documents">
-  <meta name="lang:search.tokenizer" content="[\s\-]+">
-
-  
-    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
-
-    <style>
-      body,
-      input {
-        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
-      }
-
-      code,
-      kbd,
-      pre {
-        font-family: "Roboto Mono", "Courier New", Courier, monospace
-      }
-    </style>
-  
-
-  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
-  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
-  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
-  
-  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
-  
-  <meta name="theme-color" content="#3f51b5">
-  <script src="../_static/javascripts/modernizr.js"></script>
-  
-  
-  
-    <title>Keywords: Declarations and Definitions &#8212; L4 Manual 1.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installation and setup instructions of the Web Tool" href="pdpa-dbno-installation-webtool.html" />
-    <link rel="prev" title="Learning L4: Tutorials" href="L4manual-tutorials.html" />
-  
-   
-
-  </head>
-  <body dir=ltr
-        data-md-color-primary=blue-grey data-md-color-accent=blue>
-  
-  <svg class="md-svg">
-    <defs data-children-count="0">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-      
-    </defs>
-  </svg>
-  
-  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
-  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
-  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-  <a href="#docs/L4manual-language-spec" tabindex="1" class="md-skip"> Skip to content </a>
-  <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex navheader">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../index.html" title="L4 Manual 1.0 documentation"
-           class="md-header-nav__button md-logo">
-          
-            &nbsp;
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          <span class="md-header-nav__topic">L4 Manual 1.0 documentation</span>
-          <span class="md-header-nav__topic"> Keywords: Declarations and Definitions </span>
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-        
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" action="../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
-             autocapitalize="off" autocomplete="off" spellcheck="false"
-             data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>Keywords: Declarations and Definitions | L4 Manual 1.0 documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet"/>
+<link href="../_static/theme.9297a650d9dd3016d913.css" rel="stylesheet"/>
+<link href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="pdpa-dbno-installation-webtool.html" rel="next" title="Installation and setup instructions of the Web Tool"/>
+<link href="L4manual-tutorials.html" rel="prev" title="Learning L4: Tutorials"/>
+</head>
+<body class="antialiased text-gray scroll-smooth">
+<div class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto" data-action="keydown@window-&gt;search#focus " data-controller="sidebar search " id="page">
+<a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#keywords-declarations-and-definitions" title="Skip navigation links">Skip to content</a>
+<header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
+<div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center"><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none" href="../index.html" title="Back to homepage"><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">L4 Manual 1.0 documentation</span>
+</a></div><div class="flex justify-end items-center flex-1"><form action="../search.html" class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static z-10" data-action="click-&gt;search#focusSearchInput" id="searchbox" method="get">
+<button aria-label="Get search results" class="text-inherit h-14 w-14" tabindex="-1">
+<svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+</button>
+<input aria-label="Search the docs" class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100" data-search-target="searchInput" id="search-input" name="q" placeholder="Search the docs" type="search"/>
+</form></div>
 </div>
-
-      </div>
-      
-      
-  
-  <script src="../_static/javascripts/version_dropdown.js"></script>
-  <script>
-    var json_loc = "../"versions.json"",
-        target_loc = "../../",
-        text = "Versions";
-    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
-  </script>
-  
-
-    </div>
-  </nav>
 </header>
-
-  
-  <div class="md-container">
-    
-    
-    
-  <nav class="md-tabs" data-md-component="tabs">
-    <div class="md-tabs__inner md-grid">
-      <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">L4 Manual 1.0 documentation</a></li>
-      </ul>
-    </div>
-  </nav>
-    <main class="md-main">
-      <div class="md-main__inner md-grid" data-md-component="container">
-        
-          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../index.html" title="L4 Manual 1.0 documentation" class="md-nav__button md-logo">
-      
-        <img src="../_static/" alt=" logo" width="48" height="48">
-      
-    </a>
-    <a href="../index.html"
-       title="L4 Manual 1.0 documentation">L4 Manual 1.0 documentation</a>
-  </label>
-  
-
+<main class="px-4 pt-14 col-span-full overflow-y-auto flex flex-col flex-1 h-full w-full">
+<div class="flex flex-col h-full mx-auto max-w-prose"><nav aria-label="breadcrumbs" class="print:hidden mt-12 text-sm text-gray-light" role="navigation">
+<a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">L4 Manual 1.0 documentation</a>
+<span class="mr-1">/</span><span aria-current="page">Keywords: Declarations and Definitions</span>
 </nav>
-              </div>
-            </div>
-          </div>
-          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                
-<nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc">Contents</label>
-  <ul class="md-nav__list" data-md-scrollfix="">
-        <li class="md-nav__item"><a href="#docs-l4manual-language-spec--page-root" class="md-nav__link">Keywords: Declarations and Definitions</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#declare-and-define-for-data-types-and-values-and-has-attributes" class="md-nav__link">DECLARE and DEFINE, for data types and values, and HAS-Attributes</a>
-        </li>
-        <li class="md-nav__item"><a href="#by-and-within-for-temporal-constraints-such-as-deadlines" class="md-nav__link">BY and WITHIN for Temporal Constraints such as Deadlines</a>
-        </li>
-        <li class="md-nav__item"><a href="#must-shant-and-may-for-obligations-and-permissions" class="md-nav__link">MUST, SHANT, and MAY for obligations and permissions</a>
-        </li>
-        <li class="md-nav__item"><a href="#fulfilled-and-breach-for-consequences-in-l4" class="md-nav__link">FULFILLED and BREACH for consequences in L4</a>
-        </li>
-        <li class="md-nav__item"><a href="#hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code" class="md-nav__link">HENCE and LEST for regulative rules and connecting blocks of code</a>
-        </li>
-        <li class="md-nav__item"><a href="#the-semantics-of-rules" class="md-nav__link">The Semantics of rules</a>
-        </li></ul>
-            </nav>
-        </li>
-    
-<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/docs/L4manual-language-spec.rst.txt">Show Source</a> </li>
-
-<li id="searchbox" class="md-nav__item"></li>
-
-  </ul>
-</nav>
-              </div>
-            </div>
-          </div>
-        
-        <div class="md-content">
-          <article class="md-content__inner md-typeset" role="main">
-            
-  <section id="keywords-declarations-and-definitions">
-<span id="keywords"></span><h1 id="docs-l4manual-language-spec--page-root">Keywords: Declarations and Definitions<a class="headerlink" href="#docs-l4manual-language-spec--page-root" title="Permalink to this heading">¶</a></h1>
+<article class="flex-1" role="main">
+<section id="keywords-declarations-and-definitions">
+<span id="keywords"></span><h1>Keywords: Declarations and Definitions<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#keywords-declarations-and-definitions">¶</a></h1>
 <p>This chapter introduces a handful of L4 keywords.</p>
 <section id="declare-and-define-for-data-types-and-values-and-has-attributes">
-<h2 id="declare-and-define-for-data-types-and-values-and-has-attributes">DECLARE and DEFINE, for data types and values, and HAS-Attributes<a class="headerlink" href="#declare-and-define-for-data-types-and-values-and-has-attributes" title="Permalink to this heading">¶</a></h2>
+<h2>DECLARE and DEFINE, for data types and values, and HAS-Attributes<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#declare-and-define-for-data-types-and-values-and-has-attributes">¶</a></h2>
 <p>DECLARE and DEFINE have to do with data types and values.</p>
 <p>If you are familiar with Object-Oriented Programming, you will find the DECLARE and DEFINE concepts familiar.</p>
 <p>We use DECLARE to set up our:</p>
@@ -238,135 +55,108 @@
 <p>We use DEFINE to instantiate those templates with concrete values: the specific variables of a particular agreement.</p>
 <p>These declarations and definitions are automatically exported to the programming language of your choice, lessening the burden of programming downstream.</p>
 <p>Consider the following code</p>
-<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Type Declaration    <span class="o">::=</span>             DECLARE                 MultiTerm                         [Type Signature]
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">bnf</span></div>
+<div class="highlight"><pre><code>Type Declaration    <span class="o">::=</span>             DECLARE                 MultiTerm                         [Type Signature]
                                     [Has-Attribute  ]
                                     [       ...     ]
 
 Has-Attribute       <span class="o">::=</span>             HAS                     MultiTerm                         [Type Signature]
                                     [       ...     ]
                                     [Has-Attribute  ]
-</pre></div>
-</div>
+</code></pre></div></div>
 <p>This syntax rule means you can have multiple HAS-Attributes, listed on subsequent lines. For convenience, only the first HAS keyword is necessary; subsequent lines don’t need it.</p>
 <p>HAS-Attributes can nest, such that one record declaration can contain another.
 For example:</p>
-<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Variable Definition <span class="o">::=</span>     DEFINE          Value Term              [Type Signature ]       //class-object instantiation
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">bnf</span></div>
+<div class="highlight"><pre><code>Variable Definition <span class="o">::=</span>     DEFINE          Value Term              [Type Signature ]       //class-object instantiation
                             HAS             MultiTerm               [Type Signature ]
                                             [ ... ]
-</pre></div>
-</div>
+</code></pre></div></div>
 <p>Variable definitions with the DEFINE keyword follow the same format as DECLARE.</p>
 </section>
 <section id="by-and-within-for-temporal-constraints-such-as-deadlines">
-<h2 id="by-and-within-for-temporal-constraints-such-as-deadlines">BY and WITHIN for Temporal Constraints such as Deadlines<a class="headerlink" href="#by-and-within-for-temporal-constraints-such-as-deadlines" title="Permalink to this heading">¶</a></h2>
+<h2>BY and WITHIN for Temporal Constraints such as Deadlines<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#by-and-within-for-temporal-constraints-such-as-deadlines">¶</a></h2>
 <p>The BY and WITHIN keywords set deadlines</p>
-<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Temporal Constraint <span class="o">::=</span> (BEFORE | AFTER | BY | WITHIN | UNTIL) Temporal Spec
-</pre></div>
-</div>
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">bnf</span></div>
+<div class="highlight"><pre><code>Temporal Constraint <span class="o">::=</span> (BEFORE | AFTER | BY | WITHIN | UNTIL) Temporal Spec
+</code></pre></div></div>
 <p>A regulative rule without a temporal constraint is incomplete. L4 substitutes “EVENTUALLY” but will issue a warning so you are conscious that a deadline is missing.</p>
 </section>
 <section id="must-shant-and-may-for-obligations-and-permissions">
-<h2 id="must-shant-and-may-for-obligations-and-permissions">MUST, SHANT, and MAY for obligations and permissions<a class="headerlink" href="#must-shant-and-may-for-obligations-and-permissions" title="Permalink to this heading">¶</a></h2>
+<h2>MUST, SHANT, and MAY for obligations and permissions<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#must-shant-and-may-for-obligations-and-permissions">¶</a></h2>
 <p>Laws and contracts impose <em>obligations</em> and <em>prohibitions</em> on persons, and grant <em>permissions</em>. These ideas are central to <em>deontic logic</em>, and underlie L4’s keywords MUST, SHANT, and MAY, respectively.</p>
-<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Deontic Keyword <span class="o">::=</span> (MUST | MAY | SHANT)
-</pre></div>
-</div>
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">bnf</span></div>
+<div class="highlight"><pre><code>Deontic Keyword <span class="o">::=</span> (MUST | MAY | SHANT)
+</code></pre></div></div>
 <p>Within the context of a single rule, these deontic keywords specify different consequences for the satisfaction or violation of the rule.</p>
 </section>
 <section id="fulfilled-and-breach-for-consequences-in-l4">
-<h2 id="fulfilled-and-breach-for-consequences-in-l4">FULFILLED and BREACH for consequences in L4<a class="headerlink" href="#fulfilled-and-breach-for-consequences-in-l4" title="Permalink to this heading">¶</a></h2>
+<h2>FULFILLED and BREACH for consequences in L4<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#fulfilled-and-breach-for-consequences-in-l4">¶</a></h2>
 <p>The two fundamental consequences in L4 are FULFILLED and BREACH.</p>
-<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>            If the actor does not perform the action by the deadline            If the actor performs the action by the deadline
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">bnf</span></div>
+<div class="highlight"><pre><code>            If the actor does not perform the action by the deadline            If the actor performs the action by the deadline
 MUST                BREACHED                                                                                FULFILLED
 SHANT               FULFILLED                                                                               BREACHED
 MAY                 FULFILLED                                                                               FULFILLED
-</pre></div>
-</div>
+</code></pre></div></div>
 <p>We observe that a MAY rule is permissive: if you do it, fine! If you don’t, fine!</p>
 <p>L4’s workflow diagrams follow a convention: a rule that is satisfied proceeds to the bottom right, while a rule that is violated proceeds to the bottom left. The “”happy path”” therefore runs along the right side of a diagram.</p>
 <p>A MAY rule shows action to the right, and inaction to the left.</p>
 </section>
 <section id="hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code">
-<h2 id="hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code">HENCE and LEST for regulative rules and connecting blocks of code<a class="headerlink" href="#hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code" title="Permalink to this heading">¶</a></h2>
+<h2>HENCE and LEST for regulative rules and connecting blocks of code<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code">¶</a></h2>
 <p>Ordinary programming languages use the IF … THEN … ELSE construct to connect blocks of code, based on whether the conditions in the IF were met.</p>
 <p>L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative rules, based on whether the preceding rule was satisfied.</p>
-<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Regulative Connector <span class="o">::=</span>    (HENCE | LEST)
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">bnf</span></div>
+<div class="highlight"><pre><code>Regulative Connector <span class="o">::=</span>    (HENCE | LEST)
                         Rule Label | Regulative Rule
-</pre></div>
-</div>
+</code></pre></div></div>
 <p>Individual regulative rules connect with one another to form a graph, or a flowchart, describing a workflow.</p>
 </section>
 <section id="the-semantics-of-rules">
-<h2 id="the-semantics-of-rules">The Semantics of rules<a class="headerlink" href="#the-semantics-of-rules" title="Permalink to this heading">¶</a></h2>
+<h2>The Semantics of rules<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#the-semantics-of-rules">¶</a></h2>
 <p>The semantics of a rule are as follows:</p>
-<div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>[Attribute Constraint   ]
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">bnf</span></div>
+<div class="highlight"><pre><code>[Attribute Constraint   ]
 [Conditional Constraint ]
 [Upon Trigger           ]
 [HENCE                              Rule Label | Regulative Rule ]
 [LEST                               Rule Label | Regulative Rule ]
 [WHERE                              Constitutive Rule
                                     [   ...     ]                ]
-</pre></div>
+</code></pre></div></div>
+</section>
+</section>
+</article>
+<footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">© 2023, Meng Weng Wong Made with <a href="https://www.sphinx-doc.org">Sphinx 5.3.0</a></div>
+</footer></div>
+</main>
+<button class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full" data-action="search#hideSnackbar" data-search-target="snackbar">
+  Clear highlights
+</button><div class="fixed hidden inset-0 bg-black bg-opacity-50" data-action="click-&gt;sidebar#close" data-sidebar-target="screen">
 </div>
-</section>
-</section>
-
-
-          </article>
-        </div>
-      </div>
-    </main>
-  </div>
-  <footer class="md-footer">
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-          
-            <a href="L4manual-tutorials.html" title="Learning L4: Tutorials"
-               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
-               rel="prev">
-              <div class="md-flex__cell md-flex__cell--shrink">
-                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-              </div>
-              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-                <span class="md-flex__ellipsis">
-                  <span
-                      class="md-footer-nav__direction"> Previous </span> Learning L4: Tutorials </span>
-              </div>
-            </a>
-          
-          
-            <a href="pdpa-dbno-installation-webtool.html" title="Installation and setup instructions of the Web Tool"
-               class="md-flex md-footer-nav__link md-footer-nav__link--next"
-               rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
-                class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> Installation and setup instructions of the Web Tool </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink"><i
-                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          
-        </a>
-        
-      </nav>
-    </div>
-    <div class="md-footer-meta md-typeset">
-      <div class="md-footer-meta__inner md-grid">
-        <div class="md-footer-copyright">
-          <div class="md-footer-copyright__highlight">
-              &#169; Copyright 2023, Meng Weng Wong.
-              
-          </div>
-            Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
-             and
-            <a href="https://github.com/bashtage/sphinx-material/">Material for
-              Sphinx</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="../_static/javascripts/application.js"></script>
-  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
-  </body>
+</div>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/design-tabs.js"></script>
+<script src="../_static/theme.3051a0ec24cad00d4d88.js"></script>
+</body>
 </html>

@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Analysis of an example gunicorn/hello.py logfile &mdash; L4 Manual 1.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Security Considerations" href="pdpa-dbno-security.html" />
-    <link rel="prev" title="Explanation of how L4 works under the hood" href="pdpa-dbno-explanations.html" /> 
+<meta charset="utf-8"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analysis of an example gunicorn/hello.py logfile — L4 Manual 1.0 documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/js/theme.js"></script>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="pdpa-dbno-security.html" rel="next" title="Security Considerations"/>
+<link href="pdpa-dbno-explanations.html" rel="prev" title="Explanation of how L4 works under the hood"/>
 </head>
-
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> L4 Manual
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../index.html"> L4 Manual
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Quickstart Guide</span></p>
+</div><div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption" role="heading"><span class="caption-text">Quickstart Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html">What is L4?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart-installation.html">Interacting with L4 through a spreadsheet</a></li>
@@ -65,7 +60,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-googlesheets.html">Installation and setup instructions of the Google Sheets App</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-installation-L4spreadsheet.html">Installations to compile an edited Natural L4 Spreadsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-explanations.html">Explanation of how L4 works under the hood</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis of an example gunicorn/hello.py logfile</a></li>
+<li class="toctree-l1 current expanded"><a class="current reference internal" href="#">Analysis of an example gunicorn/hello.py logfile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-security.html">Security Considerations</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Deliverables, Early Beta, and Acknowledgements</span></p>
@@ -74,33 +69,29 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart-early-beta.html">Early Beta</a></li>
 <li class="toctree-l1"><a class="reference internal" href="common-acknowledgements.html">Acknowledgements</a></li>
 </ul>
-
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">L4 Manual</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Analysis of an example gunicorn/hello.py logfile</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/docs/pdpa-dbno-logfile-analysis.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <section id="analysis-of-an-example-gunicorn-hello-py-logfile">
-<h1>Analysis of an example gunicorn/hello.py logfile<a class="headerlink" href="#analysis-of-an-example-gunicorn-hello-py-logfile" title="Permalink to this heading"></a></h1>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift"><nav aria-label="Mobile navigation menu" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../index.html">L4 Manual</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="Page navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a class="icon icon-home" href="../index.html"></a></li>
+<li class="breadcrumb-item active">Analysis of an example gunicorn/hello.py logfile</li>
+<li class="wy-breadcrumbs-aside">
+<a href="../_sources/docs/pdpa-dbno-logfile-analysis.rst.txt" rel="nofollow"> View page source</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<section id="analysis-of-an-example-gunicorn-hello-py-logfile">
+<h1>Analysis of an example gunicorn/hello.py logfile<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#analysis-of-an-example-gunicorn-hello-py-logfile"></a></h1>
 <p class="linemarker linemarker-5">The following log was captured from a typical invocation of the gunicorn/hello.py script with interspersed remarks.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">02</span> <span class="mi">17</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">24</span> <span class="o">+</span><span class="mi">0800</span><span class="p">]</span> <span class="p">[</span><span class="mi">3360812</span><span class="p">]</span> <span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="n">Booting</span> <span class="n">worker</span> <span class="k">with</span> <span class="n">pid</span><span class="p">:</span> <span class="mi">3360812</span>
 <span class="n">hello</span><span class="o">.</span><span class="n">py</span> <span class="n">processCsv</span><span class="p">()</span> <span class="n">starting</span> <span class="n">at</span>  <span class="mi">2022</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">02</span> <span class="mi">17</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mf">49.002760</span>
@@ -156,20 +147,16 @@ v8k.out: :8082/5fc0aa1e-9f2c-403e-96a9-6d0011a01479/1leBCZhgDsn-Abg2H_OINGGv-8Gp
 </pre></div>
 </div>
 </section>
-
-
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pdpa-dbno-explanations.html" class="btn btn-neutral float-left" title="Explanation of how L4 works under the hood" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pdpa-dbno-security.html" class="btn btn-neutral float-right" title="Security Considerations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, Meng Weng Wong.</p>
-  </div>
+</div>
+</div>
+<footer><div aria-label="Footer" class="rst-footer-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="pdpa-dbno-explanations.html" rel="prev" title="Explanation of how L4 works under the hood"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> Previous</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="pdpa-dbno-security.html" rel="next" title="Security Considerations">Next <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>© Copyright 2023, Meng Weng Wong.</p>
+</div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
@@ -177,15 +164,14 @@ v8k.out: :8082/5fc0aa1e-9f2c-403e-96a9-6d0011a01479/1leBCZhgDsn-Abg2H_OINGGv-8Gp
    
 
 </footer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
+</div>
+</div>
+</section>
+</div>
+<script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
-
+  </script>
 </body>
 </html>

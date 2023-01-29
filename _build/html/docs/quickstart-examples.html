@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Examples in L4 and the concepts and keywords introduced in each example &mdash; L4 Manual 1.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Keywords: Declarations and Definitions" href="quickstart-language-spec.html" />
-    <link rel="prev" title="Learning L4: Exercises" href="quickstart-exercises.html" /> 
+<meta charset="utf-8"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Examples in L4 and the concepts and keywords introduced in each example — L4 Manual 1.0 documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/js/theme.js"></script>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="quickstart-language-spec.html" rel="next" title="Keywords: Declarations and Definitions"/>
+<link href="quickstart-exercises.html" rel="prev" title="Learning L4: Exercises"/>
 </head>
-
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> L4 Manual
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../index.html"> L4 Manual
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Quickstart Guide</span></p>
+</div><div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption" role="heading"><span class="caption-text">Quickstart Guide</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html">What is L4?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-is-law-specific">L4 is ‘law-specific’</a></li>
@@ -48,7 +43,7 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart-tour-of-L4.html#l4-uses-spreadsheets-for-interaction">L4 uses spreadsheets for interaction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart-installation.html">Interacting with L4 through a spreadsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart-exercises.html">Learning L4: Exercises</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples in L4 and the concepts and keywords introduced in each example</a><ul>
+<li class="toctree-l1 current expanded"><a class="current reference internal" href="#">Examples in L4 and the concepts and keywords introduced in each example</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#rules-booleans-and-syntax-must-sing-example">Rules, Booleans, and Syntax: Must Sing Example</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#regulative-rules">Regulative Rules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#syntax-meta-rules">Syntax (Meta-)Rules</a></li>
@@ -100,36 +95,32 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="common-acknowledgements.html">Acknowledgements</a></li>
 </ul>
-
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">L4 Manual</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Examples in L4 and the concepts and keywords introduced in each example</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/docs/quickstart-examples.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <section id="examples-in-l4-and-the-concepts-and-keywords-introduced-in-each-example">
-<span id="examples"></span><h1>Examples in L4 and the concepts and keywords introduced in each example<a class="headerlink" href="#examples-in-l4-and-the-concepts-and-keywords-introduced-in-each-example" title="Permalink to this heading"></a></h1>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift"><nav aria-label="Mobile navigation menu" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../index.html">L4 Manual</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="Page navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a class="icon icon-home" href="../index.html"></a></li>
+<li class="breadcrumb-item active">Examples in L4 and the concepts and keywords introduced in each example</li>
+<li class="wy-breadcrumbs-aside">
+<a href="../_sources/docs/quickstart-examples.rst.txt" rel="nofollow"> View page source</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<section id="examples-in-l4-and-the-concepts-and-keywords-introduced-in-each-example">
+<span id="examples"></span><h1>Examples in L4 and the concepts and keywords introduced in each example<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#examples-in-l4-and-the-concepts-and-keywords-introduced-in-each-example"></a></h1>
 <section id="rules-booleans-and-syntax-must-sing-example">
-<h2>Rules, Booleans, and Syntax: Must Sing Example<a class="headerlink" href="#rules-booleans-and-syntax-must-sing-example" title="Permalink to this heading"></a></h2>
-<p class="linemarker linemarker-11"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1505307398">Link to ‘Must Sing’ example</a></p>
+<h2>Rules, Booleans, and Syntax: Must Sing Example<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#rules-booleans-and-syntax-must-sing-example"></a></h2>
+<p class="linemarker linemarker-11"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1505307398" rel="nofollow noopener">Link to ‘Must Sing’ example</a></p>
 <p class="linemarker linemarker-13">This example gives an overview of how to write a simple rule in L4 using the simple rule: “Every person who walks and eats or drinks must sing”. The example illustrates key concepts along the way.</p>
 <p class="linemarker linemarker-15">We thank Matthew Waddington for originally authoring the case from which this example is drawn.</p>
 <p class="linemarker linemarker-17">Concepts introduced:</p>
@@ -163,7 +154,7 @@ MUST    sing
 </pre></div>
 </div>
 <section id="regulative-rules">
-<h3>Regulative Rules<a class="headerlink" href="#regulative-rules" title="Permalink to this heading"></a></h3>
+<h3>Regulative Rules<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#regulative-rules"></a></h3>
 <p class="linemarker linemarker-56">Legal sentences for regulative rules, according to the syntax definition above, include:</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>1.
 EVERY   Person
@@ -188,9 +179,9 @@ MUST    say bad things about Alice
 </div>
 </section>
 <section id="syntax-meta-rules">
-<h3>Syntax (Meta-)Rules<a class="headerlink" href="#syntax-meta-rules" title="Permalink to this heading"></a></h3>
+<h3>Syntax (Meta-)Rules<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#syntax-meta-rules"></a></h3>
 <p class="linemarker linemarker-84">The syntax definition above obeys syntax rules of its own.</p>
-<p class="linemarker linemarker-86">A <code class="docutils literal notranslate"><span class="pre">|</span></code> indicates alternatives: the first word of the sentence can be either EVERY or PARTY. The last keyword can be MUST, MAY, or SHANT.</p>
+<p class="linemarker linemarker-86">A <code class="docutils literal notranslate">|</code> indicates alternatives: the first word of the sentence can be either EVERY or PARTY. The last keyword can be MUST, MAY, or SHANT.</p>
 <p class="linemarker linemarker-88">A pair of [brackets] indicates that the text between them is optional: that’s why in examples 3 and 4, Alice and Bob have no WHO or WHICH.</p>
 <p class="linemarker linemarker-90">The terms to the right of the keywords hold space for expressions that have syntax rules of their own.</p>
 <p class="linemarker linemarker-92">Just as the above stanza defines the syntax for “Regulative Rule”, you can expect to find stanzas elsewhere that define the syntax for “Entity Label”, “Boolean Structure”, and “Action Spec”.</p>
@@ -203,7 +194,7 @@ MUST    say bad things about Alice
 <p class="linemarker linemarker-106">Armed with this knowledge, let’s keep learning about L4’s syntax.</p>
 </section>
 <section id="constitutive-rules">
-<h3>Constitutive Rules<a class="headerlink" href="#constitutive-rules" title="Permalink to this heading"></a></h3>
+<h3>Constitutive Rules<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#constitutive-rules"></a></h3>
 <p class="linemarker linemarker-112">The basic syntax for constitutive rules is as follows:</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Constitutive Rule <span class="o">::=</span> MultiTerm
                         MEANS   Boolean Structure
@@ -222,7 +213,7 @@ AND             eats
 <p class="linemarker linemarker-134">The Boolean Structure contains “walks AND eats OR drinks”.</p>
 </section>
 <section id="boolean-structures">
-<h3>Boolean Structures<a class="headerlink" href="#boolean-structures" title="Permalink to this heading"></a></h3>
+<h3>Boolean Structures<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#boolean-structures"></a></h3>
 <p class="linemarker linemarker-140">Let’s look more closely at Boolean Structures.</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Boolean Structure <span class="o">::=</span>   Boolean Structure
                         AND | OR | UNLESS   Boolean Structure
@@ -236,8 +227,8 @@ Advanced versions of these clauses and constituent elements will be presented la
 </section>
 </section>
 <section id="booleans-and-visualization-rodents-and-vermin-example">
-<h2>Booleans and Visualization: Rodents and Vermin Example<a class="headerlink" href="#booleans-and-visualization-rodents-and-vermin-example" title="Permalink to this heading"></a></h2>
-<p class="linemarker linemarker-159"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1206725099">Link to ‘Rodents and Vermin’ example</a></p>
+<h2>Booleans and Visualization: Rodents and Vermin Example<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#booleans-and-visualization-rodents-and-vermin-example"></a></h2>
+<p class="linemarker linemarker-159"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1206725099" rel="nofollow noopener">Link to ‘Rodents and Vermin’ example</a></p>
 <p class="linemarker linemarker-161">This example focus on a single decision rule drawn from a home insurance policy and its transformations to more easily understood forms.</p>
 <p class="linemarker linemarker-163">Decisions express first-order logic, functions, predicates, judgements, and calculation in general.</p>
 <p class="linemarker linemarker-165">Concepts introduced:</p>
@@ -257,7 +248,7 @@ Advanced versions of these clauses and constituent elements will be presented la
 </ul>
 </div></blockquote>
 <section id="decisions">
-<h3>Decisions<a class="headerlink" href="#decisions" title="Permalink to this heading"></a></h3>
+<h3>Decisions<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#decisions"></a></h3>
 <p class="linemarker linemarker-184">Decisions express first-order logic, functions, predicates, judgements, and calculation in general.</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Hornlike <span class="o">::=</span> [GIVEN        ParamText            ]
               DECIDE       RelationalPredicate
@@ -265,7 +256,7 @@ Advanced versions of these clauses and constituent elements will be presented la
 </pre></div>
 </div>
 <p class="linemarker linemarker-192">If you happen to know Prolog, you will be familiar with the notion of a Horn clause. If not, no worries.</p>
-<p class="linemarker linemarker-194"><code class="docutils literal notranslate"><span class="pre">head(param1,</span> <span class="pre">param2,</span> <span class="pre">…)</span> <span class="pre">:-</span> <span class="pre">body1(param3,</span> <span class="pre">param4),</span> <span class="pre">body2(param5,</span> <span class="pre">param6).</span></code></p>
+<p class="linemarker linemarker-194"><code class="docutils literal notranslate">head(param1, param2, …) :- body1(param3, param4), body2(param5, param6).</code></p>
 <p class="linemarker linemarker-196">The head, to the left of the :- symbol, is the conclusion of the rule.</p>
 <p class="linemarker linemarker-198">The body, to the right of the :- symbol, contains the list of predicates that, when satisfied, conclude that the head of the rule is true.</p>
 <p class="linemarker linemarker-200">In L4, the relational predicate on the DECIDE line gives the conclusion of the rule.</p>
@@ -276,15 +267,15 @@ Advanced versions of these clauses and constituent elements will be presented la
 <p class="linemarker linemarker-210">Constitutive rules using WHEN are a subset of Hornlike rules that use DECIDE.</p>
 </section>
 <section id="decision-diagrams">
-<h3>Decision Diagrams<a class="headerlink" href="#decision-diagrams" title="Permalink to this heading"></a></h3>
+<h3>Decision Diagrams<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#decision-diagrams"></a></h3>
 <p class="linemarker linemarker-216">Visualization of a decision rule produces a “circuit diagram”: it is based on electrical circuit diagrams. If you can find a path from the left side of the diagram to the right, where the relevant terms have the required values,
 the overall value of the decision diagram is true.</p>
 <p class="linemarker linemarker-219">This is useful because it shows the “big picture” of a legal construct, and suggests ways to short-circuit a particular decision rule.</p>
 </section>
 </section>
 <section id="contract-as-automaton">
-<h2>Contract as Automaton<a class="headerlink" href="#contract-as-automaton" title="Permalink to this heading"></a></h2>
-<p class="linemarker linemarker-225"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=2000125343">Link to ‘Contract as Automaton’ example</a></p>
+<h2>Contract as Automaton<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#contract-as-automaton"></a></h2>
+<p class="linemarker linemarker-225"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=2000125343" rel="nofollow noopener">Link to ‘Contract as Automaton’ example</a></p>
 <p class="linemarker linemarker-227">A loan is repaid in two instalments. The borrower has to stay out of trouble.</p>
 <p class="linemarker linemarker-229">Concepts introduced:</p>
 <ol class="arabic simple">
@@ -310,7 +301,7 @@ the overall value of the decision diagram is true.</p>
 <p class="linemarker linemarker-250">Some of the earliest written agreements, carved in stone millennia ago, deal with the lending of property. Following in this tradition, this chapter formalizes a simple financial agreement in L4. The ruleset weaves multiple regulative rules together, in series and in parallel. It shows how a “flowchart”-style diagram is automatically generated from the ruleset.
 Such diagrams give people an alternative way to understand legal documents: visually instead of textually.</p>
 <section id="declarations-and-definitions">
-<h3>Declarations and Definitions<a class="headerlink" href="#declarations-and-definitions" title="Permalink to this heading"></a></h3>
+<h3>Declarations and Definitions<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#declarations-and-definitions"></a></h3>
 <p class="linemarker linemarker-257">This chapter introduces a handful of keywords. DECLARE and DEFINE have to do with data types and values.</p>
 <p class="linemarker linemarker-259">If you are familiar with Object-Oriented Programming, from languages like Python, Java, C++, or Javascript, you will find the DECLARE and DEFINE concepts familiar.</p>
 <p class="linemarker linemarker-261">We use DECLARE to set up our classes, our records, our types, our schemas, our ontology, our templates.</p>
@@ -346,7 +337,7 @@ HAS         position x          IS A        Number
 <p class="linemarker linemarker-300">Variable definitions with the DEFINE keyword follow the same format as DECLARE.</p>
 </section>
 <section id="deadlines">
-<h3>Deadlines<a class="headerlink" href="#deadlines" title="Permalink to this heading"></a></h3>
+<h3>Deadlines<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#deadlines"></a></h3>
 <p class="linemarker linemarker-306">This chapter also introduces temporal constraints: the BY and WITHIN keywords set deadlines.</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Temporal Constraint <span class="o">::=</span> (BEFORE | AFTER | BY | WITHIN | UNTIL)  Temporal Spec
 </pre></div>
@@ -354,7 +345,7 @@ HAS         position x          IS A        Number
 <p class="linemarker linemarker-312">A regulative rule without a temporal constraint is incomplete. L4 substitutes “EVENTUALLY” but will issue a warning so you are conscious that a deadline is missing.</p>
 </section>
 <section id="deontics">
-<h3>Deontics<a class="headerlink" href="#deontics" title="Permalink to this heading"></a></h3>
+<h3>Deontics<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#deontics"></a></h3>
 <p class="linemarker linemarker-318">Laws and contracts impose obligations and prohibitions on persons, and grant permissions.</p>
 <p class="linemarker linemarker-320">These ideas are central to deontic logic, and underlie L4’s keywords MUST, SHANT, and MAY, respectively.</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Deontic Keyword <span class="o">::=</span> MUST | MAY | SHANT
@@ -375,7 +366,7 @@ MAY         FULFILLED                               FULFILLED
 <p class="linemarker linemarker-342">l4’s workflow diagrams follow a convention: a rule that is satisfied proceeds to the bottom right, while a rule that is violated proceeds to the bottom left. The “happy path” therefore runs along the right side of a diagram. A MAY rule shows action to the right, and inaction to the left.</p>
 </section>
 <section id="connections">
-<h3>Connections<a class="headerlink" href="#connections" title="Permalink to this heading"></a></h3>
+<h3>Connections<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#connections"></a></h3>
 <p class="linemarker linemarker-348">Ordinary programming languages use the IF … THEN … ELSE construct to connect blocks of code, based on whether the conditions in the IF were met.
 L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative rules, based on whether the preceding rule was satisfied.</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Regulative Connector <span class="o">::=</span> HENCE | LEST   Rule Label | Regulative Rule
@@ -395,8 +386,8 @@ L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative r
 </section>
 </section>
 <section id="case-study-motor-insurance">
-<h2>Case Study: Motor Insurance<a class="headerlink" href="#case-study-motor-insurance" title="Permalink to this heading"></a></h2>
-<p class="linemarker linemarker-373"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=2061671536">Link to the case study ‘Motor Insurance’ example</a></p>
+<h2>Case Study: Motor Insurance<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#case-study-motor-insurance"></a></h2>
+<p class="linemarker linemarker-373"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=2061671536" rel="nofollow noopener">Link to the case study ‘Motor Insurance’ example</a></p>
 <p class="linemarker linemarker-375">Entity Relations, Ontology Inference, and Convenient Syntax for Predicate Logic.</p>
 <p class="linemarker linemarker-377">Concepts introduced:</p>
 <ol class="arabic simple">
@@ -417,8 +408,8 @@ L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative r
 </div></blockquote>
 </section>
 <section id="case-study-pdpa-dbno">
-<h2>Case Study: PDPA DBNO<a class="headerlink" href="#case-study-pdpa-dbno" title="Permalink to this heading"></a></h2>
-<p class="linemarker linemarker-397"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1779650637">Link to the case study ‘PDPA DBNO’ example</a></p>
+<h2>Case Study: PDPA DBNO<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#case-study-pdpa-dbno"></a></h2>
+<p class="linemarker linemarker-397"><a class="reference external" href="https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1779650637" rel="nofollow noopener">Link to the case study ‘PDPA DBNO’ example</a></p>
 <p class="linemarker linemarker-399">L4 automatically generates a web app from real-world legislation &amp; regulation. It is an encoding of a fragment of real-world legislation.</p>
 <p class="linemarker linemarker-401">Concepts introduced:</p>
 <ol class="arabic simple">
@@ -453,20 +444,16 @@ L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative r
 </div></blockquote>
 </section>
 </section>
-
-
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="quickstart-exercises.html" class="btn btn-neutral float-left" title="Learning L4: Exercises" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="quickstart-language-spec.html" class="btn btn-neutral float-right" title="Keywords: Declarations and Definitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, Meng Weng Wong.</p>
-  </div>
+</div>
+</div>
+<footer><div aria-label="Footer" class="rst-footer-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="quickstart-exercises.html" rel="prev" title="Learning L4: Exercises"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> Previous</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="quickstart-language-spec.html" rel="next" title="Keywords: Declarations and Definitions">Next <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>© Copyright 2023, Meng Weng Wong.</p>
+</div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
@@ -474,15 +461,14 @@ L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative r
    
 
 </footer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
+</div>
+</div>
+</section>
+</div>
+<script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
-
+  </script>
 </body>
 </html>

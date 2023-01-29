@@ -40,7 +40,7 @@ You can navigate this document by:
 The page's content directory will appear on a column to the right of the main page.
 
 .. toctree:: 
-   :maxdepth: 0
+   :maxdepth: 1
    :caption: links
    :hidden:
 
@@ -52,7 +52,7 @@ The page's content directory will appear on a column to the right of the main pa
    docs/links-backend-setup-instructions.rst
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
    :caption: First Steps
    :hidden:
 
@@ -60,7 +60,7 @@ The page's content directory will appear on a column to the right of the main pa
    docs/quickstart-installation.rst
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
    :caption: Returning Users
    :hidden:
 
@@ -76,7 +76,7 @@ The page's content directory will appear on a column to the right of the main pa
    docs/L4manual-language-spec.rst
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
    :caption: Setting up the L4 Backend
    :hidden:
 
@@ -87,7 +87,7 @@ The page's content directory will appear on a column to the right of the main pa
    docs/pdpa-dbno-security.rst
 
 .. toctree:: 
-   :maxdepth: 0
+   :maxdepth: 1
    :caption: Early Beta, and Acknowledgements
    :hidden:
 

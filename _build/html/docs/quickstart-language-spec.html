@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keywords: Declarations and Definitions &mdash; L4 Manual 1.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Early Beta" href="quickstart-early-beta.html" />
-    <link rel="prev" title="Examples in L4 and the concepts and keywords introduced in each example" href="quickstart-examples.html" /> 
+<meta charset="utf-8"/><meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Keywords: Declarations and Definitions — L4 Manual 1.0 documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/js/theme.js"></script>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="quickstart-early-beta.html" rel="next" title="Early Beta"/>
+<link href="quickstart-examples.html" rel="prev" title="Examples in L4 and the concepts and keywords introduced in each example"/>
 </head>
-
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> L4 Manual
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../index.html"> L4 Manual
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+</div><div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="common-introduction.html">Overview of this document</a></li>
 <li class="toctree-l1"><a class="reference internal" href="common-acknowledgements.html">Acknowledgements</a></li>
@@ -54,7 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart-installation.html">Interacting with L4 through a spreadsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart-exercises.html">Learning L4: Exercises</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart-examples.html">Examples in L4 and the concepts and keywords introduced in each example</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Keywords: Declarations and Definitions</a><ul>
+<li class="toctree-l1 current expanded"><a class="current reference internal" href="#">Keywords: Declarations and Definitions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#declare-and-define-for-data-types-and-values-and-has-attributes">DECLARE and DEFINE, for data types and values, and HAS-Attributes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#by-and-within-for-temporal-constraints-such-as-deadlines">BY and WITHIN for Temporal Constraints such as Deadlines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#must-shant-and-may-for-obligations-and-permissions">MUST, SHANT, and MAY for obligations and permissions</a></li>
@@ -86,36 +81,32 @@
 <li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-logfile-analysis.html">Analysis of an example logfile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pdpa-dbno-security.html">Security Considerations</a></li>
 </ul>
-
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">L4 Manual</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Keywords: Declarations and Definitions</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/docs/quickstart-language-spec.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <section id="keywords-declarations-and-definitions">
-<span id="keywords"></span><h1>Keywords: Declarations and Definitions<a class="headerlink" href="#keywords-declarations-and-definitions" title="Permalink to this heading"></a></h1>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift"><nav aria-label="Mobile navigation menu" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../index.html">L4 Manual</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="Page navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a class="icon icon-home" href="../index.html"></a></li>
+<li class="breadcrumb-item active">Keywords: Declarations and Definitions</li>
+<li class="wy-breadcrumbs-aside">
+<a href="../_sources/docs/quickstart-language-spec.rst.txt" rel="nofollow"> View page source</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<section id="keywords-declarations-and-definitions">
+<span id="keywords"></span><h1>Keywords: Declarations and Definitions<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#keywords-declarations-and-definitions"></a></h1>
 <p class="linemarker linemarker-7">This chapter introduces a handful of keywords.</p>
 <section id="declare-and-define-for-data-types-and-values-and-has-attributes">
-<h2>DECLARE and DEFINE, for data types and values, and HAS-Attributes<a class="headerlink" href="#declare-and-define-for-data-types-and-values-and-has-attributes" title="Permalink to this heading"></a></h2>
+<h2>DECLARE and DEFINE, for data types and values, and HAS-Attributes<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#declare-and-define-for-data-types-and-values-and-has-attributes"></a></h2>
 <p class="linemarker linemarker-13">DECLARE and DEFINE have to do with data types and values.</p>
 <p class="linemarker linemarker-15">If you are familiar with Object-Oriented Programming (from languages like Python, Java, C++, or Javascript) you will find the DECLARE and DEFINE concepts familiar.</p>
 <p class="linemarker linemarker-17">We use DECLARE to set up our classes, our records, our types, our schemas, our ontology, our templates.</p>
@@ -143,7 +134,7 @@ For example:</p>
 <p class="linemarker linemarker-49">We’ll talk more about the elementary data-types of L4 later: sum types, product types, lists, and dictionaries. We’ll also talk about type inference and type checking.</p>
 </section>
 <section id="by-and-within-for-temporal-constraints-such-as-deadlines">
-<h2>BY and WITHIN for Temporal Constraints such as Deadlines<a class="headerlink" href="#by-and-within-for-temporal-constraints-such-as-deadlines" title="Permalink to this heading"></a></h2>
+<h2>BY and WITHIN for Temporal Constraints such as Deadlines<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#by-and-within-for-temporal-constraints-such-as-deadlines"></a></h2>
 <p class="linemarker linemarker-55">The BY and WITHIN keywords set deadlines</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Temporal Constraint <span class="o">::=</span> (BEFORE | AFTER | BY | WITHIN | UNTIL) Temporal Spec
 </pre></div>
@@ -151,7 +142,7 @@ For example:</p>
 <p class="linemarker linemarker-61">A regulative rule without a temporal constraint is incomplete. L4 substitutes “EVENTUALLY” but will issue a warning so you are conscious that a deadline is missing.</p>
 </section>
 <section id="must-shant-and-may-for-obligations-and-permissions">
-<h2>MUST, SHANT, and MAY for obligations and permissions<a class="headerlink" href="#must-shant-and-may-for-obligations-and-permissions" title="Permalink to this heading"></a></h2>
+<h2>MUST, SHANT, and MAY for obligations and permissions<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#must-shant-and-may-for-obligations-and-permissions"></a></h2>
 <p class="linemarker linemarker-67">Laws and contracts impose <em>obligations</em> and <em>prohibitions</em> on persons, and grant <em>permissions</em>. These ideas are central to <em>deontic logic</em>, and underlie L4’s keywords MUST, SHANT, and MAY, respectively.</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Deontic Keyword <span class="o">::=</span> (MUST | MAY | SHANT)
 </pre></div>
@@ -159,7 +150,7 @@ For example:</p>
 <p class="linemarker linemarker-73">Within the context of a single rule, these deontic keywords specify different consequences for the satisfaction or violation of the rule.</p>
 </section>
 <section id="fulfilled-and-breach-for-consequences-in-l4">
-<h2>FULFILLED and BREACH for consequences in L4<a class="headerlink" href="#fulfilled-and-breach-for-consequences-in-l4" title="Permalink to this heading"></a></h2>
+<h2>FULFILLED and BREACH for consequences in L4<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#fulfilled-and-breach-for-consequences-in-l4"></a></h2>
 <p class="linemarker linemarker-79">The two fundamental consequences in L4 are FULFILLED and BREACH.</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>            If the actor does not perform the action by the deadline            If the actor performs the action by the deadline
 MUST                BREACHED                                                                                FULFILLED
@@ -172,7 +163,7 @@ MAY                 FULFILLED                                                   
 <p class="linemarker linemarker-92">A MAY rule shows action to the right, and inaction to the left.</p>
 </section>
 <section id="hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code">
-<h2>HENCE and LEST for regulative rules and connecting blocks of code<a class="headerlink" href="#hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code" title="Permalink to this heading"></a></h2>
+<h2>HENCE and LEST for regulative rules and connecting blocks of code<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code"></a></h2>
 <p class="linemarker linemarker-98">Ordinary programming languages use the IF … THEN … ELSE construct to connect blocks of code, based on whether the conditions in the IF were met.</p>
 <p class="linemarker linemarker-100">L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative rules, based on whether the preceding rule was satisfied.</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>Regulative Connector <span class="o">::=</span>    (HENCE | LEST)
@@ -182,7 +173,7 @@ MAY                 FULFILLED                                                   
 <p class="linemarker linemarker-107">Individual regulative rules connect with one another to form a graph, or a flowchart, describing a workflow.</p>
 </section>
 <section id="the-semantics-of-rules">
-<h2>The Semantics of rules<a class="headerlink" href="#the-semantics-of-rules" title="Permalink to this heading"></a></h2>
+<h2>The Semantics of rules<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#the-semantics-of-rules"></a></h2>
 <p class="linemarker linemarker-113">What are the semantics of a rule?</p>
 <div class="highlight-bnf notranslate"><div class="highlight"><pre><span></span>[Attribute Constraint   ]
 [Conditional Constraint ]
@@ -195,20 +186,16 @@ MAY                 FULFILLED                                                   
 </div>
 </section>
 </section>
-
-
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="quickstart-examples.html" class="btn btn-neutral float-left" title="Examples in L4 and the concepts and keywords introduced in each example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="quickstart-early-beta.html" class="btn btn-neutral float-right" title="Early Beta" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, Meng Weng Wong.</p>
-  </div>
+</div>
+</div>
+<footer><div aria-label="Footer" class="rst-footer-buttons" role="navigation">
+<a accesskey="p" class="btn btn-neutral float-left" href="quickstart-examples.html" rel="prev" title="Examples in L4 and the concepts and keywords introduced in each example"><span aria-hidden="true" class="fa fa-arrow-circle-left"></span> Previous</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="quickstart-early-beta.html" rel="next" title="Early Beta">Next <span aria-hidden="true" class="fa fa-arrow-circle-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>© Copyright 2023, Meng Weng Wong.</p>
+</div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
@@ -216,15 +203,14 @@ MAY                 FULFILLED                                                   
    
 
 </footer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
+</div>
+</div>
+</section>
+</div>
+<script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
-
+  </script>
 </body>
 </html>

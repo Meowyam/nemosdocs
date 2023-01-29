@@ -2,318 +2,120 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="lang:clipboard.copy" content="Copy to clipboard">
-  <meta name="lang:clipboard.copied" content="Copied to clipboard">
-  <meta name="lang:search.language" content="en">
-  <meta name="lang:search.pipeline.stopwords" content="True">
-  <meta name="lang:search.pipeline.trimmer" content="True">
-  <meta name="lang:search.result.none" content="No matching documents">
-  <meta name="lang:search.result.one" content="1 matching document">
-  <meta name="lang:search.result.other" content="# matching documents">
-  <meta name="lang:search.tokenizer" content="[\s\-]+">
-
-  
-    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
-
-    <style>
-      body,
-      input {
-        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
-      }
-
-      code,
-      kbd,
-      pre {
-        font-family: "Roboto Mono", "Courier New", Courier, monospace
-      }
-    </style>
-  
-
-  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
-  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
-  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
-  
-  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
-  
-  <meta name="theme-color" content="#3f51b5">
-  <script src="../_static/javascripts/modernizr.js"></script>
-  
-  
-  
-    <title>Installation and setup instructions of the Web Tool &#8212; L4 Manual 1.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installation and setup instructions of the Google Sheets App" href="pdpa-dbno-installation-googlesheets.html" />
-    <link rel="prev" title="Keywords: Declarations and Definitions" href="L4manual-language-spec.html" />
-  
-   
-
-  </head>
-  <body dir=ltr
-        data-md-color-primary=blue-grey data-md-color-accent=blue>
-  
-  <svg class="md-svg">
-    <defs data-children-count="0">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-      
-    </defs>
-  </svg>
-  
-  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
-  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
-  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-  <a href="#docs/pdpa-dbno-installation-webtool" tabindex="1" class="md-skip"> Skip to content </a>
-  <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex navheader">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../index.html" title="L4 Manual 1.0 documentation"
-           class="md-header-nav__button md-logo">
-          
-            &nbsp;
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          <span class="md-header-nav__topic">L4 Manual 1.0 documentation</span>
-          <span class="md-header-nav__topic"> Installation and setup instructions of the Web Tool </span>
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-        
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" action="../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
-             autocapitalize="off" autocomplete="off" spellcheck="false"
-             data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>Installation and setup instructions of the Web Tool | L4 Manual 1.0 documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet"/>
+<link href="../_static/theme.9297a650d9dd3016d913.css" rel="stylesheet"/>
+<link href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="pdpa-dbno-installation-googlesheets.html" rel="next" title="Installation and setup instructions of the Google Sheets App"/>
+<link href="L4manual-language-spec.html" rel="prev" title="Keywords: Declarations and Definitions"/>
+</head>
+<body class="antialiased text-gray scroll-smooth">
+<div class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto" data-action="keydown@window-&gt;search#focus " data-controller="sidebar search " id="page">
+<a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#installation-and-setup-instructions-of-the-web-tool" title="Skip navigation links">Skip to content</a>
+<header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
+<div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center"><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none" href="../index.html" title="Back to homepage"><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">L4 Manual 1.0 documentation</span>
+</a></div><div class="flex justify-end items-center flex-1"><form action="../search.html" class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static z-10" data-action="click-&gt;search#focusSearchInput" id="searchbox" method="get">
+<button aria-label="Get search results" class="text-inherit h-14 w-14" tabindex="-1">
+<svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+</button>
+<input aria-label="Search the docs" class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100" data-search-target="searchInput" id="search-input" name="q" placeholder="Search the docs" type="search"/>
+</form></div>
 </div>
-
-      </div>
-      
-      
-  
-  <script src="../_static/javascripts/version_dropdown.js"></script>
-  <script>
-    var json_loc = "../"versions.json"",
-        target_loc = "../../",
-        text = "Versions";
-    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
-  </script>
-  
-
-    </div>
-  </nav>
 </header>
-
-  
-  <div class="md-container">
-    
-    
-    
-  <nav class="md-tabs" data-md-component="tabs">
-    <div class="md-tabs__inner md-grid">
-      <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">L4 Manual 1.0 documentation</a></li>
-      </ul>
-    </div>
-  </nav>
-    <main class="md-main">
-      <div class="md-main__inner md-grid" data-md-component="container">
-        
-          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../index.html" title="L4 Manual 1.0 documentation" class="md-nav__button md-logo">
-      
-        <img src="../_static/" alt=" logo" width="48" height="48">
-      
-    </a>
-    <a href="../index.html"
-       title="L4 Manual 1.0 documentation">L4 Manual 1.0 documentation</a>
-  </label>
-  
-
+<main class="px-4 pt-14 col-span-full overflow-y-auto flex flex-col flex-1 h-full w-full">
+<div class="flex flex-col h-full mx-auto max-w-prose"><nav aria-label="breadcrumbs" class="print:hidden mt-12 text-sm text-gray-light" role="navigation">
+<a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">L4 Manual 1.0 documentation</a>
+<span class="mr-1">/</span><span aria-current="page">Installation and setup instructions of the Web Tool</span>
 </nav>
-              </div>
-            </div>
-          </div>
-          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                
-<nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc">Contents</label>
-  <ul class="md-nav__list" data-md-scrollfix="">
-        <li class="md-nav__item"><a href="#docs-pdpa-dbno-installation-webtool--page-root" class="md-nav__link">Installation and setup instructions of the Web Tool</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#requirements" class="md-nav__link">Requirements</a>
-        </li>
-        <li class="md-nav__item"><a href="#setup-and-usage" class="md-nav__link">Setup and Usage</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#configuring-environment-variables-with-env" class="md-nav__link">Configuring Environment Variables with .env</a>
-        </li>
-        <li class="md-nav__item"><a href="#installing-nvm" class="md-nav__link">Installing NVM</a>
-        </li>
-        <li class="md-nav__item"><a href="#installing-packages" class="md-nav__link">Installing Packages</a>
-        </li>
-        <li class="md-nav__item"><a href="#running-in-development" class="md-nav__link">Running in Development</a>
-        </li>
-        <li class="md-nav__item"><a href="#building-for-production" class="md-nav__link">Building for Production</a>
-        </li>
-        <li class="md-nav__item"><a href="#using-docker" class="md-nav__link">Using Docker</a>
-        </li>
-        <li class="md-nav__item"><a href="#using-v8k" class="md-nav__link">Using v8k</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#setting-up-v8k" class="md-nav__link">Setting up v8K</a>
-        </li>
-        <li class="md-nav__item"><a href="#spawning-a-new-server" class="md-nav__link">Spawning a new server</a>
-        </li>
-        <li class="md-nav__item"><a href="#bringing-down-a-server" class="md-nav__link">Bringing Down A Server</a>
-        </li>
-        <li class="md-nav__item"><a href="#bringing-down-a-server-through-a-forced-shutdown" class="md-nav__link">Bringing Down A Server through a forced shutdown</a>
-        </li>
-        <li class="md-nav__item"><a href="#checking-to-see-what-s-running-using-v8k" class="md-nav__link">Checking to see what’s running using v8k</a>
-        </li>
-        <li class="md-nav__item"><a href="#checking-to-see-what-s-running" class="md-nav__link">Checking to see what’s running</a>
-        </li></ul>
-            </nav>
-        </li></ul>
-            </nav>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#accessing-the-web-tool" class="md-nav__link">Accessing the Web Tool</a>
-        </li>
-    
-<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/docs/pdpa-dbno-installation-webtool.rst.txt">Show Source</a> </li>
-
-<li id="searchbox" class="md-nav__item"></li>
-
-  </ul>
-</nav>
-              </div>
-            </div>
-          </div>
-        
-        <div class="md-content">
-          <article class="md-content__inner md-typeset" role="main">
-            
-  <section id="installation-and-setup-instructions-of-the-web-tool">
-<span id="webtool"></span><h1 id="docs-pdpa-dbno-installation-webtool--page-root">Installation and setup instructions of the Web Tool<a class="headerlink" href="#docs-pdpa-dbno-installation-webtool--page-root" title="Permalink to this heading">¶</a></h1>
+<article class="flex-1" role="main">
+<section id="installation-and-setup-instructions-of-the-web-tool">
+<span id="webtool"></span><h1>Installation and setup instructions of the Web Tool<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#installation-and-setup-instructions-of-the-web-tool">¶</a></h1>
 <p>Installation instructions for the Web Tool were taken and edited from
-<a class="reference external" href="https://github.com/smucclaw/vue-pure-pdpa">https://github.com/smucclaw/vue-pure-pdpa</a></p>
+<a class="reference external" href="https://github.com/smucclaw/vue-pure-pdpa" rel="nofollow noopener">https://github.com/smucclaw/vue-pure-pdpa<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a></p>
 <p>The reader will be able to install the Web Tool even if they are unfamiliar with some of Vue, Purescript, or Haskell.</p>
 <ul class="simple">
 <li><p>Vue is a framework similar to React and Angular, providing infrastructure for component-oriented single-page web application development. We chose it for its excellent support for hot-reloading and re-rendering.</p></li>
-<li><p>Purescript is a functional language that compiles to Javascript, used for the configuration and interactive recomputation of the interview results. We chose it because it lies at the intersection of Haskell-style functional programming and <a class="reference external" href="https://sliptype.com/functional-front-end/">compatibility with Javascript and Vue</a> <a class="footnote-reference brackets" href="#f1" id="id1">1</a> for web development.</p></li>
+<li><p>Purescript is a functional language that compiles to Javascript, used for the configuration and interactive recomputation of the interview results. We chose it because it lies at the intersection of Haskell-style functional programming and <a class="reference external" href="https://sliptype.com/functional-front-end/" rel="nofollow noopener">compatibility with Javascript and Vue<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> <a class="footnote-reference brackets" href="#f1" id="id1">1</a> for web development.</p></li>
 <li><p>Haskell is a functional language used to implement the L4 parser, interpreter, transpilers, and intermediate representation components. We chose it because it is generally recognized as a good choice for language engineering and writing compiler-related tools <a class="footnote-reference brackets" href="#f2" id="id2">2</a>.</p></li>
 </ul>
 <p>Future development of this Web Tool will involve a design team familiar with the above technologies.</p>
 <section id="requirements">
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
-<p><a class="reference external" href="https://nodejs.dev/en/learn/how-to-install-nodejs/">NodeJS</a> (versions 16 and above)</p>
+<h2>Requirements<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#requirements">¶</a></h2>
+<p><a class="reference external" href="https://nodejs.dev/en/learn/how-to-install-nodejs/" rel="nofollow noopener">NodeJS<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> (versions 16 and above)</p>
 </section>
 <section id="setup-and-usage">
-<h2 id="setup-and-usage">Setup and Usage<a class="headerlink" href="#setup-and-usage" title="Permalink to this heading">¶</a></h2>
-<p>Clone the <a class="reference external" href="https://github.com/smucclaw/vue-pure-pdpa">SMU CCLAW vue-pure-pdpa github page</a>.</p>
+<h2>Setup and Usage<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#setup-and-usage">¶</a></h2>
+<p>Clone the <a class="reference external" href="https://github.com/smucclaw/vue-pure-pdpa" rel="nofollow noopener">SMU CCLAW vue-pure-pdpa github page<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>.</p>
 <section id="configuring-environment-variables-with-env">
-<h3 id="configuring-environment-variables-with-env">Configuring Environment Variables with .env<a class="headerlink" href="#configuring-environment-variables-with-env" title="Permalink to this heading">¶</a></h3>
-<p>Before proceeding with the steps below, copy the <code class="docutils literal notranslate"><span class="pre">.env.example</span></code> to <code class="docutils literal notranslate"><span class="pre">.env</span></code> in your cloned vue-pure-pdpa repository. You can do this with the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">example</span> <span class="o">.</span><span class="n">env</span>
-</pre></div>
-</div>
-<p>Inside the newly created <code class="docutils literal notranslate"><span class="pre">.env</span></code> file, configure the following settings according to your application:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">BASE_URL</span><span class="o">=/</span>
+<h3>Configuring Environment Variables with .env<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#configuring-environment-variables-with-env">¶</a></h3>
+<p>Before proceeding with the steps below, copy the <code class="docutils literal notranslate">.env.example</code> to <code class="docutils literal notranslate">.env</code> in your cloned vue-pure-pdpa repository. You can do this with the following command:</p>
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">default</span></div>
+<div class="highlight"><pre><code><span class="n">mv</span> <span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">example</span> <span class="o">.</span><span class="n">env</span>
+</code></pre></div></div>
+<p>Inside the newly created <code class="docutils literal notranslate">.env</code> file, configure the following settings according to your application:</p>
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">default</span></div>
+<div class="highlight"><pre><code><span class="n">BASE_URL</span><span class="o">=/</span>
 <span class="n">VUE_APP_BROWSER_NAME</span><span class="o">=</span><span class="n">CCLAW</span>
 <span class="n">VUE_APP_NAME</span><span class="o">=</span><span class="s2">"PDPA DBNO PoC - Draft"</span>
-</pre></div>
-</div>
+</code></pre></div></div>
 </section>
 <section id="installing-nvm">
-<h3 id="installing-nvm">Installing NVM<a class="headerlink" href="#installing-nvm" title="Permalink to this heading">¶</a></h3>
-<p>NVM is a version manager for node. Follow the instructions on the <a class="reference external" href="https://github.com/nvm-sh/nvm">nvm github</a>.</p>
+<h3>Installing NVM<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#installing-nvm">¶</a></h3>
+<p>NVM is a version manager for node. Follow the instructions on the <a class="reference external" href="https://github.com/nvm-sh/nvm" rel="nofollow noopener">nvm github<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>.</p>
 </section>
 <section id="installing-packages">
-<h3 id="installing-packages">Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this heading">¶</a></h3>
+<h3>Installing Packages<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#installing-packages">¶</a></h3>
 <p>Run the following set of install scripts:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nvm</span> <span class="n">use</span>
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">default</span></div>
+<div class="highlight"><pre><code><span class="n">nvm</span> <span class="n">use</span>
 <span class="n">nvm</span> <span class="n">install</span>
 <span class="n">nvm</span> <span class="n">exec</span>
 <span class="n">npm</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span> <span class="n">node</span><span class="o">-</span><span class="n">gyp</span><span class="nd">@latest</span>
 <span class="n">npm</span> <span class="n">run</span> <span class="n">deps</span>
-</pre></div>
-</div>
+</code></pre></div></div>
 </section>
 <section id="running-in-development">
-<h3 id="running-in-development">Running in Development<a class="headerlink" href="#running-in-development" title="Permalink to this heading">¶</a></h3>
+<h3>Running in Development<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#running-in-development">¶</a></h3>
 <p>Start the application in development mode by running:</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">npm</span> <span class="pre">run</span> <span class="pre">serve</span></code></p>
-<p>The application can be accessed at <code class="docutils literal notranslate"><span class="pre">localhost:8080</span></code>.</p>
+<p><code class="docutils literal notranslate">$ npm run serve</code></p>
+<p>The application can be accessed at <code class="docutils literal notranslate">localhost:8080</code>.</p>
 </section>
 <section id="building-for-production">
-<h3 id="building-for-production">Building for Production<a class="headerlink" href="#building-for-production" title="Permalink to this heading">¶</a></h3>
+<h3>Building for Production<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#building-for-production">¶</a></h3>
 <p>To build the application for production, run:</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">npm</span> <span class="pre">run</span> <span class="pre">build</span></code></p>
-<p>This command should produce a <code class="docutils literal notranslate"><span class="pre">dist/</span></code> directory. Deploy the contents in the <code class="docutils literal notranslate"><span class="pre">dist/</span></code> directory to your application of choice (e.g. Github pages).</p>
-<p>An example can be found at <a class="reference external" href="https://smucclaw.github.io/vue-pure-pdpa/">https://smucclaw.github.io/vue-pure-pdpa/</a> or <a class="reference external" href="https://smucclaw.github.io/mengwong/pdpa/">https://smucclaw.github.io/mengwong/pdpa/</a>.</p>
+<p><code class="docutils literal notranslate">$ npm run build</code></p>
+<p>This command should produce a <code class="docutils literal notranslate">dist/</code> directory. Deploy the contents in the <code class="docutils literal notranslate">dist/</code> directory to your application of choice (e.g. Github pages).</p>
+<p>An example can be found at <a class="reference external" href="https://smucclaw.github.io/vue-pure-pdpa/" rel="nofollow noopener">https://smucclaw.github.io/vue-pure-pdpa/<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> or <a class="reference external" href="https://smucclaw.github.io/mengwong/pdpa/" rel="nofollow noopener">https://smucclaw.github.io/mengwong/pdpa/<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>.</p>
 </section>
 <section id="using-docker">
-<h3 id="using-docker">Using Docker<a class="headerlink" href="#using-docker" title="Permalink to this heading">¶</a></h3>
+<h3>Using Docker<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#using-docker">¶</a></h3>
 <p>Alternatively, you may run this application on a Docker container by running:</p>
-<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">--build</span></code></p>
+<p><code class="docutils literal notranslate">$ docker-compose up --build</code></p>
 </section>
 <section id="using-v8k">
-<h3 id="using-v8k">Using v8k<a class="headerlink" href="#using-v8k" title="Permalink to this heading">¶</a></h3>
+<h3>Using v8k<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#using-v8k">¶</a></h3>
 <p>v8k is a little server-management script that allocates new development servers to ports in the 8000 range.</p>
-<p>Once you’re able to run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">serve</span></code> you can think about spawning new servers in response to updates from the Python/Flask/natural4-exe end of things.</p>
+<p>Once you’re able to run <code class="docutils literal notranslate">npm run serve</code> you can think about spawning new servers in response to updates from the Python/Flask/natural4-exe end of things.</p>
 <p>Spawning new servers allows you to edit work in one server without affecting another server, such as when you have multiple sheets of different rules.</p>
 <section id="setting-up-v8k">
-<h4 id="setting-up-v8k">Setting up v8K<a class="headerlink" href="#setting-up-v8k" title="Permalink to this heading">¶</a></h4>
+<h4>Setting up v8K<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#setting-up-v8k">¶</a></h4>
 <p>You only have to do this once:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="n">v8kworkdir</span>
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">default</span></div>
+<div class="highlight"><pre><code><span class="n">mkdir</span> <span class="o">~/</span><span class="n">v8kworkdir</span>
 <span class="n">cd</span> <span class="o">~/</span><span class="n">v8kworkdir</span>
 <span class="n">export</span> <span class="n">V8K_WORKDIR</span><span class="o">=~/</span><span class="n">v8kworkdir</span>
 <span class="n">rsync</span> <span class="o">-</span><span class="n">va</span> <span class="o">~/</span><span class="n">src</span><span class="o">/</span><span class="n">smucclaw</span><span class="o">/</span><span class="n">vue</span><span class="o">-</span><span class="n">pure</span><span class="o">-</span><span class="n">pdpa</span><span class="o">/</span> <span class="n">vue</span><span class="o">-</span><span class="n">big</span><span class="o">/</span>
@@ -322,127 +124,85 @@
 <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">../</span><span class="n">vue</span><span class="o">-</span><span class="n">big</span><span class="o">/.</span><span class="n">git</span> <span class="o">.</span>
 <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">../</span><span class="n">vue</span><span class="o">-</span><span class="n">big</span><span class="o">/</span><span class="n">node_modules</span> <span class="o">.</span>
 <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">../</span><span class="n">vue</span><span class="o">-</span><span class="n">big</span><span class="o">/.</span><span class="n">spago</span> <span class="o">.</span>
-</pre></div>
-</div>
-<p>Note that for the 3rd command, <code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">-va</span> <span class="pre">~/src/smucclaw/vue-pure-pdpa/</span> <span class="pre">vue-big/</span></code>, you should replace <code class="docutils literal notranslate"><span class="pre">~/src/smucclaw/vue-pure-pdpa/</span></code> with the folder where you cloned the vue-pure-pdpa github page.</p>
+</code></pre></div></div>
+<p>Note that for the 3rd command, <code class="docutils literal notranslate">rsync -va ~/src/smucclaw/vue-pure-pdpa/ vue-big/</code>, you should replace <code class="docutils literal notranslate">~/src/smucclaw/vue-pure-pdpa/</code> with the folder where you cloned the vue-pure-pdpa github page.</p>
 </section>
 <section id="spawning-a-new-server">
-<h4 id="spawning-a-new-server">Spawning a new server<a class="headerlink" href="#spawning-a-new-server" title="Permalink to this heading">¶</a></h4>
+<h4>Spawning a new server<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#spawning-a-new-server">¶</a></h4>
 <p>Note that you do not have to run the following commands; this is just an explanation of how the Pythong Flask subsystem spawns a server.</p>
 <p>Every time the Python Flask subsystem runs natural4-exe to refresh the workdir output, it will want to tell Vue that there is a new .purs file that contains a Rule Library.</p>
 <p>It should run:</p>
-<p><code class="docutils literal notranslate"><span class="pre">~/src/smucclaw/vue-pure-pdpa/bin/v8k</span> <span class="pre">up</span> <span class="pre">--uuid=000</span> <span class="pre">--ssid=111</span> <span class="pre">--sheetid=222</span> <span class="pre">~/src/smucclaw/dsl/lib/haskell/natural4/workdir/000/111/222/purs/LATEST.purs</span></code></p>
+<p><code class="docutils literal notranslate">~/src/smucclaw/vue-pure-pdpa/bin/v8k up --uuid=000 --ssid=111 --sheetid=222 ~/src/smucclaw/dsl/lib/haskell/natural4/workdir/000/111/222/purs/LATEST.purs</code></p>
 <p>The STDOUT of this command will be a port number and path. Append that to the server public ip or domain name to get something like</p>
-<p><a class="reference external" href="http://18.139.62.80:8001/000/111/222/">http://18.139.62.80:8001/000/111/222/</a></p>
-<p>And a few seconds later that link should serve an instance of your personal Vue app configured with the <code class="docutils literal notranslate"><span class="pre">LATEST.purs</span></code> that you gave it. <a class="footnote-reference brackets" href="#f3" id="id3">3</a></p>
-<p>The above <code class="docutils literal notranslate"><span class="pre">up</span></code> call is idempotent: the Flask system can just re-run it when the <code class="docutils literal notranslate"><span class="pre">workdir</span></code> changes and serve the constructed URL back to the sidebar. Most of the time the URL will not change but sometimes it will, so do read it each time.</p>
+<p><a class="reference external" href="http://18.139.62.80:8001/000/111/222/" rel="nofollow noopener">http://18.139.62.80:8001/000/111/222/<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a></p>
+<p>And a few seconds later that link should serve an instance of your personal Vue app configured with the <code class="docutils literal notranslate">LATEST.purs</code> that you gave it. <a class="footnote-reference brackets" href="#f3" id="id3">3</a></p>
+<p>The above <code class="docutils literal notranslate">up</code> call is idempotent: the Flask system can just re-run it when the <code class="docutils literal notranslate">workdir</code> changes and serve the constructed URL back to the sidebar. Most of the time the URL will not change but sometimes it will, so do read it each time.</p>
 </section>
 <section id="bringing-down-a-server">
-<h4 id="bringing-down-a-server">Bringing Down A Server<a class="headerlink" href="#bringing-down-a-server" title="Permalink to this heading">¶</a></h4>
+<h4>Bringing Down A Server<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#bringing-down-a-server">¶</a></h4>
 <p>Usually you can just leave the servers running. The v8k script has the notion of a pool, whose default size is 10; after 10 slots are allocated, new up commands will overwrite the oldest server.</p>
 <p>If you have the notion of “ending a session” in the Google Sheets “IDE” frontend, the Python Flask subsystem is invited to call</p>
-<p><code class="docutils literal notranslate"><span class="pre">~/src/smucclaw/vue-pure-pdpa/bin/v8k</span> <span class="pre">down</span> <span class="pre">--uuid=000</span> <span class="pre">--ssid=111</span> <span class="pre">--sheetid=222</span></code></p>
+<p><code class="docutils literal notranslate">~/src/smucclaw/vue-pure-pdpa/bin/v8k down --uuid=000 --ssid=111 --sheetid=222</code></p>
 <p>This will deallocate the running instance and make the slot available.</p>
 </section>
 <section id="bringing-down-a-server-through-a-forced-shutdown">
-<h4 id="bringing-down-a-server-through-a-forced-shutdown">Bringing Down A Server through a forced shutdown<a class="headerlink" href="#bringing-down-a-server-through-a-forced-shutdown" title="Permalink to this heading">¶</a></h4>
+<h4>Bringing Down A Server through a forced shutdown<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#bringing-down-a-server-through-a-forced-shutdown">¶</a></h4>
 <p>There are 10 slots per v8K run.</p>
 <p>If you are certain you want to bring down one of the slots, say, slot 03, run:</p>
-<p><code class="docutils literal notranslate"><span class="pre">~/src/smucclaw/vue-pure-pdpa/bin/v8k</span> <span class="pre">downdir</span> <span class="pre">03</span></code></p>
+<p><code class="docutils literal notranslate">~/src/smucclaw/vue-pure-pdpa/bin/v8k downdir 03</code></p>
 </section>
 <section id="checking-to-see-what-s-running-using-v8k">
-<h4 id="checking-to-see-what-s-running-using-v8k">Checking to see what’s running using v8k<a class="headerlink" href="#checking-to-see-what-s-running-using-v8k" title="Permalink to this heading">¶</a></h4>
+<h4>Checking to see what’s running using v8k<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#checking-to-see-what-s-running-using-v8k">¶</a></h4>
 <p>This command should, in theory, walk the V8K_WORKDIR to see what’s going on.</p>
-<p><code class="docutils literal notranslate"><span class="pre">~/src/smucclaw/vue-pure-pdpa/bin/v8k</span> <span class="pre">list</span></code></p>
+<p><code class="docutils literal notranslate">~/src/smucclaw/vue-pure-pdpa/bin/v8k list</code></p>
 </section>
 <section id="checking-to-see-what-s-running">
-<h4 id="checking-to-see-what-s-running">Checking to see what’s running<a class="headerlink" href="#checking-to-see-what-s-running" title="Permalink to this heading">¶</a></h4>
+<h4>Checking to see what’s running<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#checking-to-see-what-s-running">¶</a></h4>
 <p>If you do not trust v8K, probe the OS:</p>
-<p><code class="docutils literal notranslate"><span class="pre">ps</span> <span class="pre">wwaux</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">port=80</span></code></p>
+<p><code class="docutils literal notranslate">ps wwaux | grep port=80</code></p>
 <p>to see what’s on port 80something.</p>
 </section>
 </section>
 </section>
 </section>
 <section id="accessing-the-web-tool">
-<h1 id="accessing-the-web-tool">Accessing the Web Tool<a class="headerlink" href="#accessing-the-web-tool" title="Permalink to this heading">¶</a></h1>
+<h1>Accessing the Web Tool<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#accessing-the-web-tool">¶</a></h1>
 <p>The web-based self-assessment tool for data breach notifications (hereinafter called the “Web Tool”) can be accessed via a link in the sidebar which appears in the L4 spreadsheet.</p>
 <p>When the spreadsheet is being actively edited by a “legal engineer”, the sidebar and the Web Tool automatically update to reflect changes. To force a refresh of the sidebar without editing the sheet, click the checkbox in the top row (shown highlighted in the screenshot below).</p>
 <img alt="../_images/l4-webtool.png" src="../_images/l4-webtool.png"/>
 <p>To access the Web Tool, click on the first link in the sidebar in the spreadsheet UI.</p>
-<p>A snapshot of the Web Tool is attached in the form of a tar.gz file, containing a vue directory which contains the source code of the tool. From inside that directory, the Web Tool can be built and rebuilt using the commands <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">serve</span></code> and <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">build</span></code>. For more information on running Vue, see the Vue Guides.</p>
+<p>A snapshot of the Web Tool is attached in the form of a tar.gz file, containing a vue directory which contains the source code of the tool. From inside that directory, the Web Tool can be built and rebuilt using the commands <code class="docutils literal notranslate">npm run serve</code> and <code class="docutils literal notranslate">npm run build</code>. For more information on running Vue, see the Vue Guides.</p>
 <p>The Web Tool can run in both https and http-only modes. The configuration options for https operation are given in section <a class="reference internal" href="pdpa-dbno-installation-L4spreadsheet.html#https-needed"><span class="std std-ref">Https is needed; letsencrypt refreshes certificates</span></a>.</p>
 <p>There is a “diagram” link in the Web Tool which visualizes the decision tree. This component is outside the scope of the use case and should be ignored. The roadmap for this Web Tool revises its diagram component to match the decision diagrams shown in the spreadsheet sidebar.</p>
 <p class="rubric">Footnotes</p>
 <dl class="footnote brackets">
 <dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>via purs-loader: <a class="reference external" href="https://github.com/ethul/purs-loader">https://github.com/ethul/purs-loader</a></p>
+<dd><p>via purs-loader: <a class="reference external" href="https://github.com/ethul/purs-loader" rel="nofollow noopener">https://github.com/ethul/purs-loader<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a></p>
 </dd>
 <dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p><a class="reference external" href="https://www.reddit.com/r/haskell/comments/tyl1zr/why_is_haskell_considered_good_for_writing_a/">https://www.reddit.com/r/haskell/comments/tyl1zr/why_is_haskell_considered_good_for_writing_a/</a></p>
+<dd><p><a class="reference external" href="https://www.reddit.com/r/haskell/comments/tyl1zr/why_is_haskell_considered_good_for_writing_a/" rel="nofollow noopener">https://www.reddit.com/r/haskell/comments/tyl1zr/why_is_haskell_considered_good_for_writing_a/<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a></p>
 </dd>
 <dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p>The working name for this expert-system part of the web app is called Orwell, because it is good at evaluating And/Or trees in the context of a mechanized public service interface with the public that computes truth values.</p>
 </dd>
 </dl>
 </section>
-
-
-          </article>
-        </div>
-      </div>
-    </main>
-  </div>
-  <footer class="md-footer">
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-          
-            <a href="L4manual-language-spec.html" title="Keywords: Declarations and Definitions"
-               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
-               rel="prev">
-              <div class="md-flex__cell md-flex__cell--shrink">
-                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-              </div>
-              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-                <span class="md-flex__ellipsis">
-                  <span
-                      class="md-footer-nav__direction"> Previous </span> Keywords: Declarations and Definitions </span>
-              </div>
-            </a>
-          
-          
-            <a href="pdpa-dbno-installation-googlesheets.html" title="Installation and setup instructions of the Google Sheets App"
-               class="md-flex md-footer-nav__link md-footer-nav__link--next"
-               rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
-                class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> Installation and setup instructions of the Google Sheets App </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink"><i
-                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          
-        </a>
-        
-      </nav>
-    </div>
-    <div class="md-footer-meta md-typeset">
-      <div class="md-footer-meta__inner md-grid">
-        <div class="md-footer-copyright">
-          <div class="md-footer-copyright__highlight">
-              &#169; Copyright 2023, Meng Weng Wong.
-              
-          </div>
-            Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
-             and
-            <a href="https://github.com/bashtage/sphinx-material/">Material for
-              Sphinx</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="../_static/javascripts/application.js"></script>
-  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
-  </body>
+</article>
+<footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">© 2023, Meng Weng Wong Made with <a href="https://www.sphinx-doc.org">Sphinx 5.3.0</a></div>
+</footer></div>
+</main>
+<button class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full" data-action="search#hideSnackbar" data-search-target="snackbar">
+  Clear highlights
+</button><div class="fixed hidden inset-0 bg-black bg-opacity-50" data-action="click-&gt;sidebar#close" data-sidebar-target="screen">
+</div>
+</div>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/design-tabs.js"></script>
+<script src="../_static/theme.3051a0ec24cad00d4d88.js"></script>
+</body>
 </html>

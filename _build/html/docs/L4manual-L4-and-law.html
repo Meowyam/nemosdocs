@@ -2,237 +2,42 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="lang:clipboard.copy" content="Copy to clipboard">
-  <meta name="lang:clipboard.copied" content="Copied to clipboard">
-  <meta name="lang:search.language" content="en">
-  <meta name="lang:search.pipeline.stopwords" content="True">
-  <meta name="lang:search.pipeline.trimmer" content="True">
-  <meta name="lang:search.result.none" content="No matching documents">
-  <meta name="lang:search.result.one" content="1 matching document">
-  <meta name="lang:search.result.other" content="# matching documents">
-  <meta name="lang:search.tokenizer" content="[\s\-]+">
-
-  
-    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
-
-    <style>
-      body,
-      input {
-        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
-      }
-
-      code,
-      kbd,
-      pre {
-        font-family: "Roboto Mono", "Courier New", Courier, monospace
-      }
-    </style>
-  
-
-  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
-  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
-  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
-  
-  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
-  
-  <meta name="theme-color" content="#3f51b5">
-  <script src="../_static/javascripts/modernizr.js"></script>
-  
-  
-  
-    <title>How L4 Approaches Law &#8212; L4 Manual 1.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Examples in L4 and the concepts and keywords introduced in each example" href="L4manual-examples.html" />
-    <link rel="prev" title="What Computational Law Aims to Solve" href="L4manual-computational-law.html" />
-  
-   
-
-  </head>
-  <body dir=ltr
-        data-md-color-primary=blue-grey data-md-color-accent=blue>
-  
-  <svg class="md-svg">
-    <defs data-children-count="0">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-      
-    </defs>
-  </svg>
-  
-  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
-  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
-  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-  <a href="#docs/L4manual-L4-and-law" tabindex="1" class="md-skip"> Skip to content </a>
-  <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex navheader">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../index.html" title="L4 Manual 1.0 documentation"
-           class="md-header-nav__button md-logo">
-          
-            &nbsp;
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          <span class="md-header-nav__topic">L4 Manual 1.0 documentation</span>
-          <span class="md-header-nav__topic"> How L4 Approaches Law </span>
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-        
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" action="../search.html" method="get" name="search">
-      <input type="text" class="md-search__input" name="q" placeholder="Search"
-             autocapitalize="off" autocomplete="off" spellcheck="false"
-             data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8"/>
+<meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>How L4 Approaches Law | L4 Manual 1.0 documentation</title>
+<link href="../_static/pygments.css" rel="stylesheet"/>
+<link href="../_static/theme.9297a650d9dd3016d913.css" rel="stylesheet"/>
+<link href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="L4manual-examples.html" rel="next" title="Examples in L4 and the concepts and keywords introduced in each example"/>
+<link href="L4manual-computational-law.html" rel="prev" title="What Computational Law Aims to Solve"/>
+</head>
+<body class="antialiased text-gray scroll-smooth">
+<div class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto" data-action="keydown@window-&gt;search#focus " data-controller="sidebar search " id="page">
+<a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#how-l4-approaches-law" title="Skip navigation links">Skip to content</a>
+<header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
+<div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center"><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none" href="../index.html" title="Back to homepage"><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">L4 Manual 1.0 documentation</span>
+</a></div><div class="flex justify-end items-center flex-1"><form action="../search.html" class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static z-10" data-action="click-&gt;search#focusSearchInput" id="searchbox" method="get">
+<button aria-label="Get search results" class="text-inherit h-14 w-14" tabindex="-1">
+<svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+</button>
+<input aria-label="Search the docs" class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100" data-search-target="searchInput" id="search-input" name="q" placeholder="Search the docs" type="search"/>
+</form></div>
 </div>
-
-      </div>
-      
-      
-  
-  <script src="../_static/javascripts/version_dropdown.js"></script>
-  <script>
-    var json_loc = "../"versions.json"",
-        target_loc = "../../",
-        text = "Versions";
-    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
-  </script>
-  
-
-    </div>
-  </nav>
 </header>
-
-  
-  <div class="md-container">
-    
-    
-    
-  <nav class="md-tabs" data-md-component="tabs">
-    <div class="md-tabs__inner md-grid">
-      <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">L4 Manual 1.0 documentation</a></li>
-      </ul>
-    </div>
-  </nav>
-    <main class="md-main">
-      <div class="md-main__inner md-grid" data-md-component="container">
-        
-          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../index.html" title="L4 Manual 1.0 documentation" class="md-nav__button md-logo">
-      
-        <img src="../_static/" alt=" logo" width="48" height="48">
-      
-    </a>
-    <a href="../index.html"
-       title="L4 Manual 1.0 documentation">L4 Manual 1.0 documentation</a>
-  </label>
-  
-
+<main class="px-4 pt-14 col-span-full overflow-y-auto flex flex-col flex-1 h-full w-full">
+<div class="flex flex-col h-full mx-auto max-w-prose"><nav aria-label="breadcrumbs" class="print:hidden mt-12 text-sm text-gray-light" role="navigation">
+<a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">L4 Manual 1.0 documentation</a>
+<span class="mr-1">/</span><span aria-current="page">How L4 Approaches Law</span>
 </nav>
-              </div>
-            </div>
-          </div>
-          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-            <div class="md-sidebar__scrollwrap">
-              <div class="md-sidebar__inner">
-                
-<nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc">Contents</label>
-  <ul class="md-nav__list" data-md-scrollfix="">
-        <li class="md-nav__item"><a href="#docs-l4manual-l4-and-law--page-root" class="md-nav__link">How L4 Approaches Law</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#analogies-between-computer-science-concepts-and-legal-concepts" class="md-nav__link">Analogies between Computer Science Concepts and Legal Concepts</a>
-        </li>
-        <li class="md-nav__item"><a href="#the-relationship-between-l4-and-contracts-and-legislation" class="md-nav__link">The relationship between L4 and contracts and legislation</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#advantages-of-modelling-using-a-formal-system" class="md-nav__link">Advantages of modelling using a formal system</a>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#expanding-on-technical-terms" class="md-nav__link">Expanding on technical terms</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#on-specification-languages" class="md-nav__link">On Specification Languages</a>
-        </li>
-        <li class="md-nav__item"><a href="#on-formalisation" class="md-nav__link">On Formalisation</a>
-        </li>
-        <li class="md-nav__item"><a href="#on-logic" class="md-nav__link">On Logic</a>
-        </li>
-        <li class="md-nav__item"><a href="#on-rewrites" class="md-nav__link">On Rewrites</a>
-        </li>
-        <li class="md-nav__item"><a href="#on-evaluation" class="md-nav__link">On Evaluation</a>
-        </li>
-        <li class="md-nav__item"><a href="#on-natural-language" class="md-nav__link">On Natural Language</a>
-        </li></ul>
-            </nav>
-        </li></ul>
-            </nav>
-        </li>
-    
-<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/docs/L4manual-L4-and-law.rst.txt">Show Source</a> </li>
-
-<li id="searchbox" class="md-nav__item"></li>
-
-  </ul>
-</nav>
-              </div>
-            </div>
-          </div>
-        
-        <div class="md-content">
-          <article class="md-content__inner md-typeset" role="main">
-            
-  <section id="how-l4-approaches-law">
-<h1 id="docs-l4manual-l4-and-law--page-root">How L4 Approaches Law<a class="headerlink" href="#docs-l4manual-l4-and-law--page-root" title="Permalink to this heading">¶</a></h1>
+<article class="flex-1" role="main">
+<section id="how-l4-approaches-law">
+<h1>How L4 Approaches Law<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#how-l4-approaches-law">¶</a></h1>
 <section id="analogies-between-computer-science-concepts-and-legal-concepts">
-<h2 id="analogies-between-computer-science-concepts-and-legal-concepts">Analogies between Computer Science Concepts and Legal Concepts<a class="headerlink" href="#analogies-between-computer-science-concepts-and-legal-concepts" title="Permalink to this heading">¶</a></h2>
+<h2>Analogies between Computer Science Concepts and Legal Concepts<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#analogies-between-computer-science-concepts-and-legal-concepts">¶</a></h2>
 <p>A computer scientist can learn to recognise familiar concepts, expessed differently, in law. For example:</p>
 <blockquote>
 <div><ul class="simple">
@@ -246,13 +51,13 @@
 <ul class="simple">
 <li><p>In software, refactoring efforts are facilitated by the compiler and by test suites, which give confidence that the refactored code still works.</p></li>
 </ul>
-<p>In law: As <a class="reference external" href="https://www.adamsdrafting.com/writing/mscd/">Ken Adams (MSCD)</a> and <a class="reference external" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=332941">Claire Hill (Why Contracts are Written in Legalese)</a> observe, refactorings tend to be rarer: lawyers can be superstitous about “time-tested” phrasing, which has been before a judge and given objective interpretation.</p>
+<p>In law: As <a class="reference external" href="https://www.adamsdrafting.com/writing/mscd/" rel="nofollow noopener">Ken Adams (MSCD)<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> and <a class="reference external" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=332941" rel="nofollow noopener">Claire Hill (Why Contracts are Written in Legalese)<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> observe, refactorings tend to be rarer: lawyers can be superstitous about “time-tested” phrasing, which has been before a judge and given objective interpretation.</p>
 </div></blockquote>
 <p>This shows that “objective truth” tends to be expensive in law. Human lawyers advise human clients that the ultimate truth requires a human judge,
 and that in turn often requires a full-fledged lawsuit.</p>
 </section>
 <section id="the-relationship-between-l4-and-contracts-and-legislation">
-<h2 id="the-relationship-between-l4-and-contracts-and-legislation">The relationship between L4 and contracts and legislation<a class="headerlink" href="#the-relationship-between-l4-and-contracts-and-legislation" title="Permalink to this heading">¶</a></h2>
+<h2>The relationship between L4 and contracts and legislation<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#the-relationship-between-l4-and-contracts-and-legislation">¶</a></h2>
 <p>The L4 approach considers contracts and legislation to be <em>attempts at specification</em> and models these attempts with a formal system.</p>
 <ul class="simple">
 <li><p>The behaviour of actors is regulated by rules which describe state transition systems. The transitions between states are themselves governed by decision rules.</p></li>
@@ -260,7 +65,7 @@ and that in turn often requires a full-fledged lawsuit.</p>
 <li><p>The evaluation at run-time of decision elements to binary truth values is dependent on human input.</p></li>
 </ul>
 <section id="advantages-of-modelling-using-a-formal-system">
-<h3 id="advantages-of-modelling-using-a-formal-system">Advantages of modelling using a formal system<a class="headerlink" href="#advantages-of-modelling-using-a-formal-system" title="Permalink to this heading">¶</a></h3>
+<h3>Advantages of modelling using a formal system<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#advantages-of-modelling-using-a-formal-system">¶</a></h3>
 <p>Using a formal system to model the above ideas makes it possible to apply software engineering practices to the legal sphere. New technologies and tools can help both lawyers and non-lawyers perform legally-oriented work in different and better ways.</p>
 <p>Consider the following examples:</p>
 <ul class="simple">
@@ -272,23 +77,23 @@ and that in turn often requires a full-fledged lawsuit.</p>
 </section>
 </section>
 <section id="expanding-on-technical-terms">
-<h2 id="expanding-on-technical-terms">Expanding on technical terms<a class="headerlink" href="#expanding-on-technical-terms" title="Permalink to this heading">¶</a></h2>
+<h2>Expanding on technical terms<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#expanding-on-technical-terms">¶</a></h2>
 <p>This section explains the technical terms and domains found in <a class="reference internal" href="#the-relationship-between-l4-and-contracts-and-legislation">The relationship between L4 and contracts and legislation</a>.</p>
 <section id="on-specification-languages">
-<h3 id="on-specification-languages">On Specification Languages<a class="headerlink" href="#on-specification-languages" title="Permalink to this heading">¶</a></h3>
+<h3>On Specification Languages<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#on-specification-languages">¶</a></h3>
 <p>L4 is a “domain-specific modelling language”, which is a type of “specification language”. Specification languages are distinct from programming languages because they are considered “higher-level”, and are used primarily for analyzing the properties of systems even before the systems are implemented or run.</p>
-<p>Examples of specification languages include <a class="reference external" href="https://alloytools.org/">Alloy</a> and <a class="reference external" href="http://lamport.azurewebsites.net/tla/tla.html">TLA+</a>.</p>
+<p>Examples of specification languages include <a class="reference external" href="https://alloytools.org/" rel="nofollow noopener">Alloy<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> and <a class="reference external" href="http://lamport.azurewebsites.net/tla/tla.html" rel="nofollow noopener">TLA+<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>.</p>
 <p>Both specification and programming languages are <em>formal languages</em>, which we expand upon below.</p>
 </section>
 <section id="on-formalisation">
-<h3 id="on-formalisation">On Formalisation<a class="headerlink" href="#on-formalisation" title="Permalink to this heading">¶</a></h3>
-<p>Computer scientists are familiar with <a class="reference external" href="https://en.wikipedia.org/wiki/Finite-state_machine">state machines</a>, which represent discrete change over time.</p>
-<p>One of the earliest papers in computational law identified <a class="reference external" href="https://en.wikipedia.org/wiki/Petri_net">Petri Nets</a> as a useful formalism for representing state.</p>
-<p>The notion of contract as state machine can be found at the heart of the <a class="reference external" href="https://www.visual-paradigm.com/guide/bpmn/what-is-bpmn/">Business Process Modeling Notation (BPMN) standard</a> for business processes.</p>
+<h3>On Formalisation<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#on-formalisation">¶</a></h3>
+<p>Computer scientists are familiar with <a class="reference external" href="https://en.wikipedia.org/wiki/Finite-state_machine" rel="nofollow noopener">state machines<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>, which represent discrete change over time.</p>
+<p>One of the earliest papers in computational law identified <a class="reference external" href="https://en.wikipedia.org/wiki/Petri_net" rel="nofollow noopener">Petri Nets<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> as a useful formalism for representing state.</p>
+<p>The notion of contract as state machine can be found at the heart of the <a class="reference external" href="https://www.visual-paradigm.com/guide/bpmn/what-is-bpmn/" rel="nofollow noopener">Business Process Modeling Notation (BPMN) standard<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> for business processes.</p>
 </section>
 <section id="on-logic">
-<h3 id="on-logic">On Logic<a class="headerlink" href="#on-logic" title="Permalink to this heading">¶</a></h3>
-<p>Computer scientists are also familiar with <a class="reference external" href="https://en.wikipedia.org/wiki/Propositional_calculus">propositional</a> <a class="reference external" href="https://en.wikipedia.org/wiki/First-order_logic">predicate</a>, and <a class="reference external" href="https://en.wikipedia.org/wiki/Boolean_algebra">Boolean logics</a>.</p>
+<h3>On Logic<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#on-logic">¶</a></h3>
+<p>Computer scientists are also familiar with <a class="reference external" href="https://en.wikipedia.org/wiki/Propositional_calculus" rel="nofollow noopener">propositional<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> <a class="reference external" href="https://en.wikipedia.org/wiki/First-order_logic" rel="nofollow noopener">predicate<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>, and <a class="reference external" href="https://en.wikipedia.org/wiki/Boolean_algebra" rel="nofollow noopener">Boolean logics<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>.</p>
 <p>They deal with True and False values, combined using AND / OR / NOT connectors into potentially large trees of conditions. These logics lie at the heart of “rule systems”, which calculate Boolean outputs based on inputs that are either natively Boolean or are reducible to Booleans, like x == 42. First-order predicate logic helps reduce a complex universe of many types, to Boolean values.</p>
 <p>The values of terms are often debatable: reducing a messy, real-world, real-valued term to a Boolean is not always straightforward. “No Vehicles In The Park” provides the classic example of such difficulties.</p>
 <blockquote>
@@ -304,7 +109,7 @@ and that in turn often requires a full-fledged lawsuit.</p>
 <p>In the real world it is often necessary to take unknown and undefined values into account: hence the need for a ternary logic.</p>
 </section>
 <section id="on-rewrites">
-<h3 id="on-rewrites">On Rewrites<a class="headerlink" href="#on-rewrites" title="Permalink to this heading">¶</a></h3>
+<h3>On Rewrites<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#on-rewrites">¶</a></h3>
 <p>The primary specifications which attempt to establish a rule system are themselves subject to rewriting according to further meta-rule systems.</p>
 <p>Some of these rewrites may be within the primary specification itself. In this section, any reference to dollars shall mean United States Dollars.</p>
 <p>Other rewrites may occur “beyond the awareness” of the primary specification: “any clause of any contract which attempts to establish a non-compete shall be unenforceable.”</p>
@@ -314,18 +119,18 @@ and that in turn often requires a full-fledged lawsuit.</p>
 <p>When multiple rules collide, they can be resolved using a ordering mechanism: firewall rules, for example, include priorities.</p>
 </section>
 <section id="on-evaluation">
-<h3 id="on-evaluation">On Evaluation<a class="headerlink" href="#on-evaluation" title="Permalink to this heading">¶</a></h3>
-<p>The “evaluation” of a specification depends on its <a class="reference external" href="https://www.techopedia.com/definition/5466/runtime-environment-rte">run-time environment</a> and often on <em>human input</em>.</p>
+<h3>On Evaluation<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#on-evaluation">¶</a></h3>
+<p>The “evaluation” of a specification depends on its <a class="reference external" href="https://www.techopedia.com/definition/5466/runtime-environment-rte" rel="nofollow noopener">run-time environment<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> and often on <em>human input</em>.</p>
 <p>Computer science is familiar with the notion of “static analysis”, which attempts to show that a program, or specification, satisfies or violates certain properties.</p>
 <p>In other words, it should be possible to identify, at the time of drafting, if a law or contract contains undesirable loopholes by which parties may escape intended consequences.</p>
-<p>Static analysis methods include <a class="reference external" href="https://en.wikipedia.org/wiki/SAT_solver">SAT solving</a>, which can be said to attempt to anticipate every eventuality.</p>
+<p>Static analysis methods include <a class="reference external" href="https://en.wikipedia.org/wiki/SAT_solver" rel="nofollow noopener">SAT solving<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>, which can be said to attempt to anticipate every eventuality.</p>
 <p>However, such methods cannot anticipate meta-rules operating outside the bounds of the system. A war of foreign occupation, for instance, may invalidate existing laws and contracts in unpredictable ways.</p>
 <p>In any case, it is frequently impossible to determine in advance if a particular event will be considered to have met a certain standard.</p>
 <p>Some degree of vagueness is inevitable, and, frequently, desirable: when a thing cannot be defined in any more detail, or it depends on which way the wind is blowing at the time, we need a human to step in and decide.</p>
 <p>Did a party apply “reasonable efforts” to a particular action? It depends … on a decision tree which, sooner or later, bottoms out and needs to call an external decider for input.</p>
 </section>
 <section id="on-natural-language">
-<h3 id="on-natural-language">On Natural Language<a class="headerlink" href="#on-natural-language" title="Permalink to this heading">¶</a></h3>
+<h3>On Natural Language<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#on-natural-language">¶</a></h3>
 <p>Because laws and contracts have, to date, been written in natural languages like English, drafters sometimes introduced ambiguities into their text.</p>
 <p>Sometimes, it is up to a judge to make sense of manifestly ungrammatical sentences. Interpretive doctrines like purposive intent help them do their job.</p>
 <p>The logical conjunction “A, B, C and D or E” can be interpreted at least four different ways.</p>
@@ -333,63 +138,22 @@ and that in turn often requires a full-fledged lawsuit.</p>
 </section>
 </section>
 </section>
-
-
-          </article>
-        </div>
-      </div>
-    </main>
-  </div>
-  <footer class="md-footer">
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-          
-            <a href="L4manual-computational-law.html" title="What Computational Law Aims to Solve"
-               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
-               rel="prev">
-              <div class="md-flex__cell md-flex__cell--shrink">
-                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-              </div>
-              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-                <span class="md-flex__ellipsis">
-                  <span
-                      class="md-footer-nav__direction"> Previous </span> What Computational Law Aims to Solve </span>
-              </div>
-            </a>
-          
-          
-            <a href="L4manual-examples.html" title="Examples in L4 and the concepts and keywords introduced in each example"
-               class="md-flex md-footer-nav__link md-footer-nav__link--next"
-               rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
-                class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> Examples in L4 and the concepts and keywords introduced in each example </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink"><i
-                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          
-        </a>
-        
-      </nav>
-    </div>
-    <div class="md-footer-meta md-typeset">
-      <div class="md-footer-meta__inner md-grid">
-        <div class="md-footer-copyright">
-          <div class="md-footer-copyright__highlight">
-              &#169; Copyright 2023, Meng Weng Wong.
-              
-          </div>
-            Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
-             and
-            <a href="https://github.com/bashtage/sphinx-material/">Material for
-              Sphinx</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="../_static/javascripts/application.js"></script>
-  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
-  </body>
+</article>
+<footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">© 2023, Meng Weng Wong Made with <a href="https://www.sphinx-doc.org">Sphinx 5.3.0</a></div>
+</footer></div>
+</main>
+<button class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full" data-action="search#hideSnackbar" data-search-target="snackbar">
+  Clear highlights
+</button><div class="fixed hidden inset-0 bg-black bg-opacity-50" data-action="click-&gt;sidebar#close" data-sidebar-target="screen">
+</div>
+</div>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/sphinx_highlight.js"></script>
+<script src="../_static/design-tabs.js"></script>
+<script src="../_static/theme.3051a0ec24cad00d4d88.js"></script>
+</body>
 </html>

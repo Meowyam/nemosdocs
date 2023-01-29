@@ -19,7 +19,8 @@ import sys
 sys.path.insert(0, os.path.abspath(".."))
 
 extensions = [
-    'sphinx_design'
+    'sphinx_design' ,
+    'sphinxawesome_theme'
 ]
 
 templates_path = ['_templates']
@@ -30,8 +31,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'pdf-version']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_material'
+html_theme = 'sphinxawesome_theme'
+# The html_sidebars option is for the 'material' theme
 # html_sidebars = {
 #     "**" : ["globaltoc.html", "localtoc.html", "searchbox.html"]
 # }
+html_theme_options = {'nav_include_hidden': False, 'show_nav': False}
 html_static_path = ['_static']
