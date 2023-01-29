@@ -35,6 +35,7 @@ Welcome to the L4 documentation, hosted on Read the Docs.
 You can navigate this document by:
 
    - Clicking on one of the cards above,
+   - Clicking a link on the sidebar to the left,
    - Searching for what you need at the top right hand corner.
 
 .. toctree::
@@ -71,7 +72,7 @@ You can navigate this document by:
 
 .. toctree:: 
    :maxdepth: 1
-   :caption: Early Beta, and Acknowledgements
+   :caption: Early Beta and Acknowledgements
 
    docs/common-early-beta.rst
    docs/common-acknowledgements.rst
