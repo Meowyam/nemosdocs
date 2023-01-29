@@ -39,10 +39,9 @@ You can navigate this document by:
    - Searching for what you need at the top right hand corner.
 
 .. toctree:: 
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: links
    :hidden:
-   :includehidden:
 
    docs/links-first-steps.rst
    docs/links-returning-users.rst
@@ -52,7 +51,7 @@ You can navigate this document by:
    docs/links-backend-setup-instructions.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: First Steps
    :hidden:
 
@@ -60,7 +59,7 @@ You can navigate this document by:
    docs/quickstart-installation.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Returning Users
    :hidden:
 
@@ -76,7 +75,7 @@ You can navigate this document by:
    docs/L4manual-language-spec.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Setting up the L4 Backend
    :hidden:
 
@@ -87,7 +86,7 @@ You can navigate this document by:
    docs/pdpa-dbno-security.rst
 
 .. toctree:: 
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Early Beta, and Acknowledgements
    :hidden:
 
