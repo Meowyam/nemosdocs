@@ -51,9 +51,9 @@ The basic syntax for regulative, or prescriptive, rules is as follows:
 	                [ WHO | WHICH		Boolean Structure	]
 	                MUST | MAY | SHANT      Action Spec				
 
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 Regulative Rules
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 Legal sentences for regulative rules, according to the syntax definition above, include:
 
@@ -79,9 +79,9 @@ Legal sentences for regulative rules, according to the syntax definition above, 
 
     MUST    say bad things about Alice
 
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 Syntax (Meta-)Rules
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 The syntax definition above obeys syntax rules of its own.
 
@@ -103,9 +103,9 @@ Together, these syntax rules give the "grammar" of the L4 language.
 
 L4's grammar is based on familiar English grammar. Entity Labels are nouns. Action Specs are verbs (technically, verb phrases).
 
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 Constitutive Rules
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 The basic syntax for constitutive rules is as follows:
 
@@ -131,9 +131,9 @@ The "MultiTerm" being defined is "Qualifies". The detailed syntax for "MultiTerm
 
 The Boolean Structure contains "walks AND eats OR drinks".
 
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 Boolean Structures
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 Let's look more closely at Boolean Structures.
 
@@ -174,9 +174,9 @@ Keywords introduced:
    - OR
    - NOT
 
-^^^^^^^^^
+~~~~~~~~~
 Decisions
-^^^^^^^^^
+~~~~~~~~~
 
 Decisions express first-order logic, functions, predicates, judgements, and calculation in general.
 
@@ -206,9 +206,9 @@ The expression context of the GIVEN and WHEN | IF includes the history available
 
 Constitutive rules using WHEN are a subset of Hornlike rules that use DECIDE.
 
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 Decision Diagrams
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 Visualization of a decision rule produces a "circuit diagram": it is based on electrical circuit diagrams. If you can find a path from the left side of the diagram to the right, where the relevant terms have the required values,
 the overall value of the decision diagram is true.
@@ -247,9 +247,9 @@ Keywords introduced:
 Some of the earliest written agreements, carved in stone millennia ago, deal with the lending of property. Following in this tradition, this chapter formalizes a simple financial agreement in L4. The ruleset weaves multiple regulative rules together, in series and in parallel. It shows how a "flowchart"-style diagram is automatically generated from the ruleset.
 Such diagrams give people an alternative way to understand legal documents: visually instead of textually.
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Declarations and Definitions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This chapter introduces a handful of keywords. DECLARE and DEFINE have to do with data types and values.
 
@@ -296,9 +296,9 @@ We'll talk more about the elementary data-types of L4 later: sum types, product 
 
 Variable definitions with the DEFINE keyword follow the same format as DECLARE.
 
-^^^^^^^^^
+~~~~~~~~~
 Deadlines
-^^^^^^^^^
+~~~~~~~~~
 
 This chapter also introduces temporal constraints: the BY and WITHIN keywords set deadlines.
 
@@ -308,9 +308,9 @@ This chapter also introduces temporal constraints: the BY and WITHIN keywords se
 
 A regulative rule without a temporal constraint is incomplete. L4 substitutes "EVENTUALLY" but will issue a warning so you are conscious that a deadline is missing.
 
-^^^^^^^^
+~~~~~~~~
 Deontics
-^^^^^^^^
+~~~~~~~~
 
 Laws and contracts impose obligations and prohibitions on persons, and grant permissions.
 
@@ -338,9 +338,9 @@ We observe that a MAY rule is permissive: if you do it, fine! If you don't, fine
 
 l4's workflow diagrams follow a convention: a rule that is satisfied proceeds to the bottom right, while a rule that is violated proceeds to the bottom left. The "happy path" therefore runs along the right side of a diagram. A MAY rule shows action to the right, and inaction to the left.
 
-^^^^^^^^^^^
+~~~~~~~~~~~
 Connections
-^^^^^^^^^^^
+~~~~~~~~~~~
 
 Ordinary programming languages use the IF ... THEN ... ELSE construct to connect blocks of code, based on whether the conditions in the IF were met.
 L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative rules, based on whether the preceding rule was satisfied.
