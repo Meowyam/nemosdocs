@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to documentation for the L4 Language!
-=============================================
+L4 Manual
+=========
 
 .. grid:: 3
 
@@ -41,6 +41,7 @@ You can navigate this document by:
 .. toctree::
    :maxdepth: 1
    :caption: First Steps
+   :hidden:
 
    docs/quickstart-tour-of-L4.rst
    docs/quickstart-installation.rst
@@ -48,6 +49,7 @@ You can navigate this document by:
 .. toctree::
    :maxdepth: 1
    :caption: Returning Users
+   :hidden:
 
    docs/L4manual-computational-law.rst
    docs/L4manual-L4-and-law.rst
@@ -63,6 +65,7 @@ You can navigate this document by:
 .. toctree::
    :maxdepth: 1
    :caption: Setting up the L4 Backend
+   :hidden:
 
    docs/pdpa-dbno-installation-webtool.rst
    docs/pdpa-dbno-installation-googlesheets.rst
@@ -73,6 +76,7 @@ You can navigate this document by:
 .. toctree:: 
    :maxdepth: 1
    :caption: Early Beta and Acknowledgements
+   :hidden:
 
    docs/common-early-beta.rst
    docs/common-acknowledgements.rst

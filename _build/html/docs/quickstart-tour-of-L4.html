@@ -6,18 +6,18 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta charset="utf-8"/>
 <meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>What is L4? | L4 Manual 1.0 documentation</title>
+<title>Tour of L4 | L4 Manual 1.0 documentation</title>
 <link href="../_static/pygments.css" rel="stylesheet"/>
 <link href="../_static/theme.9297a650d9dd3016d913.css" rel="stylesheet"/>
 <link href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="quickstart-installation.html" rel="next" title="Interacting with L4 through a spreadsheet"/>
-<link href="../index.html" rel="prev" title="Welcome to documentation for the L4 Language!"/>
+<link href="../index.html" rel="prev" title="L4 Manual"/>
 </head>
 <body class="antialiased text-gray scroll-smooth">
 <div class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto" data-action="keydown@window-&gt;search#focus " data-controller="sidebar search " id="page">
-<a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#what-is-l4" title="Skip navigation links">Skip to content</a>
+<a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#span-class-underline-tour-of-l4-span" title="Skip navigation links">Skip to content</a>
 <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
 <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
 <button class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand" data-action="sidebar#open" data-sidebar-target="hamburger">
@@ -36,14 +36,17 @@
 <nav class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col" role="navigation">
 <div class="nav-toc flex-1 pl-6"><p class="caption" role="heading"><span class="caption-text">First Steps</span></p>
 <ul class="current">
-<li class="toctree-l1 current expanded"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="current reference internal" data-action="click-&gt;sidebar#close" href="#">What is L4?</a></div><ul>
-<li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-is-law-specific">L4 is ‘law-specific’</a></div></li>
-<li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-outputs-a-diagram">L4 outputs a diagram</a></div></li>
-<li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-checks-for-loopholes-and-conflicts">L4 checks for loopholes and conflicts</a></div></li>
-<li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-generates-a-web-tool">L4 generates a web tool</a></div></li>
-<li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-s-diagram-ouput-can-be-converted-to-multiple-formats">L4’s diagram ouput can be converted to multiple formats</a></div></li>
-<li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-uses-spreadsheets-for-interaction">L4 uses spreadsheets for interaction</a></div></li>
-<li class="toctree-l2"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-contains-a-package-library">L4 contains a package library</a></div></li>
+<li class="toctree-l1 current expanded"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="current reference internal" data-action="click-&gt;sidebar#close" href="#"><span class="underline">Tour of L4</span></a></div><ul>
+<li class="toctree-l2"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="reference internal" data-action="click-&gt;sidebar#close" href="#what-is-l4"><span class="underline">What is L4</span></a></div><ul>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-is-law-specific">L4 is ‘law-specific’</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-outputs-a-diagram">L4 outputs a diagram</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-checks-for-loopholes-and-conflicts">L4 checks for loopholes and conflicts</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-generates-a-web-tool">L4 generates a web tool</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-s-diagram-ouput-can-be-converted-to-multiple-formats">L4’s diagram ouput can be converted to multiple formats</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-uses-spreadsheets-for-interaction">L4 uses spreadsheets for interaction</a></div></li>
+<li class="toctree-l3"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="#l4-contains-a-package-library">L4 contains a package library</a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><div class="nav-link"><svg class="expand" data-action="click-&gt;sidebar#expand keydown-&gt;sidebar#expandKeyPressed" tabindex="0" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg><a class="reference internal" data-action="click-&gt;sidebar#close" href="quickstart-installation.html">Interacting with L4 through a spreadsheet</a></div><ul>
@@ -265,6 +268,23 @@
 </li>
 <li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="common-acknowledgements.html">Acknowledgements</a></div></li>
 </ul>
+<ul>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-first-steps.html">First Steps</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-first-steps.html#taking-your-first-steps-intended-audience">Taking your first steps: Intended Audience</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-first-steps.html#page-directory">Page Directory</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-returning-users.html">Returning Users</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-returning-users.html#exploring-l4-futher-intended-audience">Exploring L4 Futher: Intended Audience</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-returning-users.html#page-directory">Page Directory</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-L4-backend.html">Setting up the L4 Backend</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-L4-backend.html#installing-the-l4-backend-intended-audience">Installing the L4 Backend: Intended Audience</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-L4-backend.html#page-directory">Page Directory</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-law-and-computer-science.html">Law and Computer Science</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-law-and-computer-science.html#law-and-computer-science-intended-audience">Law and Computer Science: Intended Audience</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-law-and-computer-science.html#page-directory">Page Directory</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-backend-setup-instructions.html">Backend Setup Instructions</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-backend-setup-instructions.html#setup-instructions-intended-audience">Setup Instructions: Intended Audience</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="links-backend-setup-instructions.html#page-directory">Page Directory</a></div></li>
+</ul>
 </div>
 <button class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center" data-action="sidebar#close" title="Close navigation menu">
 <span class="sr-only">Close navigation menu</span>
@@ -274,45 +294,48 @@
 </aside>
 <main class="px-4 pt-14 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col flex-1 h-full mx-0 md:mx-auto xl:mr-0"><nav aria-label="breadcrumbs" class="print:hidden mt-12 text-sm text-gray-light" role="navigation">
 <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">L4 Manual 1.0 documentation</a>
-<span class="mr-1">/</span><span aria-current="page">What is L4?</span>
+<span class="mr-1">/</span><span aria-current="page"><span class="underline">Tour of L4</span></span>
 </nav>
 <article class="flex-1" role="main">
+<section id="tour-of-l4">
+<span id="id1"></span><h1><span class="underline">Tour of L4</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#tour-of-l4">¶</a></h1>
 <section id="what-is-l4">
-<span id="tour-of-l4"></span><h1>What is L4?<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#what-is-l4">¶</a></h1>
-<p>L4 offers a low-code way for non-lawyers to explore existing contracts and legislation, and to generate new contracts and regulations.</p>
+<h2><span class="underline">What is L4</span><a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#what-is-l4">¶</a></h2>
+<p class="linemarker linemarker-15">L4 offers a low-code way for non-lawyers to explore existing contracts and legislation, and to generate new contracts and regulations.</p>
 <section id="l4-is-law-specific">
-<h2>L4 is ‘law-specific’<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-is-law-specific">¶</a></h2>
-<p>L4 is a domain-specific language specifically designed for the law domain, which makes it ‘law-specific’.</p>
+<h3>L4 is ‘law-specific’<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-is-law-specific">¶</a></h3>
+<p class="linemarker linemarker-21">L4 is a domain-specific language specifically designed for the law domain, which makes it ‘law-specific’.</p>
 </section>
 <section id="l4-outputs-a-diagram">
-<h2>L4 outputs a diagram<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-outputs-a-diagram">¶</a></h2>
-<p>L4 generates convenient visualizations of the logic and the moving parts of your “legal program”</p>
-<p>Specifying legislation in L4 gives you a diagram that allows you to get from a legal position A to legal position B at a glance.</p>
+<h3>L4 outputs a diagram<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-outputs-a-diagram">¶</a></h3>
+<p class="linemarker linemarker-27">L4 generates convenient visualizations of the logic and the moving parts of your “legal program”</p>
+<p class="linemarker linemarker-29">Specifying legislation in L4 gives you a diagram that allows you to get from a legal position A to legal position B at a glance.</p>
 <img alt="../_images/L4-visualisation-screenshot.png" src="../_images/L4-visualisation-screenshot.png"/>
 </section>
 <section id="l4-checks-for-loopholes-and-conflicts">
-<h2>L4 checks for loopholes and conflicts<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-checks-for-loopholes-and-conflicts">¶</a></h2>
-<p>L4 sanity-checks your programs to detect internal conflicts and loopholes.</p>
+<h3>L4 checks for loopholes and conflicts<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-checks-for-loopholes-and-conflicts">¶</a></h3>
+<p class="linemarker linemarker-37">L4 sanity-checks your programs to detect internal conflicts and loopholes.</p>
 </section>
 <section id="l4-generates-a-web-tool">
-<h2>L4 generates a web tool<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-generates-a-web-tool">¶</a></h2>
-<p>L4 automatically generates a web app that helps end users explore the logic of your “legal program”.</p>
+<h3>L4 generates a web tool<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-generates-a-web-tool">¶</a></h3>
+<p class="linemarker linemarker-43">L4 automatically generates a web app that helps end users explore the logic of your “legal program”.</p>
 <img alt="../_images/web-tool-screenshot.png" src="../_images/web-tool-screenshot.png"/>
 </section>
 <section id="l4-s-diagram-ouput-can-be-converted-to-multiple-formats">
-<h2>L4’s diagram ouput can be converted to multiple formats<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-s-diagram-ouput-can-be-converted-to-multiple-formats">¶</a></h2>
-<p>The diagrammatic output can be converted to a language you need such as Haskell.</p>
+<h3>L4’s diagram ouput can be converted to multiple formats<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-s-diagram-ouput-can-be-converted-to-multiple-formats">¶</a></h3>
+<p class="linemarker linemarker-51">The diagrammatic output can be converted to a language you need such as Haskell.</p>
 </section>
 <section id="l4-uses-spreadsheets-for-interaction">
-<h2>L4 uses spreadsheets for interaction<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-uses-spreadsheets-for-interaction">¶</a></h2>
-<p>L4 uses a spreadsheet interface to allow lawyers to interact with L4 in an environment that they are comfortable in.</p>
+<h3>L4 uses spreadsheets for interaction<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-uses-spreadsheets-for-interaction">¶</a></h3>
+<p class="linemarker linemarker-57">L4 uses a spreadsheet interface to allow lawyers to interact with L4 in an environment that they are comfortable in.</p>
 </section>
 <section id="l4-contains-a-package-library">
-<h2>L4 contains a package library<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-contains-a-package-library">¶</a></h2>
-<p>The L4 package library contains encodings of insurance policies based on those offered by major insurers.</p>
-<p>In addition to contracts, L4’s package library also contains encodings of legislation and regulation in the areas of data privacy and building permission.</p>
-<p>The available contracts allows you to generate a document you can sign after running it past a lawyer for review.</p>
-<p>The L4 package library will soon contain loan agreements, leasing agreements, and investment agreements.</p>
+<h3>L4 contains a package library<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#l4-contains-a-package-library">¶</a></h3>
+<p class="linemarker linemarker-63">The L4 package library contains encodings of insurance policies based on those offered by major insurers.</p>
+<p class="linemarker linemarker-65">In addition to contracts, L4’s package library also contains encodings of legislation and regulation in the areas of data privacy and building permission.</p>
+<p class="linemarker linemarker-67">The available contracts allows you to generate a document you can sign after running it past a lawyer for review.</p>
+<p class="linemarker linemarker-69">The L4 package library will soon contain loan agreements, leasing agreements, and investment agreements.</p>
+</section>
 </section>
 </section>
 </article>
