@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-L4 Manual
-=========
+################
+L4 Documentation
+################
+
 
 .. grid:: 3
 
@@ -12,7 +14,7 @@ L4 Manual
          :link: docs/links-first-steps
          :link-type: doc
 
-         Begin your journey with L4.
+         Installing and Understanding L4
 
       .. grid-item-card:: Returning Users
          :link: docs/links-returning-users
@@ -20,8 +22,8 @@ L4 Manual
 
          Continue your journey with L4.
 
-      .. grid-item-card:: Setting up the L4 Backend
-         :link: docs/links-L4-backend
+      .. grid-item-card:: Advanced Users
+         :link: docs/links-backend
          :link-type: doc
 
          Set up L4 on your own server.
@@ -41,52 +43,48 @@ You can navigate this document by:
 .. toctree::
    :maxdepth: 1
    :caption: First Steps
+   :titlesonly:
    :hidden:
+
 
    docs/quickstart-tour-of-L4.rst
    docs/quickstart-installation.rst
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Returning Users
+   :titlesonly:
    :hidden:
 
-   docs/L4manual-computational-law.rst
-   docs/L4manual-L4-and-law.rst
-   docs/L4manual-examples.rst
-   docs/L4manual-common-expressions.rst
-   docs/L4manual-defeasibility-defaults.rst
-   docs/L4manual-flowchart.rst
-   docs/L4manual-cheatsheet.rst
-   docs/L4manual-exporting-L4.rst
-   docs/L4manual-tutorials.rst
-   docs/L4manual-language-spec.rst
+   docs/returning-examples.rst
+   docs/returning-L4-and-law.rst
+   docs/returning-cheatsheet.rst
+   docs/returning-exporting-L4.rst
+   docs/returning-exercises.rst
+   docs/returning-language-spec.rst
+   docs/returning-law-logic-programming.rst
+   docs/returning-flowchart.rst
+   docs/returning-common-expressions.rst
+   docs/returning-computational-law.rst
+
 
 .. toctree::
    :maxdepth: 1
    :caption: Setting up the L4 Backend
+   :titlesonly:
    :hidden:
 
-   docs/pdpa-dbno-installation-webtool.rst
-   docs/pdpa-dbno-installation-googlesheets.rst
-   docs/pdpa-dbno-installation-L4spreadsheet.rst
-   docs/pdpa-dbno-explanations.rst
-   docs/pdpa-dbno-security.rst
+   docs/advanced-explanations.rst
+   docs/advanced-security.rst
+   docs/advanced-installation-webtool.rst
+   docs/advanced-installation-googlesheets.rst
+   docs/advanced-installation-L4spreadsheet.rst
 
 .. toctree:: 
    :maxdepth: 1
    :caption: Early Beta and Acknowledgements
+   :titlesonly:
    :hidden:
 
-   docs/common-early-beta.rst
-   docs/common-acknowledgements.rst
-
-.. toctree:: 
-   :maxdepth: 0
-   :hidden:
-
-   docs/links-first-steps.rst
-   docs/links-returning-users.rst
-   docs/links-L4-backend.rst
-   docs/links-law-and-computer-science.rst
-   docs/links-backend-setup-instructions.rst
+   docs/early-beta.rst
+   docs/acknowledgements.rst

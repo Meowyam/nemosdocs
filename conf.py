@@ -6,10 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'L4 Manual'
+project = 'L4'
 copyright = '2023, Meng Weng Wong'
 author = 'Meng Weng Wong, edited and organised by Nemo'
-release = '1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

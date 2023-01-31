@@ -43,7 +43,7 @@ A system diagram depicting the function call graph for the system comprising the
 
 For convenience a snapshot of that diagram is presented here. The sequence of operations is indicated in the diagram by numbered steps.
 
-.. image:: ../L4manual-images/system-diagram.png
+.. image:: ../images/system-diagram.png
 
 The blue (natural4-exe) and green (v8k) boxes are the subject of this section. The other system components corel4 and clara operate in parallel but are not the subject of this section.
 

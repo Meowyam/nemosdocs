@@ -2869,9 +2869,3 @@ html .md-typeset .superfences-tabs>label:hover{
         -webkit-line-clamp:3
     }
 }
-
-/* User-defined html */
-
-.underline{
-    text-decoration: underline;
-}

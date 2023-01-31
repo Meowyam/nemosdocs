@@ -24,12 +24,12 @@ You are given the following rule in the tab "Learning L4: Liquor Exercise".
 
 You will have succeeded if you obtain the following diagrams:
 
-.. image:: ../L4manual-images/Pastedimage20230114164121.png
+.. image:: ../images/Pastedimage20230114164121.png
 
 
-.. image:: ../L4manual-images/Pastedimage20230114164043.png
+.. image:: ../images/Pastedimage20230114164043.png
 
-.. image:: ../L4manual-images/Pastedimage20230114164104.png
+.. image:: ../images/Pastedimage20230114164104.png
 
 Now, implement the following rule in a new tab in your spreadsheet.
 
@@ -37,11 +37,11 @@ Now, implement the following rule in a new tab in your spreadsheet.
 
 You will have succeeded if you obtain the following diagrams:
 
-.. image:: ../L4manual-images/Pastedimage20230114164601.png
+.. image:: ../images/Pastedimage20230114164601.png
 
-.. image:: ../L4manual-images/Pastedimage20230114164523.png
+.. image:: ../images/Pastedimage20230114164523.png
 
-.. image:: ../L4manual-images/Pastedimage20230114164537.png
+.. image:: ../images/Pastedimage20230114164537.png
 
 -------------------
 Arithmetic Exercise

@@ -195,7 +195,7 @@ The web-based self-assessment tool for data breach notifications (hereinafter ca
 
 When the spreadsheet is being actively edited by a “legal engineer”, the sidebar and the Web Tool automatically update to reflect changes. To force a refresh of the sidebar without editing the sheet, click the checkbox in the top row (shown highlighted in the screenshot below).
 
-.. image:: ../L4manual-images/l4-webtool.png
+.. image:: ../images/l4-webtool.png
 
 To access the Web Tool, click on the first link in the sidebar in the spreadsheet UI.
 

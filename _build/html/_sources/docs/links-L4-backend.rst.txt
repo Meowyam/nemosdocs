@@ -5,13 +5,13 @@ Setting up the L4 Backend
 .. grid:: 2
 
     .. grid-item-card:: Backend Setup Instructions
-        :link: links-backend-setup-instructions
+        :link: links-advanced-setup-instructions
         :link-type: doc
 
         Instructions for the setup of the necessary tools.
 
     .. grid-item-card:: A Conceptual Explanation of the L4 Backend
-        :link: pdpa-dbno-explanations
+        :link: advanced-explanations
         :link-type: doc
 
         In-depth conceptual explanation of how the L4 backend works.

@@ -21,7 +21,7 @@ The encoding of the PDPA DBNO legislation and regulations is documented directly
 
 A screenshot of the encoding is seen in the figure below.
 
-.. image:: ../L4manual-images/l4-screenshot.png
+.. image:: ../images/l4-screenshot.png
 
 .. _deliverable_2:
 

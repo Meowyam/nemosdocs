@@ -1,7 +1,7 @@
 .. _Learning L4_exercises:
 
 ======================
-Learning L4: Tutorials
+Learning L4: Exercises
 ======================
 
 You may find the :ref:`L4 Spreadsheet quick reference` helpful.
@@ -28,7 +28,7 @@ You are given the following rule in the tab "Learning L4: Liquor Exercise". You 
 
 1. A person **WHO** is 21, **AND** is **NOT** located within the Little India **OR** Geylang liquor control zones, **MAY** buy liquor.
 
-.. image:: ../L4manual-images/liquor-exercise-start.png
+.. image:: ../images/liquor-exercise-start.png
    
 **Edit the above rule in L4 to reflect the following**, keywords are still in **bold** but they are not in all-caps.
    
@@ -36,11 +36,11 @@ You are given the following rule in the tab "Learning L4: Liquor Exercise". You 
 
 You will have succeeded if you obtain the following diagrams:
 
-.. image:: ../L4manual-images/Pastedimage20230114164121.png
+.. image:: ../images/Pastedimage20230114164121.png
 
-.. image:: ../L4manual-images/Pastedimage20230114164043.png
+.. image:: ../images/Pastedimage20230114164043.png
 
-.. image:: ../L4manual-images/Pastedimage20230114164104.png
+.. image:: ../images/Pastedimage20230114164104.png
 
 **Now, implement the following rule in a new tab in your spreadsheet**. Now keywords are neither in bold nor in all-caps!
 
@@ -48,11 +48,11 @@ You will have succeeded if you obtain the following diagrams:
 
 You will have succeeded if you obtain the following diagrams:
 
-.. image:: ../L4manual-images/Pastedimage20230114164601.png
+.. image:: ../images/Pastedimage20230114164601.png
 
-.. image:: ../L4manual-images/Pastedimage20230114164523.png
+.. image:: ../images/Pastedimage20230114164523.png
 
-.. image:: ../L4manual-images/Pastedimage20230114164537.png
+.. image:: ../images/Pastedimage20230114164537.png
 
 .. _L4 Spreadsheet quick reference:
 
@@ -62,13 +62,13 @@ LegalSS spreadsheet quick reference
 
 - **Adding tabs to Google Sheets**: Click the plus sign on the bottom-left hand corner of your screen, next to where you can find the google sheet tabs.
 
-.. image:: ../L4manual-images/new-tab.png
+.. image:: ../images/new-tab.png
 
 - **Sidebar auto-refresh**: You can stop auto-refresh by highlighting the cells you are typing in in a shade of grey. To enable auto-refresh, highlight the cells you are typing in back to white, make a minor change, and then wait for refresh.
 
 If the sidebar is not refreshing at all, re-run the Apps script from step 2 of :ref:`sheets_ide`.
 
-.. image:: ../L4manual-images/grey-colouring.png
+.. image:: ../images/grey-colouring.png
 
 - **Adding comments to the LegalSS Google Sheets**: Comments have a grey background and start with '//'.
 

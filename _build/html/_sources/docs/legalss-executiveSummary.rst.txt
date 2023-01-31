@@ -35,13 +35,13 @@ If you want to customize an existing contract template, you can fork and edit it
 
 To make life easier for "legal engineers", L4 generates convenient visualizations of the logic and the moving parts of your "legal program".
 
-.. image:: ../L4manual-images/L4-visualisation-screenshot.png
+.. image:: ../images/L4-visualisation-screenshot.png
 
 L4 also sanity-checks your programs to detect internal conflicts and loopholes.
 
 L4 automatically generates a web app that helps end users explore the logic.
 
-.. image:: ../L4manual-images/web-tool-screenshot.png
+.. image:: ../images/web-tool-screenshot.png
 
 In addition to contracts, L4's package library also contains encodings of legislation and regulation in the areas of data privacy and building permission.
 
