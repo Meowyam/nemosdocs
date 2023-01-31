@@ -56,17 +56,22 @@ You can navigate this document by:
    :titlesonly:
    :hidden:
 
-   docs/returning-examples.rst
    docs/returning-L4-and-law.rst
    docs/returning-cheatsheet.rst
    docs/returning-exporting-L4.rst
    docs/returning-exercises.rst
    docs/returning-keywords.rst
+
    docs/returning-law-logic-programming.rst
    docs/returning-flowchart.rst
    docs/returning-common-expressions.rst
    docs/returning-computational-law.rst
 
+   docs/returning-examples-must-sing.rst
+   docs/returning-examples-rodents-vermin.rst
+   docs/returning-examples-pdpa-dbno.rst
+   docs/returning-examples-motor-insurance.rst
+   docs/returning-examples-contract-automaton.rst
 
 .. toctree::
    :maxdepth: 1

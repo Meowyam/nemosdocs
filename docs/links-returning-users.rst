@@ -33,7 +33,7 @@ Returning Users
         Get a deeper understanding of the motivation for L4's creation.
 
     .. grid-item-card:: Examples
-        :link: returning-examples
+        :link: links-examples
         :link-type: doc
 
         Explore L4 in practice.
