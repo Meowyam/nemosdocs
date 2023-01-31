@@ -6,18 +6,18 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta charset="utf-8"/>
 <meta content="Docutils 0.17.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Law and Logic programming | L4  documentation</title>
+<title>Language Specification | L4  documentation</title>
 <link href="../_static/pygments.css" rel="stylesheet"/>
 <link href="../_static/theme.9297a650d9dd3016d913.css" rel="stylesheet"/>
 <link href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
-<link href="returning-flowchart.html" rel="next" title="Flowcharts and Software Engineering"/>
-<link href="returning-keywords.html" rel="prev" title="Language Specification"/>
+<link href="returning-law-logic-programming.html" rel="next" title="Law and Logic programming"/>
+<link href="returning-exercises.html" rel="prev" title="Exercises"/>
 </head>
 <body class="antialiased text-gray scroll-smooth">
 <div class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto" data-action="keydown@window-&gt;search#focus " data-controller="sidebar search " id="page">
-<a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#law-and-logic-programming" title="Skip navigation links">Skip to content</a>
+<a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#language-specification" title="Skip navigation links">Skip to content</a>
 <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
 <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
 <button class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand" data-action="sidebar#open" data-sidebar-target="hamburger">
@@ -47,8 +47,8 @@
 <li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="returning-cheatsheet.html#syntax-reference-by-keyword">Syntax Reference by Keyword</a></div></li>
 <li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="returning-exporting-L4.html">Exporting L4</a></div></li>
 <li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="returning-exercises.html">Exercises</a></div></li>
-<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="returning-keywords.html">Language Specification</a></div></li>
-<li class="toctree-l1 current expanded"><div class="nav-link"><a class="current reference internal" data-action="click-&gt;sidebar#close" href="#">Law and Logic programming</a></div></li>
+<li class="toctree-l1 current expanded"><div class="nav-link"><a class="current reference internal" data-action="click-&gt;sidebar#close" href="#">Language Specification</a></div></li>
+<li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="returning-law-logic-programming.html">Law and Logic programming</a></div></li>
 <li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="returning-flowchart.html">Flowcharts and Software Engineering</a></div></li>
 <li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="returning-common-expressions.html">Computer Science terms in L4</a></div></li>
 <li class="toctree-l1"><div class="nav-link"><a class="reference internal" data-action="click-&gt;sidebar#close" href="returning-computational-law.html">L4 and Computational Law</a></div></li>
@@ -75,104 +75,118 @@
 </aside>
 <main class="px-4 pt-14 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col flex-1 h-full mx-0 md:mx-auto xl:mr-0"><nav aria-label="breadcrumbs" class="print:hidden mt-12 text-sm text-gray-light" role="navigation">
 <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">L4  documentation</a>
-<span class="mr-1">/</span><span aria-current="page">Law and Logic programming</span>
+<span class="mr-1">/</span><span aria-current="page">Language Specification</span>
 </nav>
 <article class="flex-1" role="main">
-<section id="law-and-logic-programming">
-<h1>Law and Logic programming<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#law-and-logic-programming">¶</a></h1>
-<p>We borrow from Default Logic the notion of priorities, as given in <a class="reference external" href="https://link.springer.com/chapter/10.1007/978-94-015-9383-0_3" rel="nofollow noopener">Brewka 2000<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a> and <a class="reference external" href="https://www.aaai.org/Papers/AAAI/1994/AAAI94-144.pdf" rel="nofollow noopener">Brewka 1994<svg aria-hidden="true" class="external-link-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></a>.</p>
-<p><strong>Notwithstanding</strong></p>
-<p>Let us consider Example Def-1:</p>
+<section id="language-specification">
+<span id="keywords"></span><h1>Language Specification<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#language-specification">¶</a></h1>
+<section id="keywords-declarations-and-definitions">
+<h2>Keywords: Declarations and Definitions<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#keywords-declarations-and-definitions">¶</a></h2>
+<p>This chapter introduces a handful of L4 keywords.</p>
+<section id="declare-and-define-for-data-types-and-values-and-has-attributes">
+<h3>DECLARE and DEFINE, for data types and values, and HAS-Attributes<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#declare-and-define-for-data-types-and-values-and-has-attributes">¶</a></h3>
+<p>DECLARE and DEFINE have to do with data types and values.</p>
+<p>If you are familiar with Object-Oriented Programming, you will find the DECLARE and DEFINE concepts familiar.</p>
+<p>We use DECLARE to set up our:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>classes</p></li>
+<li><p>records</p></li>
+<li><p>types</p></li>
+<li><p>schemas</p></li>
+<li><p>ontology</p></li>
+<li><p>templates</p></li>
+</ul>
+</div></blockquote>
+<p>We use DEFINE to instantiate those templates with concrete values: the specific variables of a particular agreement.</p>
+<p>These declarations and definitions are automatically exported to the programming language of your choice, lessening the burden of programming downstream.</p>
+<p>Consider the following code</p>
 <div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">bnf</span></div>
-<div class="highlight"><pre><code>Clause A    No integers are prime.
+<div class="highlight"><pre><code>Type Declaration    <span class="o">::=</span>             DECLARE                 MultiTerm                         [Type Signature]
+                                    [Has-Attribute  ]
+                                    [       ...     ]
 
-Clause B    Notwithstanding Clause A, some integers are prime:
-            if a positive integer has no factors besides 1 and itself,
-            then it is prime.
+Has-Attribute       <span class="o">::=</span>             HAS                     MultiTerm                         [Type Signature]
+                                    [       ...     ]
+                                    [Has-Attribute  ]
 </code></pre></div></div>
-<p>In this example, the default is Clause A, and the priority relation is B &lt; A, meaning B describes exceptions to A.</p>
-<p><strong>Subject To</strong></p>
-<p>Let us consider Example Def-2:</p>
+<p>This syntax rule means you can have multiple HAS-Attributes, listed on subsequent lines. For convenience, only the first HAS keyword is necessary; subsequent lines don’t need it.</p>
+<p>HAS-Attributes can nest, such that one record declaration can contain another.
+For example:</p>
 <div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">bnf</span></div>
-<div class="highlight"><pre><code>Clause A    Subject to Clause B, no integers are prime.
-Clause B    Some integers are prime:
-            if a positive integer has no factors besides 1 and itself,
-            then it is prime.
+<div class="highlight"><pre><code>Variable Definition <span class="o">::=</span>     DEFINE          Value Term              [Type Signature ]       //class-object instantiation
+                            HAS             MultiTerm               [Type Signature ]
+                                            [ ... ]
 </code></pre></div></div>
-<p>In this example, the default is Clause A, and the priority relation is B &lt; A, meaning B describes exceptions to A.</p>
-<p><strong>Symmetry</strong></p>
-<p>In both examples above, the effective semantics are the same: B &lt; A.</p>
-<p>The examples differ only in the choice of which clause explicitly states the priority relation.</p>
-<p><strong>Operationalization</strong></p>
-<p>The above examples reduce to the same program:</p>
-<div class="code-wrapper" data-controller="code">
-<div class="code-header">
-<span class="code-lang">haskell</span></div>
-<div class="highlight"><pre><code><span class="nf">isP</span><span class="w"> </span><span class="n">n</span>
-<span class="o">|</span><span class="w">   </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span>
-<span class="w">    </span><span class="n">primeFactors</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">`</span><span class="n">remove</span><span class="p">`</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">`</span><span class="n">remove</span><span class="p">`</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">[]</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kt">True</span>
-<span class="o">|</span><span class="w">   </span><span class="kt">Otherwise</span><span class="w">                                  </span><span class="ow">=</span><span class="w"> </span><span class="kt">False</span>
-<span class="kr">where</span>
-<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="p">`</span><span class="n">remove</span><span class="p">`</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="p">(</span><span class="o">/=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">a</span>
-</code></pre></div></div>
-<p>The priority relation is made explicit by the ordering.</p>
-<p>The “otherwise” line gives the default answer “False”, and is placed last.</p>
-<p>The exception is tested before the default, and thus is placed above.</p>
-<p><strong>Scope</strong></p>
-<p>Note that priority relations do not wholly knock out the overridden clause.</p>
-<p>Clause B is only dispositive when there are no other factors besides 1 and n.</p>
-<p>If there are no other factors, Clause B is not dispositive, so the default applies.</p>
-<p>Let us advance through the history of mathematics to 1938, and add:</p>
+<p>Variable definitions with the DEFINE keyword follow the same format as DECLARE.</p>
+</section>
+<section id="by-and-within-for-temporal-constraints-such-as-deadlines">
+<h3>BY and WITHIN for Temporal Constraints such as Deadlines<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#by-and-within-for-temporal-constraints-such-as-deadlines">¶</a></h3>
+<p>The BY and WITHIN keywords set deadlines</p>
 <div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">bnf</span></div>
-<div class="highlight"><pre><code>Clause C    Notwithstanding Clause B, we deem 1 to be non-prime.
+<div class="highlight"><pre><code>Temporal Constraint <span class="o">::=</span> (BEFORE | AFTER | BY | WITHIN | UNTIL) Temporal Spec
 </code></pre></div></div>
-<p>This clause C does not override clause B in full: it only removes a single element 1 from the domain.</p>
-<div class="code-wrapper" data-controller="code">
-<div class="code-header">
-<span class="code-lang">haskell</span></div>
-<div class="highlight"><pre><code><span class="nf">isP</span><span class="w"> </span><span class="n">n</span>
-<span class="o">|</span><span class="w">   </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w">                                              </span><span class="ow">=</span><span class="w"> </span><span class="kt">False</span>
-<span class="o">|</span><span class="w">   </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span>
-<span class="w">    </span><span class="n">primeFactors</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">`</span><span class="n">remove</span><span class="p">`</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">`</span><span class="n">remove</span><span class="p">`</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">[]</span><span class="w">          </span><span class="ow">=</span><span class="w"> </span><span class="kt">True</span>
-<span class="o">|</span><span class="w">   </span><span class="kt">Otherwise</span><span class="w">                                           </span><span class="ow">=</span><span class="w"> </span><span class="kt">False</span>
-<span class="kr">where</span>
-<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="p">`</span><span class="n">remove</span><span class="p">`</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="p">(</span><span class="o">/=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="n">a</span>
-</code></pre></div></div>
-<p>Above, the priority clause (“”notwithstanding B””) was placed in clause C.</p>
-<p>But we could also have placed the priority clause inside Clause B:</p>
+<p>A regulative rule without a temporal constraint is incomplete. L4 substitutes “EVENTUALLY” but will issue a warning so you are conscious that a deadline is missing.</p>
+</section>
+<section id="must-shant-and-may-for-obligations-and-permissions">
+<h3>MUST, SHANT, and MAY for obligations and permissions<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#must-shant-and-may-for-obligations-and-permissions">¶</a></h3>
+<p>Laws and contracts impose <em>obligations</em> and <em>prohibitions</em> on persons, and grant <em>permissions</em>. These ideas are central to <em>deontic logic</em>, and underlie L4’s keywords MUST, SHANT, and MAY, respectively.</p>
 <div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">bnf</span></div>
-<div class="highlight"><pre><code>Clause B            Subject to Clause C, ...
-Clause C            We deem 1 to be non-prime.
+<div class="highlight"><pre><code>Deontic Keyword <span class="o">::=</span> (MUST | MAY | SHANT)
 </code></pre></div></div>
-<p><strong>The Defeasibility Graph</strong></p>
-<p>The above examples are deliberately simple, and create a linear chain of overrides: C &lt; B &lt; A.</p>
-<p>These overrides, ordered for correct execution in a program, constitute a topological sort of a graph.</p>
-<p>One could imagine a more complex set of overrides, with two main branches rooted at X:</p>
+<p>Within the context of a single rule, these deontic keywords specify different consequences for the satisfaction or violation of the rule.</p>
+</section>
+<section id="fulfilled-and-breach-for-consequences-in-l4">
+<h3>FULFILLED and BREACH for consequences in L4<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#fulfilled-and-breach-for-consequences-in-l4">¶</a></h3>
+<p>The two fundamental consequences in L4 are FULFILLED and BREACH.</p>
 <div class="code-wrapper" data-controller="code">
 <div class="code-header">
 <span class="code-lang">bnf</span></div>
-<div class="highlight"><pre><code>A &lt; E &lt; I &lt; O &lt; U &lt; X       \\the "vowel branch"
-B &lt; C &lt; D &lt; F &lt; G &lt; X       \\the "consonant branch"
+<div class="highlight"><pre><code>            If the actor does not perform the action by the deadline            If the actor performs the action by the deadline
+MUST                BREACHED                                                                                FULFILLED
+SHANT               FULFILLED                                                                               BREACHED
+MAY                 FULFILLED                                                                               FULFILLED
 </code></pre></div></div>
-<p>Such a graph admits multiple topological sorts.</p>
-<p><strong>In terms of Logic Programming</strong></p>
-<p>We can map the above example to logic programming.</p>
-<p>If the body of a Horn clause is satisfied, we say the rule applies.</p>
-<p>The head of the Horn clause is then evaluated (or unified), and gives the effect of the rule.</p>
-<p>In the above examples, first we decide if each clause applies;
-if it does, the rest of the clause gives a True/False answer, which is its effect.</p>
-<p><strong>In terms of traditional programming</strong></p>
-<p>Conventional programming languages use the IF/THEN construct.</p>
-<p>The IF part tests if the rule applies.
-The THEN part gives the effect.</p>
+<p>We observe that a MAY rule is permissive: if you do it, fine! If you don’t, fine!</p>
+<p>L4’s workflow diagrams follow a convention: a rule that is satisfied proceeds to the bottom right, while a rule that is violated proceeds to the bottom left. The “”happy path”” therefore runs along the right side of a diagram.</p>
+<p>A MAY rule shows action to the right, and inaction to the left.</p>
+</section>
+<section id="hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code">
+<h3>HENCE and LEST for regulative rules and connecting blocks of code<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#hence-and-lest-for-regulative-rules-and-connecting-blocks-of-code">¶</a></h3>
+<p>Ordinary programming languages use the IF … THEN … ELSE construct to connect blocks of code, based on whether the conditions in the IF were met.</p>
+<p>L4 uses HENCE instead of THEN, and LEST instead of ELSE, to connect regulative rules, based on whether the preceding rule was satisfied.</p>
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">bnf</span></div>
+<div class="highlight"><pre><code>Regulative Connector <span class="o">::=</span>    (HENCE | LEST)
+                        Rule Label | Regulative Rule
+</code></pre></div></div>
+<p>Individual regulative rules connect with one another to form a graph, or a flowchart, describing a workflow.</p>
+</section>
+<section id="the-semantics-of-rules">
+<h3>The Semantics of rules<a aria-label="Click to copy this link" class="headerlink tooltipped tooltipped-ne" data-action="click-&gt;clipboard#copyHeaderLink" data-controller="clipboard" href="#the-semantics-of-rules">¶</a></h3>
+<p>The semantics of a rule are as follows:</p>
+<div class="code-wrapper" data-controller="code">
+<div class="code-header">
+<span class="code-lang">bnf</span></div>
+<div class="highlight"><pre><code>[Attribute Constraint   ]
+[Conditional Constraint ]
+[Upon Trigger           ]
+[HENCE                              Rule Label | Regulative Rule ]
+[LEST                               Rule Label | Regulative Rule ]
+[WHERE                              Constitutive Rule
+                                    [   ...     ]                ]
+</code></pre></div></div>
+</section>
+</section>
 </section>
 </article>
 <footer>

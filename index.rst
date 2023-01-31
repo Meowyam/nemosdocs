@@ -61,7 +61,7 @@ You can navigate this document by:
    docs/returning-cheatsheet.rst
    docs/returning-exporting-L4.rst
    docs/returning-exercises.rst
-   docs/returning-language-spec.rst
+   docs/returning-keywords.rst
    docs/returning-law-logic-programming.rst
    docs/returning-flowchart.rst
    docs/returning-common-expressions.rst

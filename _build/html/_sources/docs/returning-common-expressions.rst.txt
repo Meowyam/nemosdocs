@@ -1,6 +1,6 @@
-###################################
-Common Computer Science terms in L4
-###################################
+############################
+Computer Science terms in L4
+############################
 
 This section gives examples of how common terms in computer science are used in L4.
 

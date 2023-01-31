@@ -31,7 +31,7 @@ Law and Computer Science
 
         Explore the relationship between Law and Logic Programming.
 
-    .. grid-item-card:: Common Computer Science terms in L4
+    .. grid-item-card:: Computer Science terms in L4
         :link: returning-common-expressions
         :link-type: doc
 
