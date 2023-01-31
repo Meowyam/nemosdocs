@@ -33,4 +33,3 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'pdf-version']
 html_theme = 'sphinxawesome_theme'
 html_theme_options = {'nav_include_hidden': True, "show_nav": True}
 html_static_path = ['_static']
-html_css_files = ['background-colors.css']
