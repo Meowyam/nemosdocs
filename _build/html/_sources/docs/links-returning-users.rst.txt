@@ -16,7 +16,7 @@ Returning Users
         :link: returning-cheatsheet
         :link-type: doc
 
-        A cheatsheet of L4 Syntax.
+        A dictionary cheatsheet of L4 Syntax.
 
     .. grid-item-card:: Important L4 Keywords
         :link: returning-keywords

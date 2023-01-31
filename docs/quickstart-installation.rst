@@ -14,11 +14,19 @@ The current version of the `LegalSS spreadsheet <https://docs.google.com/spreads
 Getting the LegalSS spreadsheet working on your computer
 ========================================================
 
+--------------------------------------------------------------
+0. Prerequisites before you can set up the LegalSS spreadsheet
+--------------------------------------------------------------
+
+- You will need a google account, which doubles as a gmail account. You can follow the instructions in `www.google.com`, under "sign up for free"
+
+- You will need access to the `LegalSS spreadsheet <https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1453008311>`_ linked in this section. Clicking on the link will open the `LegalSS spreadsheet <https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1453008311>`_ in a new window.
+
 ---------------------------------
 1. Make a copy of the spreadsheet
 ---------------------------------
 
-Make a copy of the `LegalSS spreadsheet <https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1453008311>`_ by clicking on 'File' at the toolbar, then choose the 4th option 'Make A Copy'. 
+Make a copy of the `LegalSS spreadsheet <https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1453008311>`_ by clicking on 'File' at the toolbar found on the top of the page, then choose the 4th option 'Make A Copy'. 
 
 .. figure:: ../images/make-a-copy-screenshot.png
     :class: with-border
@@ -76,13 +84,13 @@ You should be directed to a page similar to the below screenshot.
 
 .. figure:: ../images/apps-script-page-screenshot.png
     :class: with-border
-    :width: 300px
+    :width: 600px
 
 -------------------------------------------------
 5. Return to your copy of the LegalSS Spreadsheet
 -------------------------------------------------
 
-When the Apps Script page loads, go back to your copy of `LegalSS spreadsheet <https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1453008311>`_ in your browser and select the tab "Quickstart", which is the first tab of the `LegalSS spreadsheet <https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1453008311>`_.
+When the Apps Script page loads, go back to your copy of `LegalSS spreadsheet <https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1453008311>`_ in your browser and select the tab "PDPA DBNO", which is the first tab of the `LegalSS spreadsheet <https://docs.google.com/spreadsheets/d/1leBCZhgDsn-Abg2H_OINGGv-8Gpf9mzuX1RR56v0Sss/edit?pli=1#gid=1453008311>`_.
 
 .. figure:: ../images/advanced-selection-screenshot.png
     :class: with-border
@@ -94,7 +102,9 @@ When the Apps Script page loads, go back to your copy of `LegalSS spreadsheet <h
 6. Return to the Apps Script page and click "Run"
 -------------------------------------------------
 
-Back in the Apps Script page, click "Run" to execute the function. You will have to grant permission to the App Script to make changes to Google Sheets.
+Back in the Apps Script page, click "Run" to execute the function. 
+
+You will have to grant permission to the App Script to make changes to Google Sheets.
 
 .. figure:: ../images/select-run-on-sheet-ide-screenshot.png
     :class: with-border
