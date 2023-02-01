@@ -1,0 +1,15 @@
+node_modules
+yarn-error.log
+__pycache__
+dist
+pip-wheel-metadata/
+sphinxawesome_theme.egg-info
+docs/public
+docs/public/xml
+.nox
+.coverage
+.vscode
+.history
+.python-version
+.env
+.yarn
