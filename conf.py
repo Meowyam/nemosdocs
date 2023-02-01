@@ -31,5 +31,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'pdf-version']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinxawesome_theme'
-html_theme_options = {'nav_include_hidden': True, "show_nav": True}
+html_theme_path = ['../sphinxawesome-theme/src/sphinxawesome_theme']
 html_static_path = ['_static']
+html_collapsible_definitions = True
