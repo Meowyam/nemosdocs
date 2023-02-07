@@ -46,7 +46,7 @@ You can navigate this document by:
    :titlesonly:
    :hidden:
 
-
+   docs/links-first-steps.rst
    docs/quickstart-tour-of-L4.rst
    docs/quickstart-installation.rst
 
@@ -85,7 +85,7 @@ You can navigate this document by:
    docs/advanced-installation-googlesheets.rst
    docs/advanced-installation-L4spreadsheet.rst
 
-.. toctree:: 
+.. toctree::
    :maxdepth: 1
    :caption: Early Beta and Acknowledgements
    :titlesonly:
